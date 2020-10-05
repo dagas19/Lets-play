@@ -5,11 +5,21 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'faker'
 
-puts 'creating 5 users'
-5.times do |i|
-  user = User.create!(
-    name: Faker::Company.name,
-    tagline: Faker::Company.catch_phrase
-    )
-  puts "#{i+1}. #{user.name}"
+games = %w[scrabble connect-four cranium blokus mancala stratego catan risk pictionary othello rummikub the-game-of-life candy-land battleship trivial-pursuit cluedo monopoly backgammon checkers chess]
+
+puts 'creating 50 users e-mails/passwords/nickname/preferred games'
+50.times do
+  # user = User.create!(
+    puts Faker::Internet.email
+    puts Faker::Internet.password
+    puts Faker::DcComics.hero
+    p games.sample((1..4).to_a.sample).join(", ")
+  end
+
+  puts 'creating games'
+
+
+
+
