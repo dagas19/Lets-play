@@ -1,0 +1,25 @@
+.banner-events {
+  height: 30vh;
+  background: url("game-img.png");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  color: white;
+  font-family: Bungee;
+  font-size: 46px;
+  padding-left: 40px;
+  padding-top: 60px;
+
+}
+
+.banner h1 {
+  font-size: 24px;
+  font-weight: bolder;
+}
+
+.banner p {
+  font-size: 30px;
+  font-weight: lighter;
+}
