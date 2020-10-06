@@ -12,6 +12,18 @@ genders = %w[male female transgender gender-neutral non-binary agender pangender
 games = %w[scrabble connect-four cranium blokus mancala stratego catan risk pictionary othello rummikub the-game-of-life candy-land battleship trivial-pursuit cluedo monopoly backgammon checkers chess]
 games_cat = %w[strategy gambling fun trivia speed]
 experience = %w[Novice Intermediate Advanced Expert]
+users_email = []
+users_passwords = []
+50.times do
+  users_email << Faker::Internet.email
+  users_passwords << Faker::Internet.password
+end
+
+users_email.each do |email|
+  puts "#{email} | #{users_passwords[users_email.index(email)]}"
+end
+
+
 
 a = "Ravnkroken 25, 1254 Oslo, Norway"
 b = "Øvre Ljanskoll vei 24, 1169 Oslo, Norway"
@@ -50,8 +62,9 @@ genders.each do |gender|
 end
   # 2- users
 puts 'creating 50 users e-mails/passwords/nickname/preferred games'
+i = 0
 50.times do
-  User.create(email: Faker::Internet.email, password: Faker::Internet.password, nickname: Faker::DcComics.hero, preferred_games: games.sample((1..4).to_a.sample).join(", "), gender: Gender.find((1..10).to_a.sample), age: (16..110).to_a.sample, address: addresses.sample)
+  User.create(email: users_email[i], password: users_passwords[0], nickname: Faker::DcComics.hero, preferred_games: games.sample((1..4).to_a.sample).join(", "), gender: Gender.find((1..10).to_a.sample), age: (16..110).to_a.sample, address: addresses.sample)
   end
   # 3- venues
 puts 'creating 15 venues'
