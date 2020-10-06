@@ -1,0 +1,31 @@
+<div class="back d-flex align-items-left">
+  <div class="container left">
+    <div class="row justify-content-center">
+      <div class="col-8">
+        <div class="form text-white p-4">
+          <h1 class="text-center">Add new event</h1>
+          <%= simple_form_for [:user, @event] do |f| %>
+           <%= f.error_notification %>
+           <%= f.input :title, placeholder: "e.g. Chess duel" %>
+           <%= f.input :date, as: :date %>
+           <%= f.input :spots, placeholder: "e.g. 2" %>
+           <%= f.input :experience_level, collection: Event::EXPERIENCE, prompt: :translate %>
+           <div class="row">
+            <div class="col-3">
+               <%= f.input :min_age, placeholder: "25" %>
+            </div>
+            <div class="col-3">
+               <%= f.input :max_age, placeholder: "30" %>
+            </div>
+          </div>
+           <%= f.input :description, placeholder: "e.g Just looking for someone to play game of chess" %>
+           <%= f.submit class: "btn btn-primary btn-lg", style: "border-radius:10px;" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
