@@ -1,4 +1,4 @@
 class Game < ApplicationRecord
   validates :name, presence: true
-  validates :type, presence: true
+  validates :game_type, presence: true
 end

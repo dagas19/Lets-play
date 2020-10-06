@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_05_150720) do
+ActiveRecord::Schema.define(version: 2020_10_06_112515) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "events", force: :cascade do |t|
     t.string "title"
-    t.date "date"
+    t.datetime "date"
     t.integer "spots"
     t.text "description"
     t.string "experience_level"
@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 2020_10_05_150720) do
 
   create_table "games", force: :cascade do |t|
     t.string "name"
-    t.string "type"
+    t.string "game_type"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(version: 2020_10_05_150720) do
 
   create_table "messages", force: :cascade do |t|
     t.text "content"
-    t.date "date"
+    t.datetime "date"
     t.bigint "event_id", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
