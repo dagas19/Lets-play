@@ -11,6 +11,7 @@ require 'faker'
 genders = %w[male female transgender gender-neutral non-binary agender pangender genderqueer two-spirit third-gender]
 games = %w[scrabble connect-four cranium blokus mancala stratego catan risk pictionary othello rummikub the-game-of-life candy-land battleship trivial-pursuit cluedo monopoly backgammon checkers chess]
 games_cat = %w[strategy gambling fun trivia speed]
+experience = %w[Novice Intermediate Advanced Expert]
 
 a = "Ravnkroken 25, 1254 Oslo, Norway"
 b = "Øvre Ljanskoll vei 24, 1169 Oslo, Norway"
@@ -62,34 +63,17 @@ puts 'creating 20 games'
 games.each do |game|
   Game.create(name: game, game_type: games_cat.sample)
 end
+  # 5- Events
+puts 'creating 20 events / date needs still to be changes from date to datetime. Stian will do this soon.'
+20.times do
+  Event.create(title: Faker::Marketing.buzzwords, spots: (2..8).to_a.sample, description: Faker::Lorem.sentence(word_count: 25), experience_level: experience.sample, min_age: (16..35).to_a.sample, max_age: (36..110).to_a.sample, game: Game.find((1..20).to_a.sample), venue: Venue.find((1..15).to_a.sample), gender: Gender.find((1..10).to_a.sample), user: User.find((1..10).to_a.sample))
+end
+
+
+
   # 5- registrations
   # 6- messages
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# puts 'creating games'
-# puts games
-
-
-
-
-# puts 'creating 50 messages'
-# 50
 
 
 
