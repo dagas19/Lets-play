@@ -1,4 +1,5 @@
 class Event < ApplicationRecord
+  EXPERIENCE = ["Newbie", "Beginner", "Intermidiate", "Professional"]
   belongs_to :game
   belongs_to :venue
   belongs_to :gender
