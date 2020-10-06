@@ -1,32 +1,168 @@
-<div class="banner">
-
+<div class="banner d-flex justify-content-center align-items-center">
+  <h3 class="text-white di m-3">Enter your location and explore...</h3>
+  <div class="form mt-5">
+    <form action="#" class="form-group">
+      <div class="d-flex">
+        <input type="text" class="form-control">
+        <button class="btn btn-primary" style="border-radius: 10px;">Search</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container jumb-text">
+    <p class="lead">We offer huge variety of games and lot of  and ton of players and joining to happening events every day. So if you are looking  for possibility to joinng
+cool board games event you came to right place we assure smooth time setting up  event or joining one of them without and hussle and we let you
+ where you want  to play and with whom and if you really into it and want to organise new event we gonna help you with that also.</p>
+  </div>
 </div>
 
-
-
-<p>We offer huge variety of games and lot of  and ton of players and joining to happening events every day. So if you are looking  for possibility to joinng
-cool board games event you came to right place we assure smooth time setting up  event or joining one of them without and hussle and we let you
- where you want  to play and with whom and if you really into it and want to organise new event we gonna help you with that also </p>
-<h1>Some of the games we offer</h1>
-<ul>
-  <li><img src="" alt=""></li>
-  <li><img src="" alt=""></li>
-  <li><img src="" alt=""></li>
-  <li><img src="" alt=""></li>
-  <li><img src="" alt=""></li>
-</ul>
-<h2>Events happening every single day</h2>
-
-<h2>avialability</h2>
-<p>We offer places nearby
-and most importantly on
-convinient time</p>
-<h2>excitment</h2>
-<p>There is nothing more
-exciting then competing
-by playing board games
-</p>
-<h2>fun</h2>
-<p>Most importantly we
-gather to play this these
-games to have some fun</p>
+<div class="container mb">
+  <div class="row">
+    <div class="col-6 text-center">
+      <div class="card-body h">
+        <div class="card m-3 activee cardon">
+          <div class="card-title"><h1>avialability</h1></div>
+          <div class="card-description lead">
+            <p>We offer places nearby that have boards games
+            and most importantly time is decided by players who organise
+          these events so we assure you will find right time and place for you</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 text-center">
+      <div class="card-body h acti">
+        <div class="card m-3 activee cardon">
+          <div class="card-title display-2"><h1>excitment</h1></div>
+          <div class="card-description lead">
+            <p>There is nothing more
+            exciting then competing with players that has same experience
+            as you have so you can choose with whom you want
+            to compete on amazing board games
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="col-6 text-center mx-auto">
+      <div class="card-body h">
+        <div class="card m-3 p-2 cardon activee">
+          <div class="card-title display-2"><h1>fun</h1></div>
+          <div class="card-description lead">
+            <p>But lets not forget most important reason
+            why we play these awesome games, that's simply to have fun
+          and we got plenty of events offering fun time</p>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<hr class="light">
+<div class="container my-4 max">
+  <div class="titl">
+    <h2 class="text-center">Some of the games we offer</h2>
+  </div>
+    <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+      <div class="controls-top">
+        <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+        <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+      <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+      <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-2 card-size">
+                <div class="card-body m-4 text-center">
+                  <h4 class="card-title">Chess</h4>
+                </div>
+                <%= image_tag "chesss.jpg", class: "card-img-top" %>
+              </div>
+            </div>
+            <div class="col-md-4 clearfix d-none d-md-block">
+              <div class="card mb-2 card-size">
+                <div class="card-body m-4 text-center">
+                  <h4 class="card-title">Monopoly</h4>
+                </div>
+                <%= image_tag "monopoly.jpg", class: "card-img-top" %>
+              </div>
+            </div>
+            <div class="col-md-4 clearfix d-none d-md-block">
+              <div class="card mb-2 card-size">
+                <div class="card-body m-4 text-center">
+                  <h4 class="card-title">Checkers</h4>
+                </div>
+                <%= image_tag "checkers.jpg", class: "card-img-top" %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-2 card-size">
+                <div class="card-body m-4 text-center">
+                  <h4 class="card-title">Battleship</h4>
+                </div>
+                <%= image_tag "battleship.jpg", class: "card-img-top" %>
+              </div>
+            </div>
+            <div class="col-md-4 clearfix d-none d-md-block">
+              <div class="card mb-2 card-size">
+                <div class="card-body m-4 text-center">
+                  <h4 class="card-title">Scrabble</h4>
+                </div>
+                <%= image_tag "scrabble.jpg", class: "card-img-top" %>
+              </div>
+            </div>
+            <div class="col-md-4 clearfix d-none d-md-block">
+              <div class="card mb-2 card-size">
+                <div class="card-body m-4 text-center">
+                  <h4 class="card-title">Clue</h4>
+                </div>
+                <%= image_tag "clue.jpg", class: "card-img-top" %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-2 card-size">
+                <div class="card-body m-4 text-center">
+                  <h4 class="card-title">Stratego</h4>
+                </div>
+                <%= image_tag "stratego.jpg", class: "card-img-top" %>
+              </div>
+            </div>
+            <div class="col-md-4 clearfix d-none d-md-block">
+              <div class="card mb-2 card-size">
+                <div class="card-body m-4 text-center">
+                  <h4 class="card-title">Uno</h4>
+                </div>
+                <%= image_tag "uno.jpg", class: "card-img-top" %>
+              </div>
+            </div>
+            <div class="col-md-4 clearfix d-none d-md-block">
+              <div class="card mb-2 card-size">
+                <div class="card-body m-4 text-center">
+                  <h4 class="card-title">Backgammon</h4>
+                </div>
+                <%= image_tag "backgammon.jpg", class: "card-img-top" %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
