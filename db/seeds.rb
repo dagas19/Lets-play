@@ -60,7 +60,7 @@ end
   # 4- games
 puts 'creating 20 games'
 games.each do |game|
-  Game.create(name: game, type: games_cat.sample)
+  Game.create(name: game, game_type: games_cat.sample)
 end
   # 5- registrations
   # 6- messages
