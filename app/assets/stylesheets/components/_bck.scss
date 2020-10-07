@@ -1,13 +1,48 @@
 .bck {
-  background-color: #2F2E2E;
+  background: linear-gradient(#000000, #4E4E4E);
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
   width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
 }
 .set {
   margin-top: 50%;
 }
 .ii {
   border-radius: 15px;
+}
+.dd {
+  position: absolute;
+  left: 20px;
+}
+.bottom-right {
+   position: absolute;
+   bottom: 8px;
+   right: 16px;
+}
+.wrapper {
+  position: relative;
+  padding: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+}
+.fa-dice {
+  font-size: 300px;
+  color: #DD3667;
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+}
+.ttit {
+  top: 15px;
+}
+
+.ttt {
+  position: absolute;
+  top: 50px;
+  width: 100%;
 }
