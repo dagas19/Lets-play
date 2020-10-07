@@ -21,7 +21,7 @@ Gender.destroy_all
 puts "Dumping completed"
 
 # variables
-genders = %w[male female transgender gender-neutral non-binary agender pangender genderqueer two-spirit third-gender]
+genders = %w[male female transgender gender-neutral non-binary agender pangender genderqueer two-spirit third-gender all]
 games = %w[scrabble connect-four cranium blokus mancala stratego catan risk pictionary othello rummikub the-game-of-life candy-land battleship trivial-pursuit cluedo monopoly backgammon checkers chess]
 games_cat = %w[strategy gambling fun trivia speed]
 experience = %w[Novice Intermediate Advanced Expert]

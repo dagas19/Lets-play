@@ -4,4 +4,10 @@ class EventsController < ApplicationController
     @events = policy_scope(Event)
     @events = Event.all
   end
+
+  def show
+    @event = Event.find(params[:id])
+    authorize @event
+  end
+
 end
