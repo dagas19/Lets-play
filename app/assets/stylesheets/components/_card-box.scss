@@ -14,6 +14,26 @@
     position: relative;
 }
 
+.events-container {
+    margin: 0;
+    padding-top: 5%;
+    font-size: 28px;
+}
+
+.events-container h3 {
+    margin: 0;
+    padding-top: 5%;
+    font-family: Sniglet;
+    font-size: 26px;
+}
+
+.events-container h4 {
+    margin: 2px;
+    padding-top: 5%;
+    font-family: Sniglet;
+    font-size: 20px;
+}
+
 .card-title h2 {
     margin: 0;
     padding-top: 5%;
@@ -29,4 +49,12 @@
     font-size: 12px;
 }
 
+.location { 
+    position: absolute; 
+    right: 0px; 
+    font-size: 12px; 
+    letter-spacing: -1px; 
+    line-height: 1.5; 
+    bottom: 70px; 
+}
 
