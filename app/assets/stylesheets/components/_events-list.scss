@@ -1,0 +1,14 @@
+.events-page-content {
+	display: flex;
+	flex-direction: row;
+}
+
+.events-container {
+	flex-grow: 3;
+}
+
+.events-filter-bar {
+	flex-grow: 2;
+	background-color: black;
+	min-height: 100%;
+}
