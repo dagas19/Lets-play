@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get '/me', to: 'users#me'
   resources :users, only: :show
   resources :events, only: %i[index]
-  namespace :user do
+  namespace :my do
     resources :events, only: %i[new create]
   end
 end
