@@ -89,7 +89,7 @@ i = 0
   # 3- venues
 puts 'creating 15 venues'
 15.times do
-  Venue.create(name: Faker::Restaurant.name, address: addresses.sample, description: Faker::Restaurant.description)
+  Venue.create(name: Faker::Restaurant.name, address: addresses.sample, description: Faker::Restaurant.description[0..100])
 end
   # 4- games
 puts 'creating 20 games'
