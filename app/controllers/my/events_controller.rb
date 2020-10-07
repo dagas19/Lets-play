@@ -1,21 +1,20 @@
 class My::EventsController < ApplicationController
 
-  def new
-    @event = Event.new
-    authorize [:user, @event]
-  end
-
-
   def index
     @events = policy_scope([:my, Event.where(user: current_user)])
     @participations = policy_scope([:my, Registration.where(user: current_user)])
   end
 
 
+  def new
+    @event = Event.new
+    authorize [:my, @event]
+  end
+
   def create
     @event = Event.new(event_params)
     @event.user = current_user
-    authorize [:user, @event]
+    authorize [:my, @event]
     if @event.save
       redirect_to my_events_path
     else
