@@ -7,8 +7,19 @@
           <%= simple_form_for [:my, @event] do |f| %>
            <%= f.error_notification %>
            <%= f.input :title, placeholder: "e.g. Chess duel" %>
+           <div class="row">
+            <div class="col-4">
+              <%= f.association :game, required: true, prompt: :translate  %>
+            </div>
+            <div class="col-4">
+              <%= f.association :venue, required: true, prompt: :translate  %>
+            </div>
+            <div class="col-4">
+              <%= f.input :spots, placeholder: "e.g. 2" %>
+            </div>
+          </div>
            <%= f.input :date, as: :date %>
-           <%= f.input :spots, placeholder: "e.g. 2" %>
+           <%= f.association :gender, required: true, prompt: :translate  %>
            <%= f.input :experience_level, collection: Event::EXPERIENCE, prompt: :translate %>
            <div class="row">
             <div class="col-3">
@@ -19,7 +30,7 @@
             </div>
           </div>
            <%= f.input :description, placeholder: "e.g Just looking for someone to play game of chess" %>
-           <%= f.submit class: "btn btn-primary btn-lg", style: "border-radius:10px;" %>
+           <%= f.submit class: "btn btn-primary btn-lg btn-block", style: "border-radius:10px;" %>
           <% end %>
         </div>
       </div>
