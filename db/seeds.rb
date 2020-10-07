@@ -7,6 +7,19 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
 
+puts "Taking a dump"
+
+
+
+Message.destroy_all
+Registration.destroy_all
+Event.destroy_all
+Game.destroy_all
+User.destroy_all
+Gender.destroy_all
+
+puts "Dumping completed"
+
 # variables
 genders = %w[male female transgender gender-neutral non-binary agender pangender genderqueer two-spirit third-gender]
 games = %w[scrabble connect-four cranium blokus mancala stratego catan risk pictionary othello rummikub the-game-of-life candy-land battleship trivial-pursuit cluedo monopoly backgammon checkers chess]
@@ -67,10 +80,10 @@ end
 puts 'creating 50 users'
 i = 0
 50.times do
-  User.create(email: users_email[i], password: users_passwords[0], nickname: Faker::DcComics.hero, preferred_games: games.sample((1..4).to_a.sample).join(", "), gender: Gender.find((1..10).to_a.sample), age: (16..110).to_a.sample, address: addresses.sample)
+  User.create(email: users_email[i], password: users_passwords[0], nickname: Faker::DcComics.hero, preferred_games: games.sample((1..4).to_a.sample).join(", "), gender: Gender.all.sample, age: (16..110).to_a.sample, address: addresses.sample)
   i = i +1
   end
-  User.create(email: "sandra@live.com", password: "photo$$Bread", nickname: Faker::DcComics.hero, preferred_games: games.sample((1..4).to_a.sample).join(", "), gender: Gender.find((1..10).to_a.sample), age: (16..110).to_a.sample, address: addresses.sample)
+  User.create(email: "sandra@live.com", password: "photo$$Bread", nickname: Faker::DcComics.hero, preferred_games: games.sample((1..4).to_a.sample).join(", "), gender: Gender.all.sample, age: (16..110).to_a.sample, address: addresses.sample)
 
 
   # 3- venues
@@ -86,7 +99,7 @@ end
   # 5- Events
 puts 'creating 20 events'
 20.times do
-  Event.create(title: Faker::Marketing.buzzwords, spots: (1..7).to_a.sample, description: Faker::Lorem.sentence(word_count: 25), experience_level: experience.sample, min_age: (16..35).to_a.sample, max_age: (36..110).to_a.sample, game: Game.find((1..20).to_a.sample), venue: Venue.find((1..15).to_a.sample), gender: Gender.find((1..10).to_a.sample), user: User.find((1..10).to_a.sample), date: (time_now + ((6..600).to_a.sample).hours).to_datetime)
+  Event.create(title: Faker::Marketing.buzzwords, spots: (1..7).to_a.sample, description: Faker::Lorem.sentence(word_count: 25), experience_level: experience.sample, min_age: (16..35).to_a.sample, max_age: (36..110).to_a.sample, game: Game.all.sample, venue: Venue.all.sample, gender: Gender.all.sample, user: User.all.sample, date: (time_now + ((6..600).to_a.sample).hours).to_datetime)
 end
   # 5- registrations
 puts 'creating 19 registrations and messages'
@@ -106,8 +119,3 @@ events.each do |event|
     Message.create(content: "Hi everyone, I'm so excited about this next game!", event: event, user: event.user, date: time_now  )
     Message.create(content: Faker::Movies::Lebowski.quote, event: event, user: reg.user, date: (time_now + ((1..3).to_a.sample).hours).to_datetime )
   end
-
-
-
-
-
