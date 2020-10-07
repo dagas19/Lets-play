@@ -8,13 +8,13 @@ class My::EventsController < ApplicationController
 
   def new
     @event = Event.new
-    authorize [:user, @event]
+    authorize [:my, @event]
   end
 
   def create
     @event = Event.new(event_params)
     @event.user = current_user
-    authorize [:user, @event]
+    authorize [:my, @event]
     if @event.save
       redirect_to my_events_path
     else
