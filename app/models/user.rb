@@ -5,4 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   belongs_to :gender
+
+  has_many :events
+  has_many :registrations
+  has_many :participations, through: :registrations, source: :event
 end
