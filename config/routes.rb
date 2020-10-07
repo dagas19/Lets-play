@@ -3,9 +3,9 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   get '/me', to: 'users#me'
-  resources :users, only: %i[show]
-  resources :events, only: %i[index show]
-  namespace :user do
+  resources :users, only: :show
+  resources :events, only: %i[index]
+  namespace :my do
     resources :events, only: %i[new create]
   end
 end

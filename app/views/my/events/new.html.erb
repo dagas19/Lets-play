@@ -4,7 +4,7 @@
       <div class="col-8">
         <div class="form text-white p-4">
           <h1 class="text-center">Add new event</h1>
-          <%= simple_form_for [:user, @event] do |f| %>
+          <%= simple_form_for [:my, @event] do |f| %>
            <%= f.error_notification %>
            <%= f.input :title, placeholder: "e.g. Chess duel" %>
            <%= f.input :date, as: :date %>
@@ -26,6 +26,3 @@
     </div>
   </div>
 </div>
-
-
-
