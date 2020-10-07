@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   resources :users, only: :show
   resources :events, only: %i[index show]
   namespace :my do
-    resources :events, only: %i[new create]
+    resources :events, only: %i[index new create]
   end
 end
