@@ -1,6 +1,6 @@
-<div class="navbar navbar-expand-sm navbar-background navbar-lewagon">
+<div class="navbar navbar-expand-sm navbar-background navbar-lewagon navbar-height">
   <%= link_to "#", class: "navbar-brand" do %>
-    <i class="fas fa-chess-rook text-primary navbar-rook"></i>
+    <i class="fas fa-chess-rook text-primary navbar-rook mt-4"></i>
     <% end %>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -9,7 +9,7 @@
 
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav mr-auto mt-4">
       <% if user_signed_in? %>
         <h5>
         <li class="nav-item active">
@@ -29,8 +29,8 @@
         <li class="nav-item dropdown">
           <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar-square-navbar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" id="avatar-dropdown" aria-labelledby="navbarDropdown">
-            <%= link_to "My profile", me_path, class: "dropdown-item" %>
-            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+            <%= link_to "My profile", me_path, class: "dropdown-item navbar-dropdown-text" %>
+            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item navbar-dropdown-text" %>
           </div>
         </li>
       <% else %>
