@@ -8,7 +8,6 @@ class My::EventsController < ApplicationController
     @event = Event.new(event_params)
     @event.user = current_user
     authorize [:user, @event]
-    raise
     if @event.save
       redirect_to my_events_path
     else
@@ -18,7 +17,6 @@ class My::EventsController < ApplicationController
   end
 
   def event_params
-    params.require(:event).permit(:title, :spots)
-    # params.require(:event).permit(:title, :date, :spots, :description, :experience_level, :min_age, :max_age)
+    params.require(:event).permit(:title, :date, :spots, :description, :experience_level, :min_age, :max_age, :game_id, :venue_id, :gender_id)
   end
 end
