@@ -5,7 +5,7 @@
 }
 
 .card-box {
-  background: #FAFAFA;
+  background: #D3D3D3;
   min-height: 100px;
   position: relative;
   padding: 20px 20px 20px;
@@ -17,14 +17,20 @@
   -ms-flex-pack: justify;
   justify-content: space-between;
   position: relative;
-  border-radius: 10px;
+  border-radius: 5px;
+}
+
+.card-box:hover {
+  background-color: #FAFAFA;
+  border: 1px solid rgba(223,190,106,0);
+  color: #DD3567;
+  background-position: right center;
+  box-shadow: #DD3567;
 }
 
 .events-container {
-  margin: 40px;
-  padding-top: 5%;
+  margin: 80px;
   font-size: 28px;
-
 }
 
 .events-container h3 {
@@ -81,6 +87,7 @@
   font-size: 12px; 
   line-height: 1.5; 
   bottom: 70px;
-  padding-right: 10px; 
+  padding-right: 10px;
+  letter-spacing: 1px; 
 }
 
