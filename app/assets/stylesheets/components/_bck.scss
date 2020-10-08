@@ -55,7 +55,7 @@
   background-color: #E0E0E0;
   border-radius: 20px;
   width: 700px;
-  height: 800px;
+  height: 200px;
   overflow-y: scroll;
   border: 5px solid #DD3567;
   padding: 20px;
@@ -64,15 +64,15 @@
 .info {
   width: 100%;
   padding: 10px;
+  height: 100%;
 }
 .messs {
-   padding: 5px;
-    border: 1px solid #DD3567;
-    border-radius: 5px;
-    background: lighten(#DD3567, 10%);
-    color: white;
-    margin: 20px;
-
+  padding: 5px;
+  border: 1px solid #DD3567;
+  border-radius: 5px;
+  background: lighten(#DD3567, 10%);
+  color: white;
+  margin: 20px;
 }
 .innn {
   height: 50px;
