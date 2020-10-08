@@ -20,7 +20,7 @@
                     <p>Spots left <%= @event.spots %></p>
                     <p>Date: <%= @event.date %></p>
                     <div class="text-align-left">
-                      <button class="btn btn-lg btn-primary bottom-right">Join an event</button>
+                      <%= link_to "Join an event", event_registrations_path(@event.id), method: :post, class: "btn btn-lg btn-primary bottom-right" %>
                     </div>
                   </div>
                 </div>
