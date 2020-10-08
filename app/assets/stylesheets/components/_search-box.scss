@@ -1,9 +1,19 @@
 .search-sec {
-    padding-top: 12rem;
     font-family: Sniglet;
     font-size: 12px;
-    
+    background: none;
+    padding-top: 30px;
 }
+
+.search-sec form > div {
+    flex-grow: 1;
+}
+
+.search-sec form > button {
+    width: auto;
+    padding: 14px;
+}
+
 .search-slt {
     display: block;
     width: 100%;
@@ -33,19 +43,4 @@
     width: 120%;
     height: calc(3rem + 2px) !important;
     border-radius: 0 5px 5px 0;
-}
-
-
-@media (min-width: 992px){
-    .search-sec{
-        position: relative;
-        top: -114px;
-        background: none;
-    }
-}
-
-@media (max-width: 992px){
-    .search-sec{
-        background: none;
-    }
 }
