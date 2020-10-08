@@ -1,4 +1,4 @@
-class My::EventPolicy < ApplicationPolicy
+class User::UserpolicyPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
       scope.all

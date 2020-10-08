@@ -1,6 +1,7 @@
 .banner-events {
   height: 300px;
-  background: url("game-img.png");
+  background-image: asset-url("game-img.png");
+
 
   background-size: cover;
   display: flex;
