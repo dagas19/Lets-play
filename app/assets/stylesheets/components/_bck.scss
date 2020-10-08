@@ -63,16 +63,47 @@
 
 .info {
   width: 100%;
-  padding: 20px;
+  padding: 10px;
 }
 .messs {
-  background-color: #F4F4F4;
-  padding: 10px;
-  width: 100%;
-  border: 1px solid #DD3567;
-  border-radius: 10px;
-  margin: 10px;
+   padding: 5px;
+    border: 1px solid #DD3567;
+    border-radius: 5px;
+    background: lighten(#DD3567, 10%);
+    color: white;
+    margin: 20px;
+
 }
 .innn {
   height: 50px;
+  border-radius: 10%;
+}
+.formRounded {
+  border-bottom-color: #b3b3b3;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color: #b3b3b3;
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-right-color: #b3b3b3;
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-top-color: #b3b3b3;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  height: 100px;
+  padding-left: 10px;
+  }
+.chat-input {
+  border-top: 0 none;
+  border-radius: 0 0 5px 5px;
+}
+.ttext {
+  position: absolute;
+  right: 50px;
+  bottom: 150px;
 }
