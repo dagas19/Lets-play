@@ -1,9 +1,9 @@
 import consumer from "./consumer";
 
-document.addEventListener('turbolinks:load', () => {
+const initEventMessages = () => {
   const messagesContainer = document.getElementById('messages');
   if (messagesContainer) {
-    const id = messagesContainer.dataset.chatroomId;
+    const id = messagesContainer.dataset.eventId;
 
     consumer.subscriptions.create({ channel: "EventChannel", id: id }, {
       received(data) {
@@ -11,4 +11,6 @@ document.addEventListener('turbolinks:load', () => {
       }
     });
   }
-});
+};
+
+export { initEventMessages }
