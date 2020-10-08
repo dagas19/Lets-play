@@ -17,9 +17,20 @@
 @import "filterMyEvents";
 @import "footer";
 @import "profile";
+@import "results_myevents";
 
 .btn-filter {
   width: 110px;
   margin-right: 14px;
   border: 2px solid $light-gray;
+}
+
+.lightt {
+  background-color: #E5E5E5;
+  padding-top: 16px;
+
+}
+
+.pink {
+  color: #DD3567;
 }
