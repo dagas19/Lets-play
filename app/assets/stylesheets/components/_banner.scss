@@ -1,6 +1,6 @@
 .banner {
   height: 50vh;
-  background: url("chess_pawn.jpg");
+  background: asset-url("chess_pawn.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -21,7 +21,7 @@
 }
 .bannerr {
   height: 50vh;
-  background-image: url("https://www.alicesrestaurantnj.com/images/siteimages/BoardGame.jpg");
+  background-image: asset-url("https://www.alicesrestaurantnj.com/images/siteimages/BoardGame.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
