@@ -1,92 +1,118 @@
 <div class="container">
-<div class="row">
-  <div class="col-9">
-    <div class="card">
-      <div class="card-body">
-        <div class="card-title mb-4">
-          <div class="d-flex justify-content-start">
-            <div class="image-container">
-              <img src="http://placehold.it/150x150" id="imgProfile" style="width: 150px; height: 150px" class="img-thumbnail" />
-              <div class="middle">
-                <input type="button" class="btn btn-secondary" id="btnChangePicture" value="Change" />
-                <input type="file" style="display: none;" id="profilePicture" name="file" />
-              </div>
-            </div>
-
-        <div class="ml-auto">
-            <input type="button" class="btn btn-primary d-none" id="btnDiscard" value="Discard Changes" />
-            </div>
-          </div>
-        </div>
-
-  <div class="row">
-      <div class="col-12">
-          <ul class="nav nav-tabs mb-4" id="myTab" role="tablist">
-              <li class="nav-item">
-                  <a class="nav-link active" id="basicInfo-tab" data-toggle="tab" href="#basicInfo" role="tab" aria-controls="basicInfo" aria-selected="true">Basic Info</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" id="connectedServices-tab" data-toggle="tab" href="#connectedServices" role="tab" aria-controls="connectedServices" aria-selected="false">My events</a>
-              </li>
-          </ul>
-          <div class="tab-content ml-1" id="myTabContent">
-              <div class="tab-pane fade show active" id="basicInfo" role="tabpanel" aria-labelledby="basicInfo-tab">
-
-
-                  <div class="row">
-                      <div class="col-sm-3 col-md-2 col-5">
-                          <label style="font-weight:bold;">Full Name</label>
+  <div class="row flex-lg-nowrap">
+    <div class="col">
+      <div class="row">
+        <div class="col mb-3">
+          <div class="card" style="width: 600px; border-radius: 10px">
+            <div class="card-body">
+              <div class="e-profile">
+                <div class="row">
+                  <div class="col-12 col-sm-auto mb-3">
+                    <div class="mx-auto" style="width: 140px;">
+                      <div class="d-flex justify-content-center align-items-center rounded" style="height: 140px; background-color: rgb(233, 236, 239);">
+                        <span style="color: rgb(166, 168, 170); font: bold 8pt Arial;">140x140</span>
                       </div>
-                      <div class="col-md-8 col-6">
-                          Sandra Bullock
-                      </div>
+                    </div>
                   </div>
-                  <hr />
-
-                  <div class="row">
-                      <div class="col-sm-3 col-md-2 col-5">
-                          <label style="font-weight:bold;">City</label>
+                  <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
+                    <div class="text-center text-sm-left mb-2 mb-sm-0">
+                      <h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">Stian Johansen</h4>
+                      <p class="mb-0">@m0rbid</p>
+                      <div class="text-muted"><small>Last seen 2 hours ago</small></div>
+                      <div class="mt-2">
+                        <button class="btn btn-primary" type="button">
+                          <i class="fa fa-fw fa-camera"></i>
+                          <span>Change Photo</span>
+                        </button>
                       </div>
-                      <div class="col-md-8 col-6">
-                          Trondheim
-                      </div>
+                    </div>
+                    <div class="text-center text-sm-right">
+                      <div class="text-muted"><small>Joined 09 Dec 2017</small></div>
+                    </div>
                   </div>
-                  <hr />
-
-
-                  <div class="row">
-                      <div class="col-sm-3 col-md-2 col-5">
-                          <label style="font-weight:bold;">Address</label>
+                </div>
+                <div class="tab-content pt-3">
+                  <div class="tab-pane active">
+                    <%= simple_form_for @user do |f| %>
+                      <div class="row">
+                        <div class="col">
+                          <div class="row">
+                            <div class="col">
+                              <div class="form-group">
+                                <%= f.input :name, label: 'Full name', class: 'from-control', placeholder: 'Your name..' %>
+                              </div>
+                            </div>
+                            <div class="col">
+                              <div class="form-group">
+                                <%= f.input :nickname, label: 'Nickname', class: 'form-control', placeholder: 'Your nickname..' %>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col">
+                              <div class="form-group">
+                                <%= f.input :email, label: 'Email', class: 'form-control', placeholder: 'Your email..' %>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col mb-3">
+                              <div class="form-group" data-controller="select2">
+                                <%= f.select :gender, Gender.all.map { |gender| gender.name}, {include_blank: false, required: true, include_hidden: false}, label: 'Gender', class: 'form-control gender-list' %>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                      <div class="col-md-8 col-6">
-                          Trondheimsveien 2
+                      <div class="row">
+                        <div class="col-12 col-sm-6 mb-3">
+                          <div class="mb-2"><b>Change Password</b></div>
+                          <div class="row">
+                            <div class="col">
+                              <div class="form-group">
+                                <%= f.input :encrypted_password, label: 'New Password', class: 'form-control' %>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col">
+                              <div class="form-group">
+                                <label>Confirm <span class="d-none d-xl-inline">Password</span></label>
+                                <input class="form-control" type="password" placeholder="••••••"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12 col-sm-5 offset-sm-1 mb-3">
+                          <div class="mb-2"><b>Keeping in Touch</b></div>
+                          <div class="row">
+                            <div class="col">
+                              <label>Email Notifications</label>
+                              <div class="custom-controls-stacked px-2">
+                                <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" class="custom-control-input" id="notifications-blog" checked="">
+                                  <label class="custom-control-label" for="notifications-blog">New events</label>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" class="custom-control-input" id="notifications-news" checked="">
+                                  <label class="custom-control-label" for="notifications-news">Newsletter</label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
+                      <div class="row">
+                        <div class="col d-flex justify-content-end">
+                          <button class="btn btn-primary" type="submit">Save Changes</button>
+                        </div>
+                      </div>
+                    <% end  %>
                   </div>
-                  <hr />
-                  <div class="row">
-                      <div class="col-sm-3 col-md-2 col-5">
-                          <label style="font-weight:bold;">Gender</label>
-                      </div>
-                      <div class="col-md-8 col-6">
-                          Male
-                      </div>
-                  </div>
-                  <hr />
-                  <div class="row">
-                      <div class="col-sm-3 col-md-2 col-5">
-                          <label style="font-weight:bold;">Preferred Games</label>
-                      </div>
-                      <div class="col-md-8 col-6">
-                          Monopoly
-                      </div>
-                  </div>
-                  <hr />
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
     </div>
   </div>
 </div>
