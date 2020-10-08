@@ -49,9 +49,30 @@
 .chat-box {
   color: #2F2E2E;
   position: absolute;
-  right: 200px;
+  right: 100px;
   border: 1px solid white;
   padding: 20px 50px;
-  background-color: #F4F4F4;
+  background-color: #E0E0E0;
   border-radius: 20px;
+  width: 700px;
+  height: 800px;
+  overflow-y: scroll;
+  border: 5px solid #DD3567;
+  padding: 20px;
+}
+
+.info {
+  width: 100%;
+  padding: 20px;
+}
+.messs {
+  background-color: #F4F4F4;
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #DD3567;
+  border-radius: 10px;
+  margin: 10px;
+}
+.innn {
+  height: 50px;
 }
