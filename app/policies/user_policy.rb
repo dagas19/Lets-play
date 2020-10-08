@@ -1,16 +1,11 @@
-class My::EventPolicy < ApplicationPolicy
+class UserPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
       scope.all
     end
   end
 
-  def new?
+  def me?
     true
   end
-
-  def create?
-    true
-  end
-
 end

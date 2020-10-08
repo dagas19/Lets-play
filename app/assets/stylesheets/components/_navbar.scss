@@ -27,10 +27,19 @@
 
 #avatar-dropdown {
   position: absolute;
+  background-color: #2F2E2E;
   top: 80px !important;
   right: 10px !important;
 }
 
 .navbar-margin-right {
   margin-right: 97px;
+}
+
+.navbar-height {
+  height: 70px;
+}
+
+.navbar-dropdown-text {
+  color: #DD3567;
 }
