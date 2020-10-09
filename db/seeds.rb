@@ -100,8 +100,9 @@ games.each do |game|
 end
   # 5- Events
 puts 'creating 20 events'
+events = []
 20.times do
-  Event.create(title: Faker::Marketing.buzzwords, spots: (1..7).to_a.sample, description: Faker::Lorem.sentence(word_count: 25), experience_level: experience.sample, min_age: (16..35).to_a.sample, max_age: (36..110).to_a.sample, game: Game.all.sample, venue: Venue.all.sample, gender: Gender.all.sample, user: User.all.sample, date: (time_now + ((6..600).to_a.sample).hours).to_datetime)
+  events << Event.create(title: Faker::Marketing.buzzwords, spots: (1..7).to_a.sample, description: Faker::Lorem.sentence(word_count: 25), experience_level: experience.sample, min_age: (16..35).to_a.sample, max_age: (36..110).to_a.sample, game: Game.all.sample, venue: Venue.all.sample, gender: Gender.all.sample, user: User.all.sample, date: (time_now + ((6..600).to_a.sample).hours).to_datetime)
 end
   # 5- registrations
 puts 'creating 19 registrations and messages'
@@ -127,7 +128,7 @@ events.each do |event|
 # making specific events and participations for Sandra
 15.times do
     Event.create(title: Faker::Marketing.buzzwords, spots: (1..7).to_a.sample, description: Faker::Lorem.sentence(word_count: 25), experience_level: experience.sample, min_age: (16..35).to_a.sample, max_age: (36..110).to_a.sample, game: Game.all.sample, venue: Venue.all.sample, gender: Gender.all.sample, user: User.last, date: (time_now + ((6..600).to_a.sample).hours).to_datetime)
-    Registration.create(event: Event.find(4), user: User.last)
+    Registration.create(event: events[3], user: User.last)
   end
 
 
