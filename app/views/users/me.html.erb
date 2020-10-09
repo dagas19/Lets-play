@@ -38,26 +38,38 @@
                           <div class="row">
                             <div class="col">
                               <div class="form-group">
-                                <%= f.input :name, label: 'Full name', class: 'from-control', placeholder: current_user.name %>
+                                <%= f.input :name, label: 'Full name', class: 'from-control form-control-sm', placeholder: current_user.name %>
                               </div>
                             </div>
                             <div class="col">
                               <div class="form-group">
-                                <%= f.input :nickname, label: 'Nickname', class: 'form-control', placeholder: current_user.nickname %>
+                                <%= f.input :nickname, label: 'Nickname', class: 'form-control form-control-sm', placeholder: current_user.nickname %>
                               </div>
                             </div>
                           </div>
                           <div class="row">
                             <div class="col">
                               <div class="form-group">
-                                <%= f.input :email, label: 'Email', class: 'form-control', placeholder: current_user.email %>
+                                <%= f.input :email, label: 'Email', class: 'form-control form-control-sm', placeholder: current_user.email %>
+                              </div>
+                            </div>
+                            <div class="col">
+                              <div class="form-group">
+                                <%= f.input :age, label: 'Age', class: 'form-control form-control-sm', placeholder: current_user.age %>
                               </div>
                             </div>
                           </div>
                           <div class="row">
-                            <div class="col mb-3">
+                            <div class="col">
+                              Gender
                               <div class="form-group" data-controller="select2">
                                 <%= f.select :gender, Gender.all.map { |gender| gender.name}, {include_blank: false, required: true, include_hidden: false}, label: 'Gender', class: 'form-control gender-list' %>
+                              </div>
+                            </div>
+                            <div class="col">
+                              Preferred Games
+                              <div class="form-group" data-controller="select2">
+                                <%= f.select :preferred_games, Game.all.map { |game| game.name}, {include_blank: false, required: true, include_hidden: false}, label: 'Preferred Games', class: 'form-control game-list' %>
                               </div>
                             </div>
                           </div>

@@ -9,5 +9,6 @@ import Select2 from "select2"
 export default class extends Controller {
   connect() {
     $('.gender-list').select2();
+    $('.game-list').select2();
   }
 }
