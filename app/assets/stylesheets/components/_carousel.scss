@@ -11,11 +11,13 @@ max-width: 90%;
 .carousel {
   margin-bottom: 150px;
 }
-.fa-chevron-left {
-  font-size: 50px;
+.btn-floating {
+  font-size: 50px ;
+  position: absolute;
+  left: 10px;
 }
 .fa-chevron-right {
-  font-size: 50px;
+  font-size: 150px;
 }
 .gray {
   filter: grayscale(70%);
