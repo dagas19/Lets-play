@@ -80,10 +80,10 @@ end
 puts 'creating 50 users'
 i = 0
 50.times do
-  User.create(email: users_email[i], password: users_passwords[0], nickname: Faker::DcComics.hero, preferred_games: games.sample((1..4).to_a.sample).join(", "), gender: Gender.all.sample, age: (16..110).to_a.sample, address: addresses.sample)
+  User.create(name: Faker::Name.name, email: users_email[i], password: users_passwords[0], nickname: Faker::DcComics.hero, preferred_games: games.sample((1..4).to_a.sample).join(", "), gender: Gender.all.sample, age: (16..110).to_a.sample, address: addresses.sample)
   i = i +1
   end
-  User.create(email: "sandra@live.com", password: "photo$$Bread", nickname: Faker::DcComics.hero, preferred_games: games.sample((1..4).to_a.sample).join(", "), gender: Gender.all.sample, age: (16..110).to_a.sample, address: addresses.sample)
+  User.create(name: 'Sandra Bullock', email: "sandra@live.com", password: "photo$$Bread", nickname: Faker::DcComics.hero, preferred_games: games.sample((1..4).to_a.sample).join(", "), gender: Gender.all.sample, age: (16..110).to_a.sample, address: addresses.sample)
 
 
   # 3- venues
