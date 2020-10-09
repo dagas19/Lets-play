@@ -10,4 +10,5 @@ class User < ApplicationRecord
   has_many :registrations
   has_many :participations, through: :registrations, source: :event
   has_many :messages
+  has_one_attached :photo
 end
