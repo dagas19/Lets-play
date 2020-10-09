@@ -10,6 +10,7 @@
                   <div class="col-12 col-sm-auto mb-3">
                     <div class="mx-auto" style="width: 140px;">
                       <div class="d-flex justify-content-center align-items-center rounded" style="height: 140px; background-color: rgb(233, 236, 239);" data-controller="image-preview">
+
                         <% if current_user.photo.attached? %>
                       <% image_url = cloudinary_url(current_user.photo.key) %>
                       <% else %>
@@ -17,6 +18,7 @@
                       <% end %>
                         <%= image_tag(image_url,  width: "140px", height: "140px", data: { target: "image-preview.output" }) %>
                      <!--    <span style="color: rgb(166, 168, 170); font: bold 8pt Arial;">140x140</span> -->
+                    
                       </div>
                     </div>
                   </div>

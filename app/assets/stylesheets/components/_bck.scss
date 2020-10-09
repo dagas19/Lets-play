@@ -1,5 +1,5 @@
 .bck {
-  background: linear-gradient(#4E4E4E, #000000);
+  background: linear-gradient(#4E4E4E,  #C0C0C0);
   background-repeat: no-repeat;
   background-size: cover;
   height: 1200px;
@@ -17,7 +17,7 @@
 }
 .dd {
   position: absolute;
-  left: 200px;
+  left: 400px;
 }
 .bottom-right {
    position: absolute;
@@ -33,10 +33,11 @@
 }
 .fa-dice {
   font-size: 300px;
-  color: #DD3667;
+  color:  white;
   position: absolute;
   left: 20px;
   bottom: 20px;
+  opacity: 0.4;
 }
 .fa-paper-plane {
   color: white;
@@ -56,12 +57,11 @@
   position: absolute;
   right: 100px;
   padding: 20px 50px;
-  background-color: #E0E0E0;
+  background-color:rgba(230, 230, 230, 0.2);
   border-radius: 20px;
-  width: 700px;
+  width: 600px;
   height: 900px;
   overflow-y: scroll;
-  border: 1px solid #DD3667;
   padding: 20px;
 }
 
@@ -71,7 +71,7 @@
   height: 100%;
 }
 .messs {
-  padding: 5px;
+  padding: 10px;
   border: 1px solid #2F2E2E;
   border-radius: 10px;
   background: lighten(white, 10%);
@@ -84,26 +84,23 @@
 }
 .spec {
   border-radius: 10px;
+  background-color:#DD3667;
 }
 
 .formRounded {
-  border-bottom-color: #DD3667;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   border-bottom-style: solid;
   border-bottom-width: 1px;
-  border-left-color: #DD3667;
   border-left-style: solid;
   border-left-width: 1px;
-  border-right-color: #DD3667;
   border-right-style: solid;
   border-right-width: 1px;
-  border-top-color: #DD3667;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   border-top-style: solid;
   border-top-width: 1px;
-  height: 60px;
+  height: 90px;
   padding-left: 10px;
   width: 100%;
   }
@@ -123,5 +120,17 @@
   right: 10px;
 }
 .pin {
-  border:1px solid #DD3667;
+  border:1px solid  white;
+  margin: 30px;
+}
+.avata {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+.gg {
+  position: absolute;
+  top: 84px;
+  left: 450px;
 }
