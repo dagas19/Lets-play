@@ -20,6 +20,7 @@ class EventsController < ApplicationController
     @event = Event.new(event_params)
     @event.user = current_user
     authorize @event
+    raise
     if @event.save
       redirect_to my_events_path
     else

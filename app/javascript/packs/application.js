@@ -30,10 +30,18 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 import { initEventMessages } from '../channels/event_channel'
 
+import flatpickr from 'flatpickr'
+
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   initEventMessages();
+  flatpickr("[data-behavior='flatpickr']", {
+    enableTime: true,
+    dateFormat: "Y-m-d H:i",
+    minDate: "today",
+    time_24hr: true,
+  })
 });
 
 import "controllers"
