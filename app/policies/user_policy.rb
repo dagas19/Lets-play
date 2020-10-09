@@ -8,4 +8,8 @@ class UserPolicy < ApplicationPolicy
   def me?
     true
   end
+
+  def update?
+    user == record
+  end
 end
