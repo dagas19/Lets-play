@@ -1,9 +1,15 @@
 .max {
 max-width: 90%;
+padding: 20px;
+margin: 0 180px;
+position: relative;
 }
 .card-size {
   height: 400px;
   width: 600px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border: 1px solid #C0CDE2;
 }
 .titl {
   padding-right: 120px;
@@ -11,14 +17,23 @@ max-width: 90%;
 .carousel {
   margin-bottom: 150px;
 }
-.btn-floating {
-  font-size: 50px ;
-  position: absolute;
-  left: 10px;
-}
 .fa-chevron-right {
   font-size: 150px;
 }
+.r {
+  position: absolute;
+  right: 5px;
+  bottom: 141px;
+}
+.fa-chevron-left {
+  font-size: 150px;
+}
+.l {
+  position: absolute;
+  left: -111px;
+  bottom: 141px;
+}
 .gray {
   filter: grayscale(70%);
+  height: 90%;
 }

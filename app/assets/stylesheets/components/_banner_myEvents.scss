@@ -1,0 +1,28 @@
+.page-banner {
+  background-image: url(/assets/dominos.jpg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  height: 234px;
+  background-position: center;
+
+  p {
+    font-family: $headers-font;
+    font-size: 80px;
+    color: #E5E5E5;
+  }
+}
+
+.backlit {
+  position: relative;
+}
+
+
+.backlit-box {
+    position: absolute;
+    top: 50px;
+    left: 350px;
+    width: 300px;
+    height: 30px;
+    background-color: $orange;
+    z-index: 0;
+  }
