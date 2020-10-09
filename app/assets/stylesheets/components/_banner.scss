@@ -1,16 +1,22 @@
 .banner {
-  height: 50vh;
+  height: 100vh;
   background: asset-url("chess_pawn.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
 }
-
-.banner p {
-  font-size: 30px;
-  font-weight: lighter;
+.apac {
+  position: absolute;
+  top: 500px;
+  left: 500px;
 }
+.frr {
+  position: absolute;
+  left: 300px;
+  margin-top: 60px;
+}
+
 .banner h3 {
   font-size: 20px;
 }
