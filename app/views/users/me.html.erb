@@ -20,10 +20,10 @@
                       <p class="mb-0">@m0rbid</p>
                       <div class="text-muted"><small>Last seen 2 hours ago</small></div>
                       <div class="mt-2">
-                        <button class="btn btn-primary" type="button">
-                          <i class="fa fa-fw fa-camera"></i>
-                          <span>Change Photo</span>
-                        </button>
+                        <%= simple_form_for @user do |b| %>
+                        <label for="user_photo" class="btn btn-primary">Choose a file</label>
+                        <%= b.input :photo, as: :file, label: false %>
+                        <% end %>
                       </div>
                     </div>
                     <div class="text-center text-sm-right">
