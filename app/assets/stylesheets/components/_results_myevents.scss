@@ -2,25 +2,3 @@
   background-color: #E5E5E5;
 }
 
-
-.card {
-  &:hover {
-    background-color: rgba(221, 53, 103, 0.1);
-    border: 1px solid $gray;
-    transition-delay: 500;
-  }
-}
-
-.lightt {
-  background-color: #E5E5E5;
-  padding-top: 16px;
-
-}
-
-.pink {
-  color: #DD3567;
-}
-
-.grey-text {
-  color: rgb(90, 90, 90);
-}
