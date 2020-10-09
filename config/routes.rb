@@ -4,8 +4,12 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   get '/me', to: 'users#me'
   resources :users, only: :show
-  resources :events, only: %i[index show]
-  namespace :my do
-    resources :events, only: %i[index new create]
+  resources :events, only: %i[index show create new] do
+    resources :messages, only: :create
+    resources :registrations, only: :create
   end
+  namespace :my do
+    resources :events, only: %i[index]
+  end
+
 end

@@ -1,19 +1,20 @@
 <div class="banner d-flex justify-content-center align-items-center">
-  <h3 class="text-white di m-3">Enter your location and explore...</h3>
-  <div class="form mt-5">
+  <h1><%= link_to "explore events", events_path, class: "btn-primary btn-lg", style: "border-radius: 15px" %></h1>
+<!--   <h3 class="text-white di m-3">Enter your location and explore...</h3>
+ -->  <!-- <div class="form mt-5">
     <form action="#" class="form-group">
       <div class="d-flex">
         <input type="text" class="form-control">
         <button class="btn btn-primary" style="border-radius: 10px;">Search</button>
       </div>
     </form>
-  </div>
+  </div> -->
 </div>
 <div class="jumbotron jumbotron-fluid">
   <div class="container jumb-text">
-    <p class="lead">We offer huge variety of games and lot of  and ton of players and joining to happening events every day. So if you are looking  for possibility to joinng
-cool board games event you came to right place we assure smooth time setting up  event or joining one of them without and hussle and we let you
- where you want  to play and with whom and if you really into it and want to organise new event we gonna help you with that also.</p>
+    <p class="lead">We offer a huge variety of games, and lots of players are joining the events every day. So, if you're looking to join
+a cool board game event, you've come to right place. We will assure that the events will run smooth, without any hassles and that you will have fun playing and socializing with others!
+On our platform you can also organize and setup your own events and get lots of players joining the fun, and add value and customers to your business</p>
   </div>
 </div>
 
@@ -22,11 +23,11 @@ cool board games event you came to right place we assure smooth time setting up 
     <div class="col-6 text-center">
       <div class="card-body h">
         <div class="card m-3 activee cardon">
-          <div class="card-title"><h1>avialability</h1></div>
+          <div class="card-title"><h1>Availability</h1></div>
           <div class="card-description lead">
-            <p>We offer places nearby that have boards games
-            and most importantly time is decided by players who organise
-          these events so we assure you will find right time and place for you</p>
+            <p>We offer game events nearby that have the board games
+            you want to play. At a time agreed upon by the organizer and the players,
+          these events will assure you a good time at your convenience!</p>
           </div>
         </div>
       </div>
@@ -37,9 +38,9 @@ cool board games event you came to right place we assure smooth time setting up 
           <div class="card-title display-2"><h1>excitment</h1></div>
           <div class="card-description lead">
             <p>There is nothing more
-            exciting then competing with players that has same experience
-            as you have so you can choose with whom you want
-            to compete on amazing board games
+            exciting then competing with players that are on the same leve as
+            yourself. On our platform you can choose the events you want,
+            with the appropriate skill level for you.
             </p>
           </div>
         </div>
@@ -53,7 +54,7 @@ cool board games event you came to right place we assure smooth time setting up 
           <div class="card-description lead">
             <p>But lets not forget most important reason
             why we play these awesome games, that's simply to have fun
-          and we got plenty of events offering fun time</p>
+          and we got plenty of events offering goooood times</p>
           </div>
         </div>
       </div>
@@ -69,15 +70,6 @@ cool board games event you came to right place we assure smooth time setting up 
         <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
         <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
       </div>
-      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-      <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
       <div class="carousel-inner" role="listbox">
         <div class="carousel-item active">
           <div class="row">
@@ -86,7 +78,7 @@ cool board games event you came to right place we assure smooth time setting up 
                 <div class="card-body m-4 text-center">
                   <h4 class="card-title">Chess</h4>
                 </div>
-                <%= image_tag "chesss.jpg", class: "card-img-top" %>
+                <%= image_tag "chesss.jpg", class: "card-img-top gray" %>
               </div>
             </div>
             <div class="col-md-4 clearfix d-none d-md-block">
@@ -94,7 +86,7 @@ cool board games event you came to right place we assure smooth time setting up 
                 <div class="card-body m-4 text-center">
                   <h4 class="card-title">Monopoly</h4>
                 </div>
-                <%= image_tag "monopoly.jpg", class: "card-img-top" %>
+                <%= image_tag "monopoly.jpg", class: "card-img-top gray" %>
               </div>
             </div>
             <div class="col-md-4 clearfix d-none d-md-block">
@@ -102,7 +94,7 @@ cool board games event you came to right place we assure smooth time setting up 
                 <div class="card-body m-4 text-center">
                   <h4 class="card-title">Checkers</h4>
                 </div>
-                <%= image_tag "checkers.jpg", class: "card-img-top" %>
+                <%= image_tag "checkers.jpg", class: "card-img-top gray" %>
               </div>
             </div>
           </div>
@@ -114,7 +106,7 @@ cool board games event you came to right place we assure smooth time setting up 
                 <div class="card-body m-4 text-center">
                   <h4 class="card-title">Battleship</h4>
                 </div>
-                <%= image_tag "battleship.jpg", class: "card-img-top" %>
+                <%= image_tag "battleship.jpg", class: "card-img-top gray" %>
               </div>
             </div>
             <div class="col-md-4 clearfix d-none d-md-block">
@@ -122,7 +114,7 @@ cool board games event you came to right place we assure smooth time setting up 
                 <div class="card-body m-4 text-center">
                   <h4 class="card-title">Scrabble</h4>
                 </div>
-                <%= image_tag "scrabble.jpg", class: "card-img-top" %>
+                <%= image_tag "scrabble.jpg", class: "card-img-top gray" %>
               </div>
             </div>
             <div class="col-md-4 clearfix d-none d-md-block">
@@ -130,7 +122,7 @@ cool board games event you came to right place we assure smooth time setting up 
                 <div class="card-body m-4 text-center">
                   <h4 class="card-title">Clue</h4>
                 </div>
-                <%= image_tag "clue.jpg", class: "card-img-top" %>
+                <%= image_tag "clue.jpg", class: "card-img-top gray" %>
               </div>
             </div>
           </div>
@@ -142,7 +134,7 @@ cool board games event you came to right place we assure smooth time setting up 
                 <div class="card-body m-4 text-center">
                   <h4 class="card-title">Stratego</h4>
                 </div>
-                <%= image_tag "stratego.jpg", class: "card-img-top" %>
+                <%= image_tag "stratego.jpg", class: "card-img-top gray" %>
               </div>
             </div>
             <div class="col-md-4 clearfix d-none d-md-block">
@@ -150,7 +142,7 @@ cool board games event you came to right place we assure smooth time setting up 
                 <div class="card-body m-4 text-center">
                   <h4 class="card-title">Uno</h4>
                 </div>
-                <%= image_tag "uno.jpg", class: "card-img-top" %>
+                <%= image_tag "uno.jpg", class: "card-img-top gray" %>
               </div>
             </div>
             <div class="col-md-4 clearfix d-none d-md-block">
@@ -158,7 +150,7 @@ cool board games event you came to right place we assure smooth time setting up 
                 <div class="card-body m-4 text-center">
                   <h4 class="card-title">Backgammon</h4>
                 </div>
-                <%= image_tag "backgammon.jpg", class: "card-img-top" %>
+                <%= image_tag "backgammon.jpg", class: "card-img-top gray" %>
               </div>
             </div>
           </div>

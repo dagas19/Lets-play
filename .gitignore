@@ -41,3 +41,7 @@ yarn-debug.log*
 .DS_Store
 
 status/
+
+public/assets
+public/assets
+

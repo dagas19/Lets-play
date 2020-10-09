@@ -1,13 +1,22 @@
 .back {
-  background-image: url("nnn.jpg");
+  background-image: asset-url("nnn.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100%;
+  height: 100vh;
   width: 100%;
+  filter: grayscale(60%);
 }
 .left {
   margin-left: 100px;
 }
 .form {
   margin-top: 100px;
+}
+.wrapper {
+  position: relative;
+}
+.formike {
+  position: absolute;
+  top: 100px;
+  width: 100%;
 }

@@ -1,60 +1,93 @@
+.box-border {
+  border-radius: 5px;
+  border: 1px solid gray;
+  width: 100%;
+}
+
 .card-box {
-    background: #FAFAFA;
-    min-height: 100px;
-    position: relative;
-    padding: 20px 20px 20px;
-    margin-bottom: 20px;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    position: relative;
+  background: #D3D3D3;
+  min-height: 100px;
+  position: relative;
+  padding: 20px 20px 20px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  position: relative;
+  border-radius: 5px;
+}
+
+.card-box:hover {
+  background-color: #FAFAFA;
+  border: 1px solid rgba(223,190,106,0);
+  color: #DD3567;
+  background-position: right center;
+  box-shadow: #DD3567;
 }
 
 .events-container {
-    margin: 0;
-    padding-top: 5%;
-    font-size: 28px;
+  margin: 80px;
+  font-size: 28px;
 }
 
 .events-container h3 {
-    margin: 0;
-    padding-top: 5%;
-    font-family: Sniglet;
-    font-size: 26px;
+  margin: 0;
+  padding-top: 5%;
+  font-family: Sniglet;
+  font-size: 26px;
 }
 
 .events-container h4 {
-    margin: 2px;
-    padding-top: 5%;
-    font-family: Sniglet;
-    font-size: 20px;
+  margin: 2px;
+  padding-top: 5%;
+  font-family: Sniglet;
+  font-size: 20px;
+  color: gray;
+}
+
+.events-container h5 {
+  margin: 2px;
+  padding-top: 5%;
+  font-family: Sniglet;
+  font-size: 12px;
+  color: gray;
 }
 
 .card-title h2 {
-    margin: 0;
-    padding-top: 5%;
-    font-family: Sniglet;
-    font-size: 18px;
-    line-height: 1;
-    margin-bottom: 15px;
+  margin: 0;
+  padding-top: 5%;
+  font-family: Sniglet;
+  font-size: 18px;
+  line-height: 1;
+  margin-bottom: 15px;
 }
 
 .card-title p {
-    margin: 0;
-    margin-bottom: 10px;
-    font-size: 12px;
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+
+.events-container .event-card:not(:last-child) {
+  border-bottom: 1px solid gray;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.events-container .event-card:last-child {
+  border-bottom: none;
 }
 
 .location { 
-    position: absolute; 
-    right: 0px; 
-    font-size: 12px; 
-    letter-spacing: -1px; 
-    line-height: 1.5; 
-    bottom: 70px; 
+  position: absolute; 
+  right: 0px; 
+  font-size: 12px; 
+  line-height: 1.5; 
+  bottom: 70px;
+  padding-right: 10px;
+  letter-spacing: 1px; 
 }
 

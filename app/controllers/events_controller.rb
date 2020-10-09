@@ -6,8 +6,30 @@ class EventsController < ApplicationController
   end
 
   def show
+    @message = Message.new
     @event = Event.find(params[:id])
     authorize @event
+  end
+
+  def new
+    @event = Event.new
+    authorize @event
+  end
+
+  def create
+    @event = Event.new(event_params)
+    @event.user = current_user
+    authorize @event
+    if @event.save
+      redirect_to my_events_path
+    else
+      flash[:danger] = @event.errors.full_messages.join(', ')
+      render :new
+    end
+  end
+
+  def event_params
+    params.require(:event).permit(:title, :date, :spots, :description, :experience_level, :min_age, :max_age, :game_id, :venue_id, :gender_id)
   end
 
 end

@@ -1,9 +1,11 @@
 .banner-events {
-  height: 30vh;
-  background: url("game-img.png");
+  height: 300px;
+  background-image: asset-url("game-img.png");
+
 
   background-size: cover;
   display: flex;
+  flex-direction: column;
   justify-content: left;
   align-items: left;
   color: white;
