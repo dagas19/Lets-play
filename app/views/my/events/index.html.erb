@@ -2,7 +2,7 @@
   <div class="page-banner d-flex justify-content-center align-items-center">
     <div class="backlit">
       <p>Let's Play</p>
-      <div class="backlit-box"></div>
+      <!-- <div class="backlit-box"></div> -->
     </div>
   </div>
 </div>
@@ -10,37 +10,16 @@
   <div class="row">
     <div class="col-8 pl-5 pr-5 mr-0 results">
       <div class="results-pane">
-        <div class="results-header pt-3 pb-3 pl-2">
-          <p class="text-uppercase">Your Upcoming Games</p>
+        <div class="results-header pt-3 pb-3 pl-2 mt-3">
+          <h2 class="text-uppercase">Your Upcoming <span class="pink">Games</span></h2>
           <hr>
         </div>
         <div class="results-output">
           <div class="results-grouping mb-5">
             <div class="results-grouping-title pl-2 mb-4">
-              <p class="text-uppercase">Next 24 hrs</p>
+              <h3 class="text-uppercase"><!-- Next 24 hrs --></h3>
             </div>
             <%= render "shared/card" %>
-          </div>
-          <div class="results-grouping mb-5">
-            <div class="results-grouping-title pl-2 mb-4">
-              <p>Next 7 Days</p>
-            </div>
-            <div class="container">
-              <div class="row">
-                <% @all_events.each do |event| %>
-                <div class="col-12">
-                  <div class="card">
-                    <h1><%= event.title %></h1>
-                  </div>
-                </div>
-                <% end %>
-              </div>
-            </div>
-          </div>
-          <div class="results-grouping mb-5">
-            <div class="results-grouping-title pl-2 mb-4">
-              <p>Beyond 7 days</p>
-            </div>
           </div>
         </div>
       </div>
