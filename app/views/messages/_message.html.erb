@@ -1,7 +1,7 @@
-<div class="message-container" id="message-<%= message.id %>">
-  <i class="author">
-    <span><%= message.user.nickname %></span>
-    <small><%= message.created_at.strftime("%a %b %e at %l:%M%p") %></small>
+<div class="message-container messs" id="message-<%= message.id %>">
+  <i class="author d-flex justify-content-between">
+    <h5 style="font-size: 15px;"><%= message.user.nickname %></h5>
+    <small><%= message.created_at.strftime("%l:%M%p") %></small>
   </i>
   <p><%= message.content %></p>
 </div>

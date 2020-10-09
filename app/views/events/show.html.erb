@@ -62,8 +62,7 @@
       </div>
       <div class="chat-box">
         <div class="d-flex">
-          <div class="event">
-            <h2><%= @event.title %></h2>
+          <div class="event info">
 
             <div>
               <div id="messages" data-event-id="<%= @event.id %>">
@@ -71,11 +70,17 @@
                   <%= render "messages/message", message: message %>
                 <% end %>
               </div>
-
-              <%= simple_form_for [ @event, @message ] do |f| %>
-                <%= f.input :content, label: false, placeholder: "Message ##{@event.title}" %>
-                <%= f.button :submit, "Send", class: "btn btn-primary" %>
-              <% end %>
+              <div class="ttext">
+                <%= simple_form_for [ @event, @message ] do |f| %>
+                  <%= f.input :content,as: :string,
+                                   wrapper: false,
+                                   label: false,
+                                   input_html: {
+                                     class: 'formRounded'
+                                   }, label: false, placeholder: "Message ##{@event.title}", class: "formRounded" %>
+                  <%= f.button :submit, class: "btn btn-primary fas fa-paper-plane" %>
+                  <% end %>
+              </div>
             </div>
 
           </div>
