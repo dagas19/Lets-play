@@ -4,7 +4,6 @@ class My::EventsController < ApplicationController
     @events = policy_scope([:my, Event.where(user: current_user)])
     @participations = policy_scope([:my, Registration.where(user: current_user)])
     group_events(@events, @participations)
-    raise
   end
 
   private
