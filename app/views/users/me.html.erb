@@ -9,8 +9,9 @@
                 <div class="row">
                   <div class="col-12 col-sm-auto mb-3">
                     <div class="mx-auto" style="width: 140px;">
-                      <div class="d-flex justify-content-center align-items-center rounded" style="height: 140px; background-color: rgb(233, 236, 239);">
-                        <span style="color: rgb(166, 168, 170); font: bold 8pt Arial;">140x140</span>
+                      <div class="d-flex justify-content-center align-items-center rounded" style="height: 140px; background-color: rgb(233, 236, 239);" data-controller="image-preview">
+                        <%= cl_image_tag(current_user.photo.key,  width: "140px", height: "140px", data: { target: "image-preview.output" }) %>
+                     <!--    <span style="color: rgb(166, 168, 170); font: bold 8pt Arial;">140x140</span> -->
                       </div>
                     </div>
                   </div>
@@ -22,7 +23,7 @@
                       <div class="mt-2">
                         <%= simple_form_for @user do |f| %>
                         <label for="user_photo" class="btn btn-primary">Choose a file</label>
-                        <%= f.input :photo, as: :file, label: false %>
+                        <%= f.input :photo, as: :file, label: false, class: 'photo_upload', data: { target: 'image-preview.input', action: 'image-preview#readURL' } %>
                       </div>
                     </div>
                     <div class="text-center text-sm-right">
@@ -37,7 +38,7 @@
                           <div class="row">
                             <div class="col">
                               <div class="form-group">
-                                <%= f.input :name, label: 'Full name', class: 'from-control', placeholder: 'Your name..' %>
+                                <%= f.input :name, label: 'Full name', class: 'from-control', placeholder: current_user.name %>
                               </div>
                             </div>
                             <div class="col">
@@ -49,7 +50,7 @@
                           <div class="row">
                             <div class="col">
                               <div class="form-group">
-                                <%= f.input :email, label: 'Email', class: 'form-control', placeholder: 'Your email..' %>
+                                <%= f.input :email, label: 'Email', class: 'form-control', placeholder: current_user.email %>
                               </div>
                             </div>
                           </div>
