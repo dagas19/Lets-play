@@ -13,6 +13,7 @@
 }
 .ii {
   border-radius: 15px;
+  filter: grayscale(30%);
 }
 .dd {
   position: absolute;
@@ -37,6 +38,10 @@
   left: 20px;
   bottom: 20px;
 }
+.fa-paper-plane {
+  color: white;
+  font-size: 20px;
+}
 .ttit {
   top: 15px;
 }
@@ -49,9 +54,74 @@
 .chat-box {
   color: #2F2E2E;
   position: absolute;
-  right: 200px;
-  border: 1px solid white;
+  right: 100px;
   padding: 20px 50px;
-  background-color: #F4F4F4;
+  background-color: #E0E0E0;
   border-radius: 20px;
+  width: 700px;
+  height: 900px;
+  overflow-y: scroll;
+  border: 1px solid #DD3667;
+  padding: 20px;
+}
+
+.info {
+  width: 100%;
+  padding: 10px;
+  height: 100%;
+}
+.messs {
+  padding: 5px;
+  border: 1px solid #2F2E2E;
+  border-radius: 10px;
+  background: lighten(white, 10%);
+  color: black;
+  margin: 20px;
+}
+.innn {
+  height: 50px;
+  border-radius: 10%;
+}
+.spec {
+  border-radius: 10px;
+}
+
+.formRounded {
+  border-bottom-color: #DD3667;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color: #DD3667;
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-right-color: #DD3667;
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-top-color: #DD3667;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  height: 60px;
+  padding-left: 10px;
+  width: 100%;
+  }
+.chat-input {
+  border-top: 0 none;
+  border-radius: 0 0 5px 5px;
+}
+.ttext {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  width: 100%;
+}
+.but {
+  position: absolute;
+  bottom: 13px;
+  right: 10px;
+}
+.pin {
+  border:1px solid #DD3667;
 }
