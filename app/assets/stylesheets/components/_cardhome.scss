@@ -21,3 +21,33 @@
   margin-bottom: 20px;
   max-width: 1550px;
 }
+.ser-but {
+  border-top-left-radius: 0;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 10px;
+}
+.specc {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 0;
+  width: 450px;
+}
+.for {
+  position: relative;
+}
+.gh  {
+  position: absolute;
+  top: 110px;
+  right: -600px;
+  width: 800px;
+}
+.tittt {
+  color: #DD3667;
+}
+.wrpp {
+  background: linear-gradient(#4E4E4E,  #C0C0C0);
+  height: 100%;
+  width: 100%;
+}
