@@ -23,7 +23,8 @@
               <%= f.input :spots, placeholder: "e.g. 2" %>
             </div>
           </div>
-           <%= f.input :date, as: :date %>
+          Choose date and time*<br>
+           <%= f.text_field :date, data: { behavior: "flatpickr" }, label: 'Choose date and time', placeholder: 'Date and Time' %>
            <%= f.association :gender, required: true, prompt: :translate  %>
            <%= f.input :experience_level, collection: Event::EXPERIENCE, prompt: :translate %>
            <div class="row">
