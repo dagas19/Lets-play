@@ -17,6 +17,7 @@ Event.destroy_all
 Game.destroy_all
 User.destroy_all
 Gender.destroy_all
+Venue.destroy_all
 
 puts "Dumping completed"
 
@@ -46,26 +47,26 @@ b = "Øvre Ljanskoll vei 24, 1169 Oslo, Norway"
 c = "Nordstrand Terrasse 51, 1170 Oslo, Norway"
 d = "Steinborgveien 49, 0678 Oslo, Norway"
 e = "Sigurds gate 9, 0650 Oslo, Norway"
-f = "Osterhaus' gate 14-18, 0183 Oslo, Norway"
-g = "Waldemar Thranes gate 5-19, 0171 Oslo, Norway"
+f = "Osterhaus' gate 18, 0183 Oslo, Norway"
+g = "Waldemar Thranes gate 19, 0171 Oslo, Norway"
 h = "Drammensveien 89, 0271 Oslo, Norway"
-i = "Møllesvingen 22-20, 0854 Oslo, Norway"
-j = "Vestgrensa 7-13, 0851 Oslo, Norway"
-k = "Ivar Aasens vei 11-15, 0373 Oslo, Norway"
+i = "Møllesvingen 20, 0854 Oslo, Norway"
+j = "Vestgrensa 13, 0851 Oslo, Norway"
+k = "Ivar Aasens vei 15, 0373 Oslo, Norway"
 l = "Åsstubben 42, 0381 Oslo, Norway"
 m = "Ringstabekkveien 41, 1358 Jar, Norway"
-n = "Maisen Pedersens vei 38-16, 1363 Sandvika, Norway"
-o = "Hiltonåsen 78-30, 1341 Slependen, Norway"
-op = "Østre vei 84-94, 1397 Nesøya, Norway"
-q = "Prinsessealléen 12-2, 0276 Oslo, Norway"
+n = "Maisen Pedersens vei 16, 1363 Sandvika, Norway"
+o = "Hiltonåsen 30, 1341 Slependen, Norway"
+op = "Østre vei 94, 1397 Nesøya, Norway"
+q = "Prinsessealléen 2, 0276 Oslo, Norway"
 r = "Niels Juels gate 14A, 0272 Oslo, Norway"
-s = "Henrik Ibsens gate 51-53, 0255 Oslo, Norway"
-t = "Osterhaus' gate 14-18, 0183 Oslo, Norway"
+s = "Henrik Ibsens gate 53, 0255 Oslo, Norway"
+t = "Osterhaus' gate 18, 0183 Oslo, Norway"
 u = "Nordre gate 16, 0551 Oslo, Norway"
 v = "Lovisenberggata 8, 0456 Oslo, Norway"
-w = "Omsens gate 14-10, 0478 Oslo, Norway"
-x = "Roveruds gate 13-15, 0479 Oslo, Norway"
-y = "Lindealléen 20-18, 0487 Oslo, Norway"
+w = "Thereses gate 20, 0354  Oslo, Norway"
+x = "Roveruds gate 15, 0479 Oslo, Norway"
+y = "Lindealléen 18, 0487 Oslo, Norway"
 z = "Kildeveien 43, 0590 Oslo, Norway"
 
 addresses = [a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, op, q, r, s, t, u, v, w, x, y, z]
