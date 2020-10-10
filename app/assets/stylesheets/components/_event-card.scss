@@ -1,0 +1,95 @@
+.container-e {
+  width: 100%;
+  margin: 50px;
+  height: 100%;
+}
+.event-card {
+  margin-bottom: 30px;
+  height: 350px;
+  width: 100%;
+  position: relative;
+  border-radius: 20px;
+  box-shadow: 1px 1px 5px 0px black;
+  border: solid 6px rgb(8,146,208);
+}
+.main-info {
+  background-color: #F5F5F5;
+  height: 230px;
+  width: 100%;
+  border-radius: 20px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  color: black;
+  padding: 10px;
+}
+.small-info {
+  background-color: #2F2E2E;
+  height: 118px;
+  width: 100%;
+  border-radius: 20px;
+  color: white;
+  padding: 10px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom: solid 6px rgb(8,146,208);
+}
+.event-img {
+  margin-right: 20px;
+  border-radius: 40px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  height: 200px;
+  width: 200px;
+}
+.button {
+  background-color: rgb(8,146,208);
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  font-weight: bold;
+  border-radius: 20px;
+}
+.small-avatar {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  margin-right: 20px;
+}
+.card-one {
+  width: 400px;
+}
+.eve-title {
+  color: rgb(8,146,208);
+  font-size: 36px;
+}
+.desc {
+  font-weight: bold;
+  font-size: 25px;
+}
+.fa-map-marker-alt {
+   color: red;
+   font-size: 25px;
+   margin-left: 20px;
+}
+.loc {
+  padding: 10px;
+}
+.card-two {
+  width: 300px;
+}
+.created {
+  font-size: 20px;
+}
+.created-by {
+  margin-right: 10px;
+  font-size: 20px;
+}
+.loc-d {
+  font-size: 20px;
+}
