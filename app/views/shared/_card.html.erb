@@ -18,7 +18,7 @@
     </div>
     <div class="loc d-flex">
         <p class="loc-d" ><%= event.venue.name %>  <% if user_signed_in? && current_user.address.present? %> -
-          <%= current_user.distance_to(event.venue.to_coordinates, :method => :spherical).round %> km  away <i class="fas fa-map-marker-alt"></i> <% end  %>  </p>
+          <%= (current_user.distance_to(event.venue.to_coordinates) * 1.3 ).round %> km  away <i class="fas fa-map-marker-alt"></i> <% end  %>  </p>
 
     </div>
   </div>
