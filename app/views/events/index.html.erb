@@ -7,7 +7,7 @@
       <%= render "shared/card" %>
     </div>
     <div class="col-5">
-      <div class="filter">
+      <div class="filter sticky-top">
         <div class="tfil d-flex justify-content-between align-items-center form-inline">
           <div class="inner-addon left-addon d-flex">
             <label for="cit" class="labe" >Search</label>
@@ -66,8 +66,8 @@
             </div>
           </div>
         </div>
+        <div class="mapp"id="map" style="width: 100%; height: 597px;" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
       </div>
-      <div class="sticky-top"id="map" style="width: 800px; height: 600px;" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
     </div>
   </div>
 </div>

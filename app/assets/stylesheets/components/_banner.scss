@@ -1,6 +1,6 @@
 .banner {
   height: 100vh;
-  background: asset-url("chess_pawn.jpg");
+  background: linear-gradient(-225deg, rgba(30,30,30,0.6) 30%, rgba(46,46,46,0.5) 80%), asset-url("chess_pawn.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
