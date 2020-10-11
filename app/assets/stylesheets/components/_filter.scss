@@ -129,6 +129,10 @@
 }
 .checkbox-budget:not(:checked) + label:hover{
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  transform: translate3D(0,-1px,0) scale(1.03);
+  box-shadow: 5px 5px 15px 0px #2F2E2E;
+  transition: all .4s ease;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .checkbox-budget:checked + label::before,
 .checkbox-budget:not(:checked) + label::before{
