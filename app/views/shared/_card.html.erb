@@ -4,7 +4,7 @@
     <h2 class="eve-title display-5"> <%= event.title %></h2>
     <div class="cont">
       <img src="https://static-s.aa-cdn.net/img/ios/504572536/235293dda92e8fa4ebf4d6d9a41b2bbf?v=1" alt="" class="event-img">
-      <p class="font-bold desc"> Hello tournament for chess game, there's no entry fee</p>
+      <p class="font-bold desc"><%= event.description %></p>
       <p class="font-bold desc time"><%= event.date.strftime("Will be happening this %A") %></p>
     </div>
   </div>
@@ -17,8 +17,9 @@
       <h2 class="button" >Enter</h2>
     </div>
     <div class="loc d-flex">
-        <p class="loc-d" >Central Bar - 3km  away</p>
-        <i class="fas fa-map-marker-alt"></i>
+        <p class="loc-d" ><%= event.venue.name %>  <% if user_signed_in? && current_user.address.present? %> -
+          <%= (current_user.distance_to(event.venue.to_coordinates) * 1.35 ).round %> km  away <i class="fas fa-map-marker-alt"></i> <% end  %>  </p>
+
     </div>
   </div>
 </div>
