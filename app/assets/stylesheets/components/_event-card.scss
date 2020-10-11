@@ -1,7 +1,9 @@
 .container-e {
   width: 100%;
-  margin: 50px;
+  margin-left: 0px;
+  margin-top: 20px;
   height: 100%;
+
 }
 .event-card {
   margin-bottom: 30px;
@@ -9,13 +11,13 @@
   width: 100%;
   position: relative;
   border-radius: 20px;
-  box-shadow: 1px 1px 5px 0px black;
+  box-shadow: 1px 1px 5px 0px #2F2E2E;
   border: solid 6px rgb(8,146,208);
   transition: all .5s ease;
 }
 .event-card:hover {
   transform: translate3D(0,-1px,0) scale(1.03);
-  box-shadow: 5px 5px 15px 0px black;
+  box-shadow: 5px 5px 15px 0px #2F2E2E;
   transition: all .4s ease;
 }
 .main-info {
@@ -25,7 +27,7 @@
   border-radius: 20px;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
-  color: black;
+  color: #2F2E2E;
   padding: 10px;
 }
 .small-info {
