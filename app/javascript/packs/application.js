@@ -38,13 +38,13 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
   initMapbox();
   initEventMessages();
+  scrollContents(chatLog[0]);
   flatpickr("[data-behavior='flatpickr']", {
     enableTime: true,
     dateFormat: "Y-m-d H:i",
     minDate: "today",
     time_24hr: true,
   })
-  scrollContents(chatLog[0]);
 });
 
 import "controllers"
