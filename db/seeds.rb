@@ -29,11 +29,27 @@ end
 p "#{Gender.all.count} genders created!"
 
 p 'Creating users.......'
-User.create(name: 'Joanna Gaudyn', email: "joanna@lewagon.com", password: "123456", nickname: Faker::DcComics.hero, preferred_games: game_names.sample((1..4).to_a.sample).join(", "), gender: Gender.where(name: 'female')[0], age: 25, address: 'Smedgata 34, 0651 Oslo, NO')
-User.create(name: 'Stian Johansen', email: "stian.a.johansen@gmail.com", password: "123456", nickname: Faker::DcComics.hero, preferred_games: game_names.sample((1..4).to_a.sample).join(", "), gender: Gender.where(name: 'male')[0], age: 38, address: 'Høyvegen 22, 7089 Trondheim, NO')
-User.create(name: 'Diana Faye-Schjøll', email: "diana@diana.com", password: "123456", nickname: Faker::DcComics.hero, preferred_games: game_names.sample((1..4).to_a.sample).join(", "), gender: Gender.where(name: 'female')[0], age: 21, address: 'Drammensveien 54B, 0271 Oslo, NO')
-User.create(name: 'Dovydas Savickas', email: "dovydas@dovydas.com", password: "123456", nickname: Faker::DcComics.hero, preferred_games: game_names.sample((1..4).to_a.sample).join(", "), gender: Gender.where(name: 'male')[0], age: 21, address: 'Nordstrand terrasse 15, 1170 Oslo, NO')
-User.create(name: 'April Yeats', email: "april@april.com", password: "123456", nickname: Faker::DcComics.hero, preferred_games: game_names.sample((1..4).to_a.sample).join(", "), gender: Gender.where(name: 'female')[0], age: 28, address: 'Marta Steinsviks vei 14B, 1283 Oslo, NO')
+joanna = User.create(name: 'Joanna Gaudyn', email: "joanna@lewagon.com", password: "123456", nickname: Faker::DcComics.hero, preferred_games: game_names.sample((1..4).to_a.sample).join(", "), gender: Gender.where(name: 'female')[0], age: 25, address: 'Smedgata 34, 0651 Oslo, NO')
+stian = User.create(name: 'Stian Johansen', email: "stian.a.johansen@gmail.com", password: "123456", nickname: Faker::DcComics.hero, preferred_games: game_names.sample((1..4).to_a.sample).join(", "), gender: Gender.where(name: 'male')[0], age: 38, address: 'Høyvegen 22, 7089 Trondheim, NO')
+diana = User.create(name: 'Diana Faye-Schjøll', email: "diana@diana.com", password: "123456", nickname: Faker::DcComics.hero, preferred_games: game_names.sample((1..4).to_a.sample).join(", "), gender: Gender.where(name: 'female')[0], age: 21, address: 'Drammensveien 54B, 0271 Oslo, NO')
+dovydas = User.create(name: 'Dovydas Savickas', email: "dovydas@dovydas.com", password: "123456", nickname: Faker::DcComics.hero, preferred_games: game_names.sample((1..4).to_a.sample).join(", "), gender: Gender.where(name: 'male')[0], age: 21, address: 'Nordstrand terrasse 15, 1170 Oslo, NO')
+april = User.create(name: 'April Yeats', email: "april@april.com", password: "123456", nickname: Faker::DcComics.hero, preferred_games: game_names.sample((1..4).to_a.sample).join(", "), gender: Gender.where(name: 'female')[0], age: 28, address: 'Marta Steinsviks vei 14B, 1283 Oslo, NO')
+
+file = URI.open('https://res.cloudinary.com/letsplay-boardgames/image/upload/v1602513955/1_P4ZUdPzzZRQrQVbdcHMh8g_wdmgfo.jpg')
+joanna.photo.attach(io: file, filename: '1_P4ZUdPzzZRQrQVbdcHMh8g_wdmgfo.jpg', content_type:'image/png')
+
+file = URI.open('https://res.cloudinary.com/letsplay-boardgames/image/upload/v1602514852/Jim-Carrey-2012_l9ojvk.jpg')
+stian.photo.attach(io: file, filename: 'v1602514852/Jim-Carrey-2012_l9ojvk.jpg', content_type:'image/png')
+
+file = URI.open('https://res.cloudinary.com/letsplay-boardgames/image/upload/v1602513409/AATXAJwU6seujWzSkm_WLq0jt0nQSX6g5ydiGTDTCjpRbw_s900-c-k-c0xffffffff-no-rj-mo_wupilv.jpg')
+diana.photo.attach(io: file, filename: 'v1602513409/AATXAJwU6seujWzSkm_WLq0jt0nQSX6g5ydiGTDTCjpRbw_s900-c-k-c0xffffffff-no-rj-mo_wupilv.jpg', content_type:'image/png')
+
+file = URI.open('https://res.cloudinary.com/letsplay-boardgames/image/upload/v1602514411/photo-1506794778202-cad84cf45f1d_cshxrh.jpg')
+dovydas.photo.attach(io: file, filename: 'photo-1506794778202-cad84cf45f1d_cshxrh.jpg', content_type:'image/png')
+
+file = URI.open('https://res.cloudinary.com/letsplay-boardgames/image/upload/v1602514098/97ed6b370803649addbf66144c18c194_zcp64m.png')
+april.photo.attach(io: file, filename: '97ed6b370803649addbf66144c18c194_zcp64m.png', content_type:'image/png')
+
 
 p "#{User.all.count} users created!"
 
@@ -47,13 +63,6 @@ Venue.create(name: 'Perestrojka', address: 'Storgata 13, 0155 Oslo, NO', descrip
 p "#{Venue.all.count} venues created!"
 
 p 'Creating games....'	
-
-# game_names.each do |game|
-#   file = URI.open('https://res.cloudinary.com/letsplay-boardgames/image/upload/v1602502641/Shinola-Monopoly__45775.1572100948_qhaomt.jpg')
-#   game1 = Game.new(name: game, game_type: games_cat.sample)
-# 	game1.photo.attach(io: file, filename: 'game.png', content_type:'image/png')
-# 	game1.save
-# end
 
 monopoly = Game.create(name:'monopoly', game_type: 'strategy')
 chess = Game.create(name:'chess', game_type: 'strategy')
