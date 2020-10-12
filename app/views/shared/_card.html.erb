@@ -2,7 +2,7 @@
 <div class="event-card">
   <div class="main-info text-center">
     <h2 class="eve-title display-5"> <%= event.title %></h2>
-    <div class="cont">
+    <div class="cont text-center">
       <img src="https://static-s.aa-cdn.net/img/ios/504572536/235293dda92e8fa4ebf4d6d9a41b2bbf?v=1" alt="" class="event-img">
       <p class="font-bold desc"><%= event.description %></p>
       <p class="font-bold desc time"><%= event.date.strftime("Will be happening this %A") %></p>
@@ -14,7 +14,6 @@
       <p class="created-by">Created by <%= event.user.nickname %></p>
     </div>
     <div class="butt">
-      <h2 class="button" >Enter</h2>
     </div>
     <div class="loc d-flex">
         <p class="loc-d" ><%= event.venue.name %>  <% if user_signed_in? && current_user.address.present? %> -
