@@ -38,7 +38,6 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
   initMapbox();
   initEventMessages();
-  scrollContents(chatLog[0]);
   flatpickr("[data-behavior='flatpickr']", {
     enableTime: true,
     dateFormat: "Y-m-d H:i",
@@ -60,5 +59,5 @@ document.addEventListener('turbolinks:load', () => {
 $("#user_photo").change(function() {
   readURL(this);
 });
-
+})
 import "controllers"
