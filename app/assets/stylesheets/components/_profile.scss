@@ -49,3 +49,7 @@
   position: absolute;
   z-index: -1;
 }
+
+.background-profile-page {
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8) ), url(/assets/background-profile.jpg);
+}
