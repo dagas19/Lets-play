@@ -31,6 +31,7 @@ import "bootstrap";
 import { initEventMessages } from '../channels/event_channel'
 import { initMapbox } from '../plugins/init_mapbox';
 import "controllers"
+
 import flatpickr from 'flatpickr'
 
 document.addEventListener('turbolinks:load', () => {

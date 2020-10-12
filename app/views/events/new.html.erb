@@ -23,18 +23,20 @@
               <%= f.input :spots, placeholder: "e.g. 2" %>
             </div>
           </div>
-          Choose date and time*<br>
-           <%= f.text_field :date, data: { behavior: "flatpickr" }, label: 'Choose date and time', placeholder: 'Date and Time' %>
-           <%= f.association :gender, required: true, prompt: :translate  %>
-           <%= f.input :experience_level, collection: Event::EXPERIENCE, prompt: :translate %>
            <div class="row">
-            <div class="col-3">
+            <div class="col-4">
                <%= f.input :min_age, placeholder: "25" %>
             </div>
-            <div class="col-3">
+            <div class="col-4">
                <%= f.input :max_age, placeholder: "30" %>
             </div>
+            <div class="col-4" style="line-height: 32px;">
+              Choose date and time*<br>
+               <%= f.text_field :date, data: { behavior: "flatpickr" }, label: 'Choose date and time', placeholder: 'Date and Time', class: "form-control" %>
+            </div>
           </div>
+           <%= f.association :gender, required: true, prompt: :translate  %>
+           <%= f.input :experience_level, collection: Event::EXPERIENCE, prompt: :translate %>
            <%= f.input :description, placeholder: "e.g Just looking for someone to play game of chess" %>
            <%= f.submit class: "btn btn-primary btn-lg btn-block", style: "border-radius:10px;" %>
           <% end %>
