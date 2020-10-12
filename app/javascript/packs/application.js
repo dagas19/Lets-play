@@ -59,4 +59,6 @@ $("#user_photo").change(function() {
   readURL(this);
 });
 })
+
+
 import "controllers"
