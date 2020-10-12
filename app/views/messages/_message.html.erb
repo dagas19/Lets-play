@@ -1,7 +1,9 @@
-  <div class="message-container messs" id="message-<%= message.id %>">
-    <i class="author d-flex justify-content-between">
-      <h5 style="font-size: 15px;"><%= message.user.nickname %></h5>
-      <small><%= message.created_at.strftime("%l:%M%p") %></small>
-    </i>
-    <p style='padding-left:20px;'><%= message.content %></p>
+<div class="chat-log">
+  <div class="chat-message">
+    <span class="chat-message__avatar-frame">
+      <%= image_tag "avatar-b.png", class: "chat-message__avatar" %>
+    </span>
+    <p class="chat-message__text"><%= message.content %></p>
   </div>
+</div>
+
