@@ -15,6 +15,11 @@
   border: solid 1px #2F2E2E;
   transition: all .5s ease;
 }
+.entry {
+  position: absolute;
+  right: 620px;
+  bottom: 35px;
+}
 .event-card:hover {
   transform: translate3D(0,-1px,0) scale(1.01);
   box-shadow: 2px 2px 5px 0px #2F2E2E;

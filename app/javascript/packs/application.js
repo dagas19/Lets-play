@@ -30,6 +30,8 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 import { initEventMessages } from '../channels/event_channel'
 import { initMapbox } from '../plugins/init_mapbox';
+import "controllers"
+
 import flatpickr from 'flatpickr'
 
 document.addEventListener('turbolinks:load', () => {
@@ -59,6 +61,3 @@ $("#user_photo").change(function() {
   readURL(this);
 });
 })
-
-
-import "controllers"
