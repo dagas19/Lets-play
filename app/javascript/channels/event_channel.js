@@ -1,5 +1,4 @@
 import consumer from "./consumer";
-import import '../app/assets/stylesheets/application.scss';
 
 const initEventMessages = () => {
   const messagesContainer = document.getElementById('messages');
@@ -14,5 +13,4 @@ const initEventMessages = () => {
   }
 };
 
-scrollContents(chatLog[0]);
 export { initEventMessages }

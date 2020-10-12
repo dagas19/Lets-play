@@ -44,7 +44,6 @@ document.addEventListener('turbolinks:load', () => {
     minDate: "today",
     time_24hr: true,
   })
-  scrollContents(chatLog[0]);
 });
 
 import "controllers"
