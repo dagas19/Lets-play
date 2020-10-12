@@ -16,7 +16,7 @@
     </div>
     <div>
 
-      <%= link_to "Enter the event", event_path(event), class: "btn entry btn-primary btn-lg" %>
+      <%= link_to "Enter the event", event_path(event), class: "btn entry btn-primary btn-lg", style: "-webkit-text-stroke: 1px white;" %>
     </div>
     <div class="loc d-flex">
         <p class="loc-d" ><%= event.venue.name %>  <% if user_signed_in? && current_user.address.present? %> -
