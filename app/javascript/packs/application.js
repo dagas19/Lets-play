@@ -30,7 +30,6 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 import { initEventMessages } from '../channels/event_channel'
 import { initMapbox } from '../plugins/init_mapbox';
-
 import flatpickr from 'flatpickr'
 
 document.addEventListener('turbolinks:load', () => {
@@ -44,6 +43,20 @@ document.addEventListener('turbolinks:load', () => {
     minDate: "today",
     time_24hr: true,
   })
-});
+  function readURL(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
 
+    reader.onload = function(e) {
+      $('#user-profile-image').attr('src', e.target.result);
+    }
+
+    reader.readAsDataURL(input.files[0]); // convert to base64 string
+  }
+}
+
+$("#user_photo").change(function() {
+  readURL(this);
+});
+})
 import "controllers"
