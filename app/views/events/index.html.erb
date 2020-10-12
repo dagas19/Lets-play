@@ -1,43 +1,73 @@
 <div class="banner-events">
-  <h1>Let's Play</h1>
-
-  <div class="search-sec">
-    <form class="w-75 d-flex" action="#" method="post" novalidate="novalidate">
-      <div>
-        <input type="text" class="form-control search-slt" id="left" placeholder="Enter game">
-      </div>
-      <div>
-        <input type="text" class="form-control search-slt" placeholder="This week">
-      </div>
-      <div>
-        <select class="form-control search-slt" id="exampleFormControlSelect1">
-         <option>In a radius of</option>
-         <option>1 km</option>
-         <option>2 km</option>
-         <option>3 km</option>
-         <option>4 km</option>
-         <option>5 km</option>
-       </select>
-     </div>
-
-      <button class="btn btn-primary wrn-btn" type="submit">
-        <i class="fas fa-search"></i>
-      </button>
-    </form>
-  </div>
 </div>
-
-
-<div class="events-page-content">
-  <div class="events-container">
-    <h3 class="mb-5">Happening in Oslo this week:</h3>
-    <div class="event-group">
-      <div class="box-border">
-        <%= render "shared/card" %>
+<div class="container-e pl-5 pr-5">
+  <div class="row">
+    <div class="col-7">
+      <%= render "shared/card" %>
+    </div>
+    <div class="col-5">
+      <div class="filter sticky-top">
+        <div class="tfil d-flex justify-content-between align-items-center form-inline">
+          <div class="inner-addon left-addon d-flex">
+            <label for="cit" class="labe" >Search</label>
+            <i class="fas fa-search"></i>
+            <input type="text" id="cit" class="form-control sear" placeholder="City" />
+          </div>
+          <div class="sorr">
+            <p>Sort by method</p>
+          </div>
+        </div>
+        <div class="bot-fil d-flex">
+          <div class="all">
+            <h3>Preffered games</h3>
+            <div class="list-t">
+             <div>
+                <input class="checkbox-budget" type="radio" name="budget" id="budget-1">
+                <label class="for-checkbox-budget" for="budget-1">
+                  <span >Strategy</span>
+                </label><!--
+                --><input class="checkbox-budget" type="radio" name="budget" id="budget-2">
+                <label class="for-checkbox-budget" for="budget-2">
+                  <span >Betrayl</span>
+                </label><!--
+                --><input class="checkbox-budget" type="radio" name="budget" id="budget-3">
+                <label class="for-checkbox-budget" for="budget-3">
+                  <span >Puzzle</span>
+                </label><!--
+                --><input class="checkbox-budget" type="radio" name="budget" id="budget-4">
+                <label class="for-checkbox-budget" for="budget-4">
+                  <span >Adventure</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="gametype">
+              <h3>Date around</h3>
+             <div class="list-t">
+             <div>
+                <input class="checkbox-budget" type="radio" name="budget" id="budget-5">
+                <label class="for-checkbox-budget" for="budget-5">
+                  <span>Today</span>
+                </label><!--
+                --><input class="checkbox-budget" type="radio" name="budget" id="budget-6">
+                <label class="for-checkbox-budget" for="budget-6">
+                  <span>This week</span>
+                </label><!--
+                --><input class="checkbox-budget" type="radio" name="budget" id="budget-7">
+                <label class="for-checkbox-budget" for="budget-7">
+                  <span>This weekend</span>
+                </label><!--
+                --><input class="checkbox-budget" type="radio" name="budget" id="budget-8">
+                <label class="for-checkbox-budget" for="budget-8">
+                  <span>All</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mapp"id="map" style="width: 100%; height: 597px;" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
       </div>
     </div>
-
-  <div class="events-filter-bar " style="background-color: black">
-
   </div>
 </div>
+

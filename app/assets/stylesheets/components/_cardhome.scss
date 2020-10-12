@@ -22,12 +22,16 @@
   max-width: 1550px;
 }
 .ser-but {
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
   font-size: 44px;
   font-family: Bungee;
+  border-radius: 20px;
+}
+.ser-butt {
+  font-size: 44px;
+  font-family: Bungee;
+  border-radius: 20px;
+  background-color: #C0C0C0;
+  border: 1px solid #4E4E4E;
 }
 .specc {
   border-top-left-radius: 10px;
@@ -47,7 +51,7 @@
   width: 800px;
 }
 .tittt {
-  color: #DD3667;
+  color: rgb(8,146,208);
 }
 .wrpp {
   background: linear-gradient(#4E4E4E,  #C0C0C0);
@@ -59,4 +63,7 @@
 }
 .displ {
   font-size: 50px;
+}
+.dded {
+  margin-left: 380px;
 }

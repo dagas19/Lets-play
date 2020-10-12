@@ -1,12 +1,26 @@
 <% @events.each do |event| %>
-<div class="card-box event-card" >
-  <div class="card-title">
-      <h2> <%= event.title %></h2>
-      <p><%= event.description %><em style="color: #DD3567"> - 2 spots left!</em></p>
-      <p><%= event.date %>
-      <p><%= event.game.name %></p>
-      <span class="location"><i class="fas fa-map-marker-alt"></i>  Central Bar - 3km  away<br>Created by <%= event.user.nickname %></span>
+<div class="event-card">
+  <div class="main-info text-center">
+    <h2 class="eve-title display-5"> <%= event.title %></h2>
+     <div class="cont text-center">
+      <%=  cl_image_tag event.game.photo.key, class: "event-img", height: 300, width: 300, crop: :fill %>
+       <p class="font-bold desc"><%= event.description %></p>
+       <p class="font-bold desc time"><%= event.date.strftime("Will be happening this %A") %></p>
+    </div>
   </div>
-  <%= link_to " ", event_path(event), class: "stretched-link"%>
+  <div class="small-info d-flex justify-content-between align-items-center">
+    <div class="sma d-flex">
+      <%=  cl_image_tag event.user.photo.key, class: "small-avatar", height: 50, width: 50, crop: :fill %>
+      <p class="created-by">Created by <%= event.user.nickname %></p>
+    </div>
+    <div>
+
+      <%= link_to "Enter the event", event_path(event), class: "btn entry btn-primary btn-lg", style: "-webkit-text-stroke: 1px white;" %>
+    </div>
+    <div class="loc d-flex">
+        <p class="loc-d" ><%= event.venue.name %>  <% if user_signed_in? && current_user.address.present? %> -
+          <%= (current_user.distance_to(event.venue.to_coordinates) * 1.35 ).round %> km  away <i class="fas fa-map-marker-alt"></i> <% end  %>  </p>
+    </div>
+  </div>
 </div>
 <% end %>
