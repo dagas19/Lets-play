@@ -33,16 +33,13 @@
 }
 .fa-dice {
   font-size: 300px;
-  color:  white;
+  color:  rgba(8,146,208, 0.7);
   position: absolute;
   left: 20px;
   bottom: 20px;
   opacity: 0.4;
 }
-.fa-paper-plane {
-  color: white;
-  font-size: 20px;
-}
+
 .ttit {
   top: 15px;
 }
@@ -77,6 +74,8 @@
   background: lighten(white, 10%);
   color: black;
   margin: 20px;
+  margin-top: 0;
+  width: 100%;
 }
 .innn {
   height: 50px;
@@ -104,10 +103,6 @@
   padding-left: 10px;
   width: 100%;
   }
-.chat-input {
-  border-top: 0 none;
-  border-radius: 0 0 5px 5px;
-}
 .ttext {
   position: absolute;
   right: 0px;
