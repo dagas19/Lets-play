@@ -30,7 +30,6 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 import { initEventMessages } from '../channels/event_channel'
 import { initMapbox } from '../plugins/init_mapbox';
-
 import flatpickr from 'flatpickr'
 
 document.addEventListener('turbolinks:load', () => {
