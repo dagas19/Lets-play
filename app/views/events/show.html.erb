@@ -28,12 +28,12 @@
                       </time>
                     </div>
                     <% if (@event.registrations.pluck(:user_id).include?(current_user.id)) || (@event.spots < @event.registrations.count) %>
-                    <div class="btn btn-secondary text-align-left bottom-right">
-                      Join an event
+                    <div class="text-align-left bottom-right">
+                      <button type="button" class="btn btn-secondary btn-lg" disabled>Join event</button>
                     </div>
                     <% else %>
                     <div class="text-align-left">
-                      <%= link_to "Join an event", event_registrations_path(@event.id), method: :post, class: "btn btn-lg btn-primary bottom-right" %>
+                      <%= link_to "Join event", event_registrations_path(@event.id), method: :post, class: "btn btn-lg btn-primary bottom-right" %>
                     </div>
                     <% end %>
                   </div>
