@@ -1,5 +1,6 @@
 
 <div class="container mt-5 mb-5">
+  <%= simple_form_for @user, html: { autocomplete: "off" } do |f| %>
   <div class="row justify-content-center">
     <div class="col">
       <div class="row justify-content-center">
@@ -28,8 +29,8 @@
                       <h4 class="pt-sm-2 pb-1 mb-0 text-nowrap"><%= current_user.name %></h4>
                       <p class="mb-0">@<%= current_user.nickname %></p>
                       <div class="mt-2">
-                        <%= simple_form_for @user do |f| %>
-                        <label for="user_photo" class="btn btn-primary">Choose a file</label>
+
+                        <label for="user_photo" class="btn btn-primary mt-4">Choose a file</label>
                         <%= f.input :photo, as: :file, label: false, class: 'photo_upload' %>
                       </div>
                     </div>
@@ -45,31 +46,31 @@
                           <div class="row">
                             <div class="col">
                               <div class="form-group">
-                                <%= f.input :name, label: 'Full name', class: 'from-control form-control-sm', placeholder: current_user.name %>
+                                <%= f.input :name, label: 'Full name', input_html: {class: 'form-control-sm'}, placeholder: current_user.name %>
                               </div>
                             </div>
                             <div class="col">
                               <div class="form-group">
-                                <%= f.input :nickname, label: 'Nickname', class: 'form-control form-control-sm', placeholder: current_user.nickname %>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col">
-                              <div class="form-group">
-                                <%= f.input :address, label: 'Address', class: 'form-control' %>
+                                <%= f.input :nickname, label: 'Nickname', input_html: {class: 'form-control-sm'}, placeholder: current_user.nickname %>
                               </div>
                             </div>
                           </div>
                           <div class="row">
                             <div class="col">
                               <div class="form-group">
-                                <%= f.input :email, label: 'Email', class: 'form-control form-control-sm', placeholder: current_user.email %>
+                                <%= f.input :address, label: 'Address', input_html: {class: 'form-control-sm'} %>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col">
+                              <div class="form-group">
+                                <%= f.input :email, label: 'Email', input_html: {class: 'form-control-sm'}, placeholder: current_user.email %>
                               </div>
                             </div>
                             <div class="col">
                               <div class="form-group">
-                                <%= f.input :age, label: 'Age', class: 'form-control form-control-sm', placeholder: current_user.age %>
+                                <%= f.input :age, label: 'Age', input_html: {class: 'form-control-sm'}, placeholder: current_user.age %>
                               </div>
                             </div>
                           </div>
@@ -77,7 +78,10 @@
                             <div class="col">
                               Gender
                               <div class="form-group" data-controller="select2">
-                                <%= f.select :gender, Gender.all.map { |gender| gender.name}, {include_blank: false, required: true, include_hidden: false}, label: 'Gender', class: 'form-control select2-list' %>
+                                <%= f.select :gender_id, Gender.all.map { |gender| [gender.name, gender.id]},
+                                {include_blank: false, required: true, include_hidden: false, selected: current_user.gender.id},
+                                label: 'Gender', class: 'form-control select2-list'
+                                 %>
                               </div>
                             </div>
                             <div class="col">
@@ -99,7 +103,7 @@
                         <%= link_to "Change password?", edit_user_registration_path, class: "mt-1" %>
                         </div>
                       </div>
-                    <% end  %>
+
                   </div>
                 </div>
               </div>
@@ -108,4 +112,5 @@
         </div>
     </div>
   </div>
+  <% end  %>
 </div>
