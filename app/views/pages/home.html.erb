@@ -5,8 +5,8 @@
     <h1 class="tittt display-1">let's play</h1>
     <p class="displ text-white text-bold">Here you can join board game events and even <br> organise them yourself</p>
     <div class="d-flex justify-content-between dded" style="width: 550px;">
-      <button class='btn btn-primary ser-but btn-lg'>events</button>
-      <button class='btn btn-primary ser-butt btn-lg'>Organise</button>
+      <%= link_to "events", events_path, class: "btn btn-primary ser-but btn-lg" %>
+      <%= link_to "organise", new_event_path, class: "btn btn-primary ser-butt btn-lg" %>
     </div>
   </div>
 </div>
