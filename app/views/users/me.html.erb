@@ -15,7 +15,7 @@
                         <% if current_user.photo.attached? %>
                       <% image_url = cloudinary_url(current_user.photo.key) %>
                       <% else %>
-                      <% image_url = 'https://kitt.lewagon.com/placeholder/users/ssaunier' %>
+                      <% image_url = 'https://miro.medium.com/max/395/1*reXbWdk_3cew69RuAUbVzg.png' %>
                       <% end %>
                         <%= image_tag(image_url,  width: "140px", height: "140px", id: "user-profile-image") %>
                      <!--    <span style="color: rgb(166, 168, 170); font: bold 8pt Arial;">140x140</span> -->
