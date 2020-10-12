@@ -46,3 +46,14 @@
 .update-info {
   margin-top: 32px;
 }
+
+
+.active {
+  &:hover {
+    color: #F4F4F4;
+    border: 2px solid #DD3667;
+    background-color: rgb(100, 100, 100);
+    padding: 5px 10px;
+    border-radius: 8px;
+  }
+}
