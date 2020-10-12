@@ -8,7 +8,6 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
 }
 
 .navbar-background {
@@ -37,9 +36,19 @@
 }
 
 .navbar-height {
-  height: 90px;
+  height: 110px;
 }
 
 .navbar-dropdown-text {
-  color: #DD3567;
+  color: rgb(8,146,208);
+}
+
+.navbar-logo {
+  height: 100px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.navbar-pointer {
+  cursor: pointer;
 }
