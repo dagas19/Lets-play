@@ -67,7 +67,12 @@ Event.create(title: 'Bridge night for seniors', spots: (5..15).to_a.sample, gend
 
 
 
-
-
+p "Creating registrations....Stian please don't be a tawt and don't delete these registrations"
+Registration.create(event: Event.find(1), user: User.first)
+Registration.create(event: Event.find(2), user: User.first)
+Registration.create(event: Event.find(3), user: User.first)
+Registration.create(event: Event.find(4), user: User.first)
+Registration.create(event: Event.find(5), user: User.first)
+Registration.create(event: Event.find(6), user: User.first)
 
 
