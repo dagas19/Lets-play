@@ -1,3 +1,5 @@
+
+<div class="background-profile-page"></div>
 <div class="container mt-5 mb-5">
   <div class="row justify-content-center">
     <div class="col">
@@ -16,25 +18,24 @@
                       <% else %>
                       <% image_url = 'https://kitt.lewagon.com/placeholder/users/ssaunier' %>
                       <% end %>
-                        <%= image_tag(image_url,  width: "140px", height: "140px", data: { target: "image-preview.output" }) %>
+                        <%= image_tag(image_url,  width: "140px", height: "140px", id: "user-profile-image") %>
                      <!--    <span style="color: rgb(166, 168, 170); font: bold 8pt Arial;">140x140</span> -->
-                    
+
                       </div>
                     </div>
                   </div>
                   <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
                     <div class="text-center text-sm-left mb-2 mb-sm-0">
-                      <h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">Stian Johansen</h4>
-                      <p class="mb-0">@m0rbid</p>
-                      <div class="text-muted"><small>Last seen 2 hours ago</small></div>
+                      <h4 class="pt-sm-2 pb-1 mb-0 text-nowrap"><%= current_user.name %></h4>
+                      <p class="mb-0">@<%= current_user.nickname %></p>
                       <div class="mt-2">
                         <%= simple_form_for @user do |f| %>
                         <label for="user_photo" class="btn btn-primary">Choose a file</label>
-                        <%= f.input :photo, as: :file, label: false, class: 'photo_upload', data: { target: 'image-preview.input', action: 'image-preview#readURL' } %>
+                        <%= f.input :photo, as: :file, label: false, class: 'photo_upload' %>
                       </div>
                     </div>
                     <div class="text-center text-sm-right">
-                      <div class="text-muted"><small>Joined 08 Oct 2020</small></div>
+                      <div class="text-muted"><small>Joined: <%= current_user.created_at.strftime("%m-%d-%y") %></small></div>
                     </div>
                   </div>
                 </div>
@@ -57,6 +58,13 @@
                           <div class="row">
                             <div class="col">
                               <div class="form-group">
+                                <%= f.input :address, label: 'Address', class: 'form-control' %>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col">
+                              <div class="form-group">
                                 <%= f.input :email, label: 'Email', class: 'form-control form-control-sm', placeholder: current_user.email %>
                               </div>
                             </div>
@@ -70,57 +78,20 @@
                             <div class="col">
                               Gender
                               <div class="form-group" data-controller="select2">
-                                <%= f.select :gender, Gender.all.map { |gender| gender.name}, {include_blank: false, required: true, include_hidden: false}, label: 'Gender', class: 'form-control gender-list' %>
+                                <%= f.select :gender, Gender.all.map { |gender| gender.name}, {include_blank: false, required: true, include_hidden: false}, label: 'Gender', class: 'form-control select2-list' %>
                               </div>
                             </div>
                             <div class="col">
-                              Preferred Games
+                              Preferred Game
                               <div class="form-group" data-controller="select2">
-                                <%= f.select :preferred_games, Game.all.map { |game| game.name}, {include_blank: false, required: true, include_hidden: false}, label: 'Preferred Games', class: 'form-control game-list' %>
+                                <%= f.select :preferred_games, Game.all.map { |game| game.name}, {include_blank: false, required: true, include_hidden: false}, label: 'Preferred Games', class: 'form-control select2-list' %>
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
                       <div class="row">
-                        <div class="col-12 col-sm-6 mb-3">
-                          <div class="mb-2"><b>Change Password</b></div>
-                          <div class="row">
-                            <div class="col">
-                              <div class="form-group">
-                                <%= f.input :encrypted_password, label: 'New Password', class: 'form-control' %>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col">
-                              <div class="form-group">
-                                <label>Confirm <span class="d-none d-xl-inline">Password</span></label>
-                                <input class="form-control" type="password" placeholder="••••••"></div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-12 col-sm-5 offset-sm-1 mb-3">
-                          <div class="mb-2"><b>Keeping in Touch</b></div>
-                          <div class="row">
-                            <div class="col">
-                              <label>Email Notifications</label>
-                              <div class="custom-controls-stacked px-2">
-                                <div class="custom-control custom-checkbox">
-                                  <input type="checkbox" class="custom-control-input" id="notifications-blog" checked="">
-                                  <label class="custom-control-label" for="notifications-blog">New events</label>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                  <input type="checkbox" class="custom-control-input" id="notifications-news" checked="">
-                                  <label class="custom-control-label" for="notifications-news">Newsletter</label>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col d-flex justify-content-end">
+                        <div class="col d-flex justify-content-beginning">
                           <button class="btn btn-primary" type="submit">Save Changes</button>
                         </div>
                       </div>
@@ -133,4 +104,5 @@
         </div>
     </div>
   </div>
+</div>
 </div>
