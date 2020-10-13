@@ -1,7 +1,7 @@
 <% @events.each do |event| %>
 <div class="event-card">
   <div class="main-info text-center">
-    <h2 class="eve-title display-5"> <%= event.title %></h2>
+    <h2 class="eve-title display-5"> <%= event.title %> <%= event.game_id %></h2>
      <div class="cont text-center">
       <%=  cl_image_tag event.game.photo.key, class: "event-img", height: 300, width: 300, crop: :fill %>
        <p class="font-bold desc"><%= event.description %></p>
