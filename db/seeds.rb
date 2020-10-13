@@ -125,3 +125,22 @@ Event.create(title: 'Backgammon night for seniors', spots: (5..15).to_a.sample, 
  Event.all.each { |event| p event.title }
 
 
+p "Creating registrations"
+Registration.create(event: Event.first, user: User.first)
+Registration.create(event: Event.first, user: User.last)
+Registration.create(event: Event.first, user: User.where(name: 'Dovydas Savickas')[0])
+Registration.create(event: Event.first, user: User.where(name: 'Diana Faye-Schjøll')[0])
+Registration.create(event: Event.last, user: User.first)
+Registration.create(event: Event.last, user: User.where(name: 'Dovydas Savickas')[0])
+Registration.create(event: Event.last, user: User.where(name: 'Diana Faye-Schjøll')[0])
+Registration.create(event: Event.last, user: User.where(name: 'April Yeats')[0])
+
+
+p "creating messages"
+Message.create(content: "Stian enjoys deleting all of John's work in the seed file only for John to have to have to do the work all over again", date: (Time.now + ((1..3).to_a.sample).hours).to_datetime, event: Event.where(title: 'Girls Monopoly bonanza!')[0], user: User.where(name: 'April Yeats')[0])
+Message.create(content: "I know, it does get on John's nerves.", date: (Time.now + ((1..3).to_a.sample).hours).to_datetime, event: Event.where(title: 'Girls Monopoly bonanza!')[0], user: User.where(name: 'Dovydas Savickas')[0])
+Message.create(content: "Stian enjoys deleting all of John's work in the seed file only for John to have to have to do the work all over again", date: (Time.now + ((1..3).to_a.sample).hours).to_datetime, event: Event.where(title: 'Backgammon night for seniors')[0], user: User.where(name: 'April Yeats')[0])
+Message.create(content: "I know, it does get on John's nerves.", date: (Time.now + ((1..3).to_a.sample).hours).to_datetime, event: Event.where(title: 'Backgammon night for seniors')[0], user: User.where(name: 'Dovydas Savickas')[0])
+Message.create(content: "Stian enjoys deleting all of John's work in the seed file only for John to have to have to do the work all over again", date: (Time.now + ((1..3).to_a.sample).hours).to_datetime, event: Event.where(title: 'Checkers night!!')[0], user: User.where(name: 'April Yeats')[0])
+Message.create(content: "I know, it does get on John's nerves.", date: (Time.now + ((1..3).to_a.sample).hours).to_datetime, event: Event.where(title: 'Checkers night!!')[0], user: User.where(name: 'Dovydas Savickas')[0])
+
