@@ -1,5 +1,5 @@
 <% @events.each do |event| %>
-<div class="event-card">
+<div class="event-card" data-game-type="<%= event.game.game_type %>">
   <div class="main-info text-center">
     <h2 class="eve-title display-5"> <%= event.title %></h2>
      <div class="cont text-center">

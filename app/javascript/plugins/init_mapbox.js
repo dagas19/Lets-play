@@ -1,9 +1,12 @@
 import mapboxgl from 'mapbox-gl';
 
+let map;
+let mapMarkers = [];
+
 // build the map
 const buildMap = (mapElement) => {
   mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
-  const map = new mapboxgl.Map({
+  map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v10'
   });
@@ -14,10 +17,11 @@ const addMarkersToMap = (map, markers) => {
   markers.forEach((marker) => {
     const popup = new mapboxgl.Popup().setHTML(marker.infoWindow);
 
-    new mapboxgl.Marker()
+    const m = new mapboxgl.Marker()
       .setLngLat([ marker.lng, marker.lat ])
       .setPopup(popup)
       .addTo(map);
+    mapMarkers.push(m)
   });
 }
 
@@ -30,11 +34,21 @@ const fitMapToMarkers = (map, markers) => {
 const initMapbox = () => {
   const mapElement = document.getElementById('map');
   if (mapElement) {
-   const map = buildMap(mapElement);
-   const markers = JSON.parse(mapElement.dataset.markers)
-   addMarkersToMap(map, markers);
-   fitMapToMarkers(map, markers);
+    buildMap(mapElement)
+    rebuildMap(JSON.parse(mapElement.dataset.markers), true)
   }
 };
 
-export { initMapbox };
+const clearMarkers = () => {
+  mapMarkers.forEach(marker => marker.remove())
+}
+
+const rebuildMap = (markers, init = false) => {
+  clearMarkers();
+  addMarkersToMap(map, markers);
+  if (init) {
+    fitMapToMarkers(map, markers);
+  }
+}
+
+export { initMapbox, rebuildMap };
