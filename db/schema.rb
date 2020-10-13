@@ -46,12 +46,10 @@ ActiveRecord::Schema.define(version: 2020_10_11_144351) do
     t.integer "max_age"
     t.bigint "game_id", null: false
     t.bigint "venue_id", null: false
-    t.bigint "gender_id", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["game_id"], name: "index_events_on_game_id"
-    t.index ["gender_id"], name: "index_events_on_gender_id"
     t.index ["user_id"], name: "index_events_on_user_id"
     t.index ["venue_id"], name: "index_events_on_venue_id"
   end
@@ -122,7 +120,6 @@ ActiveRecord::Schema.define(version: 2020_10_11_144351) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "events", "games"
-  add_foreign_key "events", "genders"
   add_foreign_key "events", "users"
   add_foreign_key "events", "venues"
   add_foreign_key "messages", "events"
