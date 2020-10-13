@@ -132,8 +132,8 @@ Registration.create(event: Event.first, user: User.last)
 Registration.create(event: Event.first, user: User.where(name: 'Dovydas Savickas')[0])
 Registration.create(event: Event.first, user: User.where(name: 'Diana Faye-Schjøll')[0])
 Registration.create(event: Event.last, user: User.first)
-Registration.create(event: Event.last, user: User.where(name: 'Stian Johansen')[0])
 Registration.create(event: Event.last, user: User.where(name: 'Dovydas Savickas')[0])
 Registration.create(event: Event.last, user: User.where(name: 'Diana Faye-Schjøll')[0])
+Registration.create(event: Event.last, user: User.where(name: 'April Yeats')[0])
 
 
