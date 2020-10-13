@@ -1,3 +1,69 @@
 .pink {
   color: #DD3667;
 }
+
+.results-tabs {
+  word-spacing: 16px;
+  margin-left: 48px;
+}
+
+.inactive-myEvents {
+  color: rgb(200, 200, 200);
+  padding: 5px 10px;
+
+  &:hover {
+    border: 1px solid #DD3667;
+
+    border-radius: 8px;
+  }
+}
+
+
+.plaque {
+  background-image: linear-gradient(to right, #F4F4F4, #DD3667);
+  color: #2F2E2D;
+  padding-top: 0;
+  margin-top: 8px;
+  margin-left: 8px;
+  border-radius: 5px;
+  max-width: 280px;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.small-avatar {
+  height: 30px;
+  width: 30px;
+  padding: 0;
+  margin-right: 0;
+}
+
+
+.nametag {
+  margin-bottom: 0px;
+}
+
+.player-groups {
+  border: 2px solid #F4F4F4;
+  border-radius: 16px;
+  box-shadow: 5px 5px 5px rgb(100, 100, 100);
+}
+
+.update-info {
+  margin-top: 32px;
+}
+
+
+.active-myEvents {
+
+  text-decoration: underline;
+  color: #DD3667;
+}
+
+
+.background-dark {
+  height: 1200px;
+}
+

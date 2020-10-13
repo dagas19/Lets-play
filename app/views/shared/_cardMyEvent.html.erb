@@ -1,7 +1,7 @@
 <% @events.each do |event| %>
 <div class="event-card" data-myevent= "<%= event.user == current_user %>" data-eventID= "<%= event.id %>">
   <div class="main-info text-center">
-    <h2 class="eve-title display-5"> <%= event.title %> <%= event.game_id %></h2>
+    <h2 class="eve-title display-5"> <%= event.title %></h2>
      <div class="cont text-center">
       <%=  cl_image_tag event.game.photo.key, class: "event-img", height: 300, width: 300, crop: :fill %>
        <p class="font-bold desc"><%= event.description %></p>
@@ -24,7 +24,7 @@
       <p class="created-by">Created by <%= event.user.nickname %></p>
     </div>
     <div>
-      <a href="<%= event_path(event) %>" class="btn  btn-primary btn-lg stretched-link">Enter the event</a>
+      <a href="<%= event_path(event) %>" class="btn  btn-primary btn-lg">Enter the event</a>
     </div>
     <div class="loc d-flex">
         <p class="loc-d" ><%= event.venue.name %>  <% if user_signed_in? && current_user.address.present? %> -
