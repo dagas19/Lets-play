@@ -1,7 +1,11 @@
 <div class="chat-log">
-  <div class="chat-message">
+  <div class="chat-message" id="message-<%= message.id %>">
     <span class="chat-message__avatar-frame">
-      <%= image_tag "avatar-b.png", class: "chat-message__avatar" %>
+      <% if @event.user.photo.attached? %>
+      <%=  cl_image_tag @event.user.photo.key, class: "chat-message__avatar", height: 50, width: 50, crop: :fill %>
+      <% else %>
+        <img src="https://media.kasperskydaily.com/wp-content/uploads/sites/85/2019/08/12075337/selfie-with-id-card-scam-featured.jpg" alt="" class='chat-message__avatar'>
+      <% end %>
     </span>
     <p class="chat-message__text"><%= message.content %></p>
   </div>

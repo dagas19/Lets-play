@@ -72,7 +72,8 @@
                   <%= render "messages/message", message: message %>
                 <% end %>
               </div>
-                <%= simple_form_for [ @event, @message ] do |f| %>
+              <div class="inppp">
+                <%= simple_form_for [ @event, @message ], remote: true do |f| %>
                   <%= f.input :content,as: :string,
                                    wrapper: false,
                                    label: false,
@@ -81,6 +82,7 @@
                                    }, label: false, placeholder: "Message ##{@event.title}" %>
                   <%= f.submit value: " ", class: "chat-input-area__submit-button" %>
                   <% end %>
+              </div>
               </div>
 
 

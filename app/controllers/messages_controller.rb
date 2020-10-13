@@ -10,7 +10,10 @@ class MessagesController < ApplicationController
         @event,
         render_to_string(partial: "message", locals: { message: @message })
       )
-      redirect_to event_path(@event, anchor: "message-#{@message.id}")
+      respond_to do |f|
+        f.html { redirect_to event_path(@event, anchor: "message-#{@message.id}") }
+        f.js { head :no_content }
+      end
     else
       render "events/show"
     end
