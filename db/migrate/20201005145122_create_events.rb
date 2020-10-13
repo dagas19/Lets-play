@@ -11,6 +11,7 @@ class CreateEvents < ActiveRecord::Migration[6.0]
       t.references :game, null: false, foreign_key: true
       t.references :venue, null: false, foreign_key: true
       t.references :user, null: false, foreign_key: true
+      t.references :gender, null: false, foreign_key: true
 
       t.timestamps
     end
