@@ -126,15 +126,11 @@ Event.create(title: 'Backgammon night for seniors', spots: (5..15).to_a.sample, 
  Event.all.each { |event| p event.title }
 
 
-p "Creating registrations....Stian please don't be a twat and don't delete these registrations"
-Registration.create(event: Event.find(1), user: User.first)
-Registration.create(event: Event.find(2), user: User.first)
-Registration.create(event: Event.find(3), user: User.first)
-Registration.create(event: Event.find(4), user: User.first)
-Registration.create(event: Event.find(5), user: User.first)
-Registration.create(event: Event.find(6), user: User.first)
-Registration.create(event: Event.find(1), user: User.find(2))
-Registration.create(event: Event.find(1), user: User.find(4))
-Registration.create(event: Event.find(1), user: User.find(5))
+p "Creating registrations"
+Registration.create(event: Event.first, user: User.first)
+Registration.create(event: Event.last, user: User.first)
+Registration.create(event: Event.first, user: stian)
+Registration.create(event: Event.first, user: dovydas)
+Registration.create(event: Event.first, user: april)
 
 
