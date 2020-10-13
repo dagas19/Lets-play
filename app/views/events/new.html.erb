@@ -35,7 +35,6 @@
                <%= f.text_field :date, data: { behavior: "flatpickr" }, label: 'Choose date and time', placeholder: 'Date and Time', class: "form-control" %>
             </div>
           </div>
-           <%= f.association :gender, required: true, prompt: :translate  %>
            <%= f.input :experience_level, collection: Event::EXPERIENCE, prompt: :translate %>
            <%= f.input :description, placeholder: "e.g Just looking for someone to play game of chess" %>
            <%= f.submit class: "btn btn-primary btn-lg btn-block", style: "border-radius:10px;" %>

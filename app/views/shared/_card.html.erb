@@ -5,16 +5,26 @@
      <div class="cont text-center">
       <%=  cl_image_tag event.game.photo.key, class: "event-img", height: 300, width: 300, crop: :fill %>
        <p class="font-bold desc"><%= event.description %></p>
-       <p class="font-bold desc time"><%= event.date.strftime("Will be happening this %A") %></p>
+       <div class="datik">
+         <time datetime="@event.date.strftime(%d %m %Y')" class="icon">
+            <em><%= event.date.strftime("%A") %></em>
+            <strong><%= event.date.strftime("%B")%></strong>
+            <span><%= (event.date + 6).strftime('%y') %></span>
+          </time>
+       </div>
     </div>
   </div>
   <div class="small-info d-flex justify-content-between align-items-center">
     <div class="sma d-flex">
+      <% if event.user.photo.attached? %>
+      <%=  cl_image_tag event.user.photo.key, class: "small-avatar", height: 50, width: 50, crop: :fill %>
+      <% else %>
+        <img src="https://media.kasperskydaily.com/wp-content/uploads/sites/85/2019/08/12075337/selfie-with-id-card-scam-featured.jpg" alt="" class='small-avatar'>
+      <% end %>
       <p class="created-by">Created by <%= event.user.nickname %></p>
     </div>
     <div>
-
-      <%= link_to "Enter the event", event_path(event), class: "btn entry btn-primary btn-lg", style: "-webkit-text-stroke: 1px white;" %>
+      <a href="<%= event_path(event) %>" class="btn  btn-primary btn-lg stretched-link">Enter the event</a>
     </div>
     <div class="loc d-flex">
         <p class="loc-d" ><%= event.venue.name %>  <% if user_signed_in? && current_user.address.present? %> -
