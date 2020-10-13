@@ -16,7 +16,7 @@ Venue.destroy_all
 p 'Dumping completed!'
 
 games_cat = %w[strategy gambling fun trivia speed]
-genders = %w[male female transgender gender-neutral non-binary agender pangender genderqueer two-spirit third-gender all]
+genders = %w[male female]
 game_names = %w[scrabble connect-four cranium blokus mancala stratego catan risk pictionary othello rummikub the-game-of-life candy-land battleship trivial-pursuit cluedo monopoly backgammon checkers chess]
 experience = %w[Novice Intermediate Advanced Expert]
 time_now = DateTime.now
@@ -62,7 +62,7 @@ Venue.create(name: 'Perestrojka', address: 'Storgata 13, 0155 Oslo, NO', descrip
 
 p "#{Venue.all.count} venues created!"
 
-p 'Creating games....'	
+p 'Creating games....'
 
 monopoly = Game.create(name:'monopoly', game_type: 'strategy')
 chess = Game.create(name:'chess', game_type: 'strategy')
@@ -79,31 +79,31 @@ file = URI.open('https://res.cloudinary.com/letsplay-boardgames/image/upload/v16
 monopoly.photo.attach(io: file, filename: 'v1602502641/Shinola-Monopoly__45775.1572100948_qhaomt.jpg', content_type:'image/png')
 
 file = URI.open('https://res.cloudinary.com/letsplay-boardgames/image/upload/v1602502700/89240_l200_sktnia.jpg')
-chess.photo.attach(io: file, filename: 'v1602502700/89240_l200_sktnia.jpg', content_type:'image/png')	
+chess.photo.attach(io: file, filename: 'v1602502700/89240_l200_sktnia.jpg', content_type:'image/png')
 
 file = URI.open('https://res.cloudinary.com/letsplay-boardgames/image/upload/v1602506446/play-checkers-using-standard-rules-409287_hero_2904-e5b2d879f6ad4c0d86e3df67796b55df_xbdso2.jpg')
-checkers.photo.attach(io: file, filename: 'v1602506446/play-checkers-using-standard-rules-409287_hero_2904-e5b2d879f6ad4c0d86e3df67796b55df_xbdso2.jpg', content_type:'image/png')	
+checkers.photo.attach(io: file, filename: 'v1602506446/play-checkers-using-standard-rules-409287_hero_2904-e5b2d879f6ad4c0d86e3df67796b55df_xbdso2.jpg', content_type:'image/png')
 
 file = URI.open('https://res.cloudinary.com/letsplay-boardgames/image/upload/v1602506579/1200px-Scrabble_game_in_progress_vicufu.jpg')
-scrabble.photo.attach(io: file, filename: 'v1602506579/1200px-Scrabble_game_in_progress_vicufu.jpg', content_type:'image/png')	
+scrabble.photo.attach(io: file, filename: 'v1602506579/1200px-Scrabble_game_in_progress_vicufu.jpg', content_type:'image/png')
 
 file = URI.open('https://res.cloudinary.com/letsplay-boardgames/image/upload/v1602506663/Catan1_Bg_1050x700-770x513_wyfqzj.jpg')
-catan.photo.attach(io: file, filename: 'v1602506663/Catan1_Bg_1050x700-770x513_wyfqzj.jpg', content_type:'image/png')	
+catan.photo.attach(io: file, filename: 'v1602506663/Catan1_Bg_1050x700-770x513_wyfqzj.jpg', content_type:'image/png')
 
 file = URI.open('https://res.cloudinary.com/letsplay-boardgames/image/upload/v1602506736/tjx_risk_deluxe_31a_zebu8d.jpg')
-risk.photo.attach(io: file, filename: 'v1602506736/tjx_risk_deluxe_31a_zebu8d.jpg', content_type:'image/png')	
+risk.photo.attach(io: file, filename: 'v1602506736/tjx_risk_deluxe_31a_zebu8d.jpg', content_type:'image/png')
 
 file = URI.open('https://res.cloudinary.com/letsplay-boardgames/image/upload/v1602506977/Remember-Backgammon-draufsicht-geoeffnet-freisteller_j6j6hf.jpg')
-backgammon.photo.attach(io: file, filename: 'v1602506977/Remember-Backgammon-draufsicht-geoeffnet-freisteller_j6j6hf.jpg', content_type:'image/png')	
+backgammon.photo.attach(io: file, filename: 'v1602506977/Remember-Backgammon-draufsicht-geoeffnet-freisteller_j6j6hf.jpg', content_type:'image/png')
 
 file = URI.open('https://res.cloudinary.com/letsplay-boardgames/image/upload/v1602507093/cc539b5be3f1f6f02ae32801ce1ae8d7_yyl3a5.jpg')
-pictionary.photo.attach(io: file, filename: 'v1602507093/cc539b5be3f1f6f02ae32801ce1ae8d7_yyl3a5.jpg', content_type:'image/png')	
+pictionary.photo.attach(io: file, filename: 'v1602507093/cc539b5be3f1f6f02ae32801ce1ae8d7_yyl3a5.jpg', content_type:'image/png')
 
 file = URI.open('https://res.cloudinary.com/letsplay-boardgames/image/upload/v1602507621/trivial-pursuit-glass-img-02_n2ajtp.jpg')
-trivial_pursuit.photo.attach(io: file, filename: 'trivial-pursuit-glass-img-02_n2ajtp.jpg', content_type:'image/png')	
+trivial_pursuit.photo.attach(io: file, filename: 'trivial-pursuit-glass-img-02_n2ajtp.jpg', content_type:'image/png')
 
 file = URI.open('https://res.cloudinary.com/letsplay-boardgames/image/upload/v1602507692/71BUjmB2djL._AC_SX425__xapqrl.jpg')
-stratego.photo.attach(io: file, filename: 'v1602507692/71BUjmB2djL._AC_SX425__xapqrl.jpg', content_type:'image/png')	
+stratego.photo.attach(io: file, filename: 'v1602507692/71BUjmB2djL._AC_SX425__xapqrl.jpg', content_type:'image/png')
 
 
 
@@ -113,14 +113,14 @@ p "#{Game.all.count} Created!"
 
 p 'Creating events....'
 
-Event.create(title: 'Chess night!!', spots: (5..15).to_a.sample, gender: Gender.where(name: 'all')[0], description: 'We are hosting a chess event, all genders are welcome for a great evening', experience_level: experience.sample, min_age: (16..35).to_a.sample, max_age: (36..110).to_a.sample, game: chess, venue: Venue.where(name: 'Tilt')[0], user: User.all.sample, date: (time_now + ((6..600).to_a.sample).hours).to_datetime)
-Event.create(title: 'Board game night!', spots: (5..15).to_a.sample, gender: Gender.where(name: 'all')[0], description: 'We are hosting a board game night, we offer all the most popular boardgames, bring all your friends and join us for a great night out. All genders and are welcome for a great evening', experience_level: experience.sample, min_age: (16..35).to_a.sample, max_age: (36..110).to_a.sample, game: catan, venue: Venue.where(name: 'Colonel Mustard')[0], user: User.all.sample, date: (time_now + ((6..600).to_a.sample).hours).to_datetime)
-Event.create(title: 'Girls Monopoly bonanza!', spots: (5..15).to_a.sample, gender: Gender.where(name: 'female')[0], description: 'Out on the town with the girls and dont know what to do? If you love board games, you should check out our Monopoly event!', experience_level: experience.sample, min_age: (16..35).to_a.sample, max_age: (36..110).to_a.sample, game: monopoly, venue: Venue.where(name: 'Oslo Mekaniske Verksted')[0], user: User.all.sample, date: (time_now + ((6..600).to_a.sample).hours).to_datetime)
-Event.create(title: 'Axis and allies!', spots: (5..15).to_a.sample, gender: Gender.where(name: 'all')[0], description: 'Up for an evening of strategy? Come join our Axis and allies event.', experience_level: experience.sample, min_age: (16..35).to_a.sample, max_age: (36..110).to_a.sample, game: stratego, venue: Venue.where(name: 'Perestrojka')[0], user: User.all.sample, date: (time_now + ((6..600).to_a.sample).hours).to_datetime)
-Event.create(title: 'Checkers night!!', spots: (5..15).to_a.sample, gender: Gender.where(name: 'all')[0], description: 'We are hosting a checkers event, all genders are welcome for a great evening', experience_level: experience.sample, min_age: (21..35).to_a.sample, max_age: (36..110).to_a.sample, game: checkers, venue: Venue.where(name: 'Bar Polar')[0], user: User.all.sample, date: (time_now + ((6..600).to_a.sample).hours).to_datetime)
-Event.create(title: 'Board game night!', spots: (5..15).to_a.sample, gender: Gender.where(name: 'all')[0], description: 'We are hosting a board game night, we offer all the most popular boardgames, bring all your friends and join us for a great night out. All genders and are welcome for a great evening', experience_level: experience.sample, min_age: (16..35).to_a.sample, max_age: (36..110).to_a.sample, game: risk, venue: Venue.all.sample, user: User.all.sample, date: (time_now + ((6..600).to_a.sample).hours).to_datetime)
-Event.create(title: 'Chess night!!', spots: (5..15).to_a.sample, gender: Gender.where(name: 'all')[0], description: 'We are hosting a chess event, all genders and are welcome for a great evening', experience_level: experience.sample, min_age: (16..35).to_a.sample, max_age: (36..110).to_a.sample, game: chess, venue: Venue.all.sample, user: User.all.sample, date: (time_now + ((6..600).to_a.sample).hours).to_datetime)
-Event.create(title: 'Backgammon night for seniors', spots: (5..15).to_a.sample, gender: Gender.where(name: 'all')[0], description: 'Are you a senior and want to meet new people for a game of bridge, come join our event', experience_level: experience.sample, min_age: (60..65).to_a.sample, max_age: (66..110).to_a.sample, game: backgammon, venue: Venue.all.sample, user: User.all.sample, date: (time_now + ((6..600).to_a.sample).hours).to_datetime)
+Event.create(title: 'Chess night!!', spots: (5..15).to_a.sample, description: 'We are hosting a chess event, all genders are welcome for a great evening', experience_level: experience.sample, min_age: (16..35).to_a.sample, max_age: (36..110).to_a.sample, game: chess, venue: Venue.where(name: 'Tilt')[0], user: User.all.sample, date: (time_now + ((6..600).to_a.sample).hours).to_datetime)
+Event.create(title: 'Board game night!', spots: (5..15).to_a.sample, description: 'We are hosting a board game night, we offer all the most popular boardgames, bring all your friends and join us for a great night out. All genders and are welcome for a great evening', experience_level: experience.sample, min_age: (16..35).to_a.sample, max_age: (36..110).to_a.sample, game: catan, venue: Venue.where(name: 'Colonel Mustard')[0], user: User.all.sample, date: (time_now + ((6..600).to_a.sample).hours).to_datetime)
+Event.create(title: 'Girls Monopoly bonanza!', spots: (5..15).to_a.sample, description: 'Out on the town with the girls and dont know what to do? If you love board games, you should check out our Monopoly event!', experience_level: experience.sample, min_age: (16..35).to_a.sample, max_age: (36..110).to_a.sample, game: monopoly, venue: Venue.where(name: 'Oslo Mekaniske Verksted')[0], user: User.all.sample, date: (time_now + ((6..600).to_a.sample).hours).to_datetime)
+Event.create(title: 'Axis and allies!', spots: (5..15).to_a.sample, description: 'Up for an evening of strategy? Come join our Axis and allies event.', experience_level: experience.sample, min_age: (16..35).to_a.sample, max_age: (36..110).to_a.sample, game: stratego, venue: Venue.where(name: 'Perestrojka')[0], user: User.all.sample, date: (time_now + ((6..600).to_a.sample).hours).to_datetime)
+Event.create(title: 'Checkers night!!', spots: (5..15).to_a.sample, description: 'We are hosting a checkers event, all genders are welcome for a great evening', experience_level: experience.sample, min_age: (21..35).to_a.sample, max_age: (36..110).to_a.sample, game: checkers, venue: Venue.where(name: 'Bar Polar')[0], user: User.all.sample, date: (time_now + ((6..600).to_a.sample).hours).to_datetime)
+Event.create(title: 'Board game night!', spots: (5..15).to_a.sample, description: 'We are hosting a board game night, we offer all the most popular boardgames, bring all your friends and join us for a great night out. All genders and are welcome for a great evening', experience_level: experience.sample, min_age: (16..35).to_a.sample, max_age: (36..110).to_a.sample, game: risk, venue: Venue.all.sample, user: User.all.sample, date: (time_now + ((6..600).to_a.sample).hours).to_datetime)
+Event.create(title: 'Chess night!!', spots: (5..15).to_a.sample, description: 'We are hosting a chess event, all genders and are welcome for a great evening', experience_level: experience.sample, min_age: (16..35).to_a.sample, max_age: (36..110).to_a.sample, game: chess, venue: Venue.all.sample, user: User.all.sample, date: (time_now + ((6..600).to_a.sample).hours).to_datetime)
+Event.create(title: 'Backgammon night for seniors', spots: (5..15).to_a.sample, description: 'Are you a senior and want to meet new people for a game of bridge, come join our event', experience_level: experience.sample, min_age: (60..65).to_a.sample, max_age: (66..110).to_a.sample, game: backgammon, venue: Venue.all.sample, user: User.all.sample, date: (time_now + ((6..600).to_a.sample).hours).to_datetime)
  p "#{Event.all.count} events created"
  Event.all.each { |event| p event.title }
 
