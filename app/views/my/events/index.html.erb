@@ -1,55 +1,104 @@
 <div class="container-fluid m-0 p-0">
   <div class="page-banner d-flex justify-content-center align-items-center">
     <div class="backlit">
-      <p>Dashboard</p>
+      <p>Let's Play</p>
       <!-- <div class="backlit-box"></div> -->
     </div>
   </div>
 </div>
-<div class="container-fluid m-0 px-0">
+<div class="container-fluid m-0 p-0">
   <div class="row">
-    <div class="col-7 results">
+    <div class="col-8 pl-5 pr-5 mr-0 results">
       <div class="results-pane">
-        <div class="results-header">
-          <h2 class="text-uppercase text-center pt-3 pb-2">Upcoming <span class="pink">Games</span></h2>
+        <div class="results-header pt-3 pb-3 pl-2 mt-3">
+          <h2 class="text-uppercase">Your Upcoming <span class="pink">Games</span></h2>
+          <hr>
         </div>
-        <div class="results-tabs d-flex">
-          <h4 class="text-uppercase text-center pt-3 pb-4"><span class="inactive" id="my-events">hosting</span> | <span class="pink text-uppercase active" id="events-joined"> joining</span></h4>
-        </div>
-
         <div class="results-output">
-          <div class="row pt-3 d-flex justify-content-center">
-            <div class="col-10">
-              <%= render "shared/card" %>
+          <div class="results-grouping mb-5">
+            <div class="results-grouping-title pl-2 mb-4">
+              <h3 class="text-uppercase"><!-- Next 24 hrs --></h3>
             </div>
+            <%= render "shared/card" %>
           </div>
         </div>
       </div>
     </div>
-    <div class="col-5 pl-0 filter-pane">
-      <div class="row">3
-        <div class="col-12 text-center pt-3 pb-5"><h4>Chess Charity Tournament</h4></div>
-        <div class="col-12">
-          <div class="row d-flex justify-content-center">
-            <div class="col-5 text-center my-1">Game</div>
-            <div class="col-5 my-1">Chess</div>
-            <div class="col-5 text-center my-1">Venue</div>
-            <div class="col-5 my-1">De La Salle Club, SW16 9UK, Oxford</div>
-            <div class="col-5 text-center my-1">Date</div>
-            <div class="col-5 my-1">Monday 18th October 2020</div>
-            <div class="col-5 text-center my-1">Time</div>
-            <div class="col-5 my-1">17:00hrs</div>
+    <div class="col-4 ml-0">
+      <div class="filter-pane">
+        <div class="filter-header text-center">
+          <p>Filters</p>
+        </div>
+        <div class="filter-group">
+          <div class="filter-title">
+            <p>Organising</p>
+          </div>
+          <div class="btn-group btn-group-toggle mb-3" data-toggle="buttons">
+            <label class="btn btn-secondary active rounded btn-filter">
+              <input type="radio" name="options" id="option1" checked> Host
+            </label>
+            <label class="btn btn-secondary rounded btn-filter">
+              <input type="radio" name="options" id="option2"> Participant
+            </label>
+            <label class="btn btn-secondary rounded btn-filter">
+              <input type="radio" name="options" id="option3"> All
+            </label>
           </div>
         </div>
-        <div class="col-12">
-          <%= render "shared/players" %>
+        <div class="filter-group">
+          <div class="filter-title">
+            <p>Date Around</p>
+          </div>
+          <div class="btn-group btn-group-toggle mb-3" data-toggle="buttons">
+            <label class="btn btn-secondary active rounded btn-filter">
+              <input type="radio" name="options" id="option1" checked> Next 24 hrs
+            </label>
+            <label class="btn btn-secondary rounded btn-filter">
+              <input type="radio" name="options" id="option2"> This week
+            </label>
+            <label class="btn btn-secondary rounded btn-filter">
+              <input type="radio" name="options" id="option3"> All
+            </label>
+          </div>
         </div>
-        <div class="col-12 text-center update-info">
-          <p>Last update:</p>
-          <p><span>3 Hrs ago... :</span> TimT joined</p>
-        </div>
-        <div class="col-12 text-center d-flex justify-content-center">
-          <button class="btn btn-primary">Edit Event</button>
+          <div class="filter-group">
+          <div class="filter-title">
+            <p>Game</p>
+          </div>
+          <div class="btn-group btn-group-toggle mb-3 " data-toggle="buttons">
+            <div class="row d-flex justify-content-center">
+              <label class="btn btn-secondary active rounded btn-filter col-3">
+                <input type="radio" name="options" id="option1" checked> Chess
+              </label>
+              <label class="btn btn-secondary rounded btn-filter col-3">
+                <input type="radio" name="options" id="option2"> Monopoly
+              </label>
+              <label class="btn btn-secondary rounded btn-filter col-3">
+                <input type="radio" name="options" id="option3"> Catan
+              </label>
+              <label class="btn btn-secondary rounded btn-filter col-3">
+                <input type="radio" name="options" id="option3"> Dominos
+              </label>
+              <label class="btn btn-secondary rounded btn-filter col-3">
+                <input type="radio" name="options" id="option3"> Mancala
+              </label>
+              <label class="btn btn-secondary rounded btn-filter col-3">
+                <input type="radio" name="options" id="option3"> Cranium
+              </label>
+              <label class="btn btn-secondary rounded btn-filter col-3">
+                <input type="radio" name="options" id="option3"> Othello
+              </label>
+              <label class="btn btn-secondary rounded btn-filter col-3">
+                <input type="radio" name="options" id="option3"> Stratego
+              </label>
+              <label class="btn btn-secondary rounded btn-filter col-3">
+                <input type="radio" name="options" id="option3"> Scrabble
+              </label>
+              <label class="btn btn-secondary rounded btn-filter col-10">
+                <input type="radio" name="options" id="option3"> All
+              </label>
+            </div>
+          </div>
         </div>
       </div>
     </div>
