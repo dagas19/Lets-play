@@ -1,0 +1,6 @@
+
+meta_product_name: "Letsplay"
+meta_title: "Letsplay - Step into board games with LetsPlay"
+meta_description: "You can search for  board game events and even organise them yourself"
+meta_image: "LOGO.png" # should exist in `app/assets/images/`
+twitter_account: "@product_twitter_account"   # required for Twitter Cards
