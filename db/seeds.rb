@@ -133,6 +133,8 @@ Registration.create(event: Event.find(3), user: User.first)
 Registration.create(event: Event.find(4), user: User.first)
 Registration.create(event: Event.find(5), user: User.first)
 Registration.create(event: Event.find(6), user: User.first)
-
+Registration.create(event: Event.find(1), user: User.find(2))
+Registration.create(event: Event.find(1), user: User.find(4))
+Registration.create(event: Event.find(1), user: User.find(5))
 
 
