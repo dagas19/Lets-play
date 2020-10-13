@@ -1,13 +1,11 @@
 class EventsController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index]
   def index
-    unless @stimulus_reflex
       if @events
         @events = policy_scope(@events)
       else
         @events = policy_scope(Event)
       end
-    end
     @markers = @events.map do |event|
       {
         lat: event.venue.latitude,
@@ -42,15 +40,5 @@ class EventsController < ApplicationController
 
   def event_params
     params.require(:event).permit(:title, :date, :spots, :description, :experience_level, :min_age, :max_age, :game_id, :venue_id, :gender_id)
-  end
-
-  def map(events)
-        @markers = events.map do |event|
-      {
-        lat: event.venue.latitude,
-        lng: event.venue.longitude,
-        infoWindow: render_to_string(partial: "info_window", locals: { event: event })
-      }
-    end
   end
 end
