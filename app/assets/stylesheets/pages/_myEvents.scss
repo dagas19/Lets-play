@@ -7,15 +7,8 @@
   margin-left: 48px;
 }
 
-.inactive-myEvents {
+.inactive {
   color: rgb(200, 200, 200);
-  padding: 5px 10px;
-
-  &:hover {
-    border: 1px solid #DD3667;
-
-    border-radius: 8px;
-  }
 }
 
 
@@ -26,7 +19,6 @@
   margin-top: 8px;
   margin-left: 8px;
   border-radius: 5px;
-  max-width: 280px;
 
   p {
     margin-bottom: 0;
@@ -56,14 +48,12 @@
 }
 
 
-.active-myEvents {
-
-  text-decoration: underline;
-  color: #DD3667;
+.active {
+  &:hover {
+    color: #F4F4F4;
+    border: 2px solid #DD3667;
+    background-color: rgb(100, 100, 100);
+    padding: 5px 10px;
+    border-radius: 8px;
+  }
 }
-
-
-.background-dark {
-  height: 1200px;
-}
-
