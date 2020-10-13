@@ -11,5 +11,4 @@ Rails.application.routes.draw do
   namespace :my do
     resources :events, only: %i[index]
   end
-
 end
