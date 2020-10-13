@@ -12,14 +12,15 @@ cards.forEach(card => {
 
 button_myEvents.addEventListener('click', (event) => {
   toggleVisibleCardsMyEvents(cards);
+  switchbuttonsOne();
 })
 
 button_eventsJoined.addEventListener('click', (event) => {
   toggleVisibleCardsOtherEvents(cards);
+  switchbuttonsTwo();
 })
 
 function toggleVisibleCardsMyEvents(cards) {
-  console.log('function triggered');
   cards.forEach(card => {
     if (card.dataset.myevent == "true") {
       card.style.display = "block";
@@ -52,5 +53,20 @@ function updateDasboardWithCard(card) {
 }
 
 
+function switchbuttonsOne() {
+  // identify the button that has just been clicked
+  button_myEvents.classList.remove("inactive-myEvents");
+  button_myEvents.classList.add("active-myEvents");
+  button_eventsJoined.classList.remove("active-myEvents");
+  button_eventsJoined.classList.add("inactive-myEvents");
+}
 
+function switchbuttonsTwo() {
+  // identify the button that has just been clicked
+
+  button_myEvents.classList.remove("active-myEvents");
+  button_myEvents.classList.add("inactive-myEvents");
+  button_eventsJoined.classList.remove("inactive-myEvents");
+  button_eventsJoined.classList.add("active-myEvents");
+}
 
