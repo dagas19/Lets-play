@@ -129,8 +129,8 @@ Event.create(title: 'Backgammon night for seniors', spots: (5..15).to_a.sample, 
 p "Creating registrations"
 Registration.create(event: Event.first, user: User.first)
 Registration.create(event: Event.last, user: User.first)
-Registration.create(event: Event.first, user: stian)
-Registration.create(event: Event.first, user: dovydas)
-Registration.create(event: Event.first, user: april)
+Registration.create(event: Event.first, user: User.where(name: 'Stian Johansen')[0])
+Registration.create(event: Event.first, user: User.where(name: 'Dovydas Savickas')[0])
+Registration.create(event: Event.first, user: User.where(name: 'April Yeats')[0])
 
 
