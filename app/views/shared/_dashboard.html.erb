@@ -1,25 +1,27 @@
-<div class="row">
-  <div class="col-12 text-center pt-3 pb-5"><h4>Chess Charity Tournament</h4></div>
-  <div class="col-12">
-    <div class="row d-flex justify-content-center">
-      <div class="col-5 text-center my-1">Game</div>
-      <div class="col-5 my-1">Chess</div>
-      <div class="col-5 text-center my-1">Venue</div>
-      <div class="col-5 my-1">De La Salle Club, SW16 9UK, Oxford</div>
-      <div class="col-5 text-center my-1">Date</div>
-      <div class="col-5 my-1">Monday 18th October 2020</div>
-      <div class="col-5 text-center my-1">Time</div>
-      <div class="col-5 my-1">17:00hrs</div>
+<% @events.each do |event| %>
+  <div class="row">
+    <div class="col-12 text-center pt-3 pb-5"><h4>Chess Charity Tournament</h4></div>
+    <div class="col-12">
+      <div class="row d-flex justify-content-center">
+        <div class="col-5 text-center my-1">Game</div>
+        <div class="col-5 my-1">Chess</div>
+        <div class="col-5 text-center my-1">Venue</div>
+        <div class="col-5 my-1">De La Salle Club, SW16 9UK, Oxford</div>
+        <div class="col-5 text-center my-1">Date</div>
+        <div class="col-5 my-1">Monday 18th October 2020</div>
+        <div class="col-5 text-center my-1">Time</div>
+        <div class="col-5 my-1">17:00hrs</div>
+      </div>
+    </div>
+    <div class="col-12">
+      <%= render "shared/players" %>
+    </div>
+    <div class="col-12 text-center update-info">
+      <p>Last update:</p>
+      <p><span>3 Hrs ago... :</span> TimT joined</p>
+    </div>
+    <div class="col-12 text-center d-flex justify-content-center">
+      <button class="btn btn-primary">Edit Event</button>
     </div>
   </div>
-  <div class="col-12">
-    <%= render "shared/players" %>
-  </div>
-  <div class="col-12 text-center update-info">
-    <p>Last update:</p>
-    <p><span>3 Hrs ago... :</span> TimT joined</p>
-  </div>
-  <div class="col-12 text-center d-flex justify-content-center">
-    <button class="btn btn-primary">Edit Event</button>
-  </div>
-</div>
+  <% end %>
