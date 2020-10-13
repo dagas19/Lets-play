@@ -64,6 +64,14 @@ p "#{Venue.all.count} venues created!"
 
 p 'Creating games....'
 
+# game_names.each do |game|
+#   file = URI.open('https://res.cloudinary.com/letsplay-boardgames/image/upload/v1602502641/Shinola-Monopoly__45775.1572100948_qhaomt.jpg')
+#   game1 = Game.new(name: game, game_type: games_cat.sample)
+# 	game1.photo.attach(io: file, filename: 'game.png', content_type:'image/png')
+# 	game1.save
+# end
+
+
 monopoly = Game.create(name:'monopoly', game_type: 'strategy')
 chess = Game.create(name:'chess', game_type: 'strategy')
 checkers = Game.create(name:'checkers', game_type: 'strategy')
@@ -99,11 +107,13 @@ backgammon.photo.attach(io: file, filename: 'v1602506977/Remember-Backgammon-dra
 file = URI.open('https://res.cloudinary.com/letsplay-boardgames/image/upload/v1602507093/cc539b5be3f1f6f02ae32801ce1ae8d7_yyl3a5.jpg')
 pictionary.photo.attach(io: file, filename: 'v1602507093/cc539b5be3f1f6f02ae32801ce1ae8d7_yyl3a5.jpg', content_type:'image/png')
 
+
 file = URI.open('https://res.cloudinary.com/letsplay-boardgames/image/upload/v1602507621/trivial-pursuit-glass-img-02_n2ajtp.jpg')
 trivial_pursuit.photo.attach(io: file, filename: 'trivial-pursuit-glass-img-02_n2ajtp.jpg', content_type:'image/png')
 
 file = URI.open('https://res.cloudinary.com/letsplay-boardgames/image/upload/v1602507692/71BUjmB2djL._AC_SX425__xapqrl.jpg')
 stratego.photo.attach(io: file, filename: 'v1602507692/71BUjmB2djL._AC_SX425__xapqrl.jpg', content_type:'image/png')
+
 
 
 
@@ -123,5 +133,15 @@ Event.create(title: 'Chess night!!', spots: (5..15).to_a.sample, description: 'W
 Event.create(title: 'Backgammon night for seniors', spots: (5..15).to_a.sample, description: 'Are you a senior and want to meet new people for a game of bridge, come join our event', experience_level: experience.sample, min_age: (60..65).to_a.sample, max_age: (66..110).to_a.sample, game: backgammon, venue: Venue.all.sample, user: User.all.sample, date: (time_now + ((6..600).to_a.sample).hours).to_datetime)
  p "#{Event.all.count} events created"
  Event.all.each { |event| p event.title }
+
+
+p "Creating registrations....Stian please don't be a twat and don't delete these registrations"
+Registration.create(event: Event.find(1), user: User.first)
+Registration.create(event: Event.find(2), user: User.first)
+Registration.create(event: Event.find(3), user: User.first)
+Registration.create(event: Event.find(4), user: User.first)
+Registration.create(event: Event.find(5), user: User.first)
+Registration.create(event: Event.find(6), user: User.first)
+
 
 
