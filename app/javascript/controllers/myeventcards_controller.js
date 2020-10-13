@@ -55,18 +55,18 @@ function updateDasboardWithCard(card) {
 
 function switchbuttonsOne() {
   // identify the button that has just been clicked
-  button_myEvents.classList.remove("inactive");
-  button_myEvents.classList.add("active");
-  button_eventsJoined.classList.remove("active");
-  button_eventsJoined.classList.add("inactive");
+  button_myEvents.classList.remove("inactive-myEvents");
+  button_myEvents.classList.add("active-myEvents");
+  button_eventsJoined.classList.remove("active-myEvents");
+  button_eventsJoined.classList.add("inactive-myEvents");
 }
 
 function switchbuttonsTwo() {
   // identify the button that has just been clicked
 
-  button_myEvents.classList.remove("active");
-  button_myEvents.classList.add("inactive");
-  button_eventsJoined.classList.remove("inactive");
-  button_eventsJoined.classList.add("active");
+  button_myEvents.classList.remove("active-myEvents");
+  button_myEvents.classList.add("inactive-myEvents");
+  button_eventsJoined.classList.remove("inactive-myEvents");
+  button_eventsJoined.classList.add("active-myEvents");
 }
 
