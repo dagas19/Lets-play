@@ -10,7 +10,11 @@
   </div>
   <div class="small-info d-flex justify-content-between align-items-center">
     <div class="sma d-flex">
+      <% if event.user.photo.attached? %>
       <%=  cl_image_tag event.user.photo.key, class: "small-avatar", height: 50, width: 50, crop: :fill %>
+      <% else %>
+        <img src="https://media.kasperskydaily.com/wp-content/uploads/sites/85/2019/08/12075337/selfie-with-id-card-scam-featured.jpg" alt="" class='small-avatar'>
+      <% end %>
       <p class="created-by">Created by <%= event.user.nickname %></p>
     </div>
     <div>
