@@ -169,7 +169,7 @@ body {
   position: absolute;
   top: 0;
   right: 170px;
-  bottom: -654px;
+  bottom: 0;
   width: $submit-icon-size;
   height: $submit-icon-size;
   background-color: transparent;
@@ -178,7 +178,7 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   border: none;
-  margin: auto;
+  margin-top: 915px;
   &:focus {
     outline: none;
   }
