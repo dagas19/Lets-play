@@ -7,7 +7,7 @@
         <img src="https://media.kasperskydaily.com/wp-content/uploads/sites/85/2019/08/12075337/selfie-with-id-card-scam-featured.jpg" alt="" class='chat-message__avatar'>
       <% end %>
     </span>
-    <p class="chat-message__text"><%= message.content %></p>
+    <p class="chat-message__text"><%= message.user.name %><span class="hidden-chat-dots">: - - - - - - -:</span><%= time_ago_in_words(message.created_at)%><br><%= message.content %></p>
   </div>
 </div>
 
