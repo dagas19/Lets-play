@@ -109,6 +109,7 @@ stratego.photo.attach(io: file, filename: 'v1602507692/71BUjmB2djL._AC_SX425__xa
 
 
 
+
 p "#{Game.all.count} Created!"
 
 p 'Creating events....'
@@ -123,5 +124,13 @@ Event.create(title: 'Chess night!!', spots: (5..15).to_a.sample, description: 'W
 Event.create(title: 'Backgammon night for seniors', spots: (5..15).to_a.sample, description: 'Are you a senior and want to meet new people for a game of bridge, come join our event', experience_level: experience.sample, min_age: (60..65).to_a.sample, max_age: (66..110).to_a.sample, game: backgammon, venue: Venue.all.sample, user: User.all.sample, date: (time_now + ((6..600).to_a.sample).hours).to_datetime)
  p "#{Event.all.count} events created"
  Event.all.each { |event| p event.title }
+
+
+p "Creating registrations"
+Registration.create(event: Event.first, user: User.first)
+Registration.create(event: Event.last, user: User.first)
+Registration.create(event: Event.first, user: stian)
+Registration.create(event: Event.first, user: dovydas)
+Registration.create(event: Event.first, user: april)
 
 
