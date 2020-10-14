@@ -32,9 +32,9 @@ body {
                     radial-gradient(circle at 100% 0%, rgba(#e3ade6, 0.05), rgba(#e3ade6, 0.8)),
                     radial-gradient(circle at 20% 50%, rgba(yellow, 0.5), rgba(pink, 0.1));
 }
-.inppp {
-  position: relative;
-}
+// .inppp {
+//    position: relative;
+// }
 
 // Conversational UI
 .chat-container {
@@ -152,11 +152,10 @@ body {
 
 // Chat input area
 .chat-input-area {
-  position: relative;
+  // position: relative;
 }
 
 .chat-input-area__input {
-  width: 80%;
   background-color: black;
   border: 1px solid white;
   border-radius: 32px;
@@ -170,14 +169,14 @@ body {
 }
 
 .chat-input-area__submit-button {
-  position: absolute;
-  top: 3px;
-  right: 10px;
-  bottom: 0;
+  // position: absolute;
+  // top: 3px;
+  // right: 10px;
+  // bottom: 0;
   width: $submit-icon-size;
   height: $submit-icon-size;
   background-color: transparent;
-  background-image: asset-url('paper-plane.svg');
+  // background-image: asset-url('paper-plane.svg');
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
