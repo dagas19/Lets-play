@@ -29,23 +29,20 @@
         <div class="created-by">
         <p>Created by </p>
         <p><%= event.user.nickname %></p>
-      </div> 
+      </div>
       </div>
 
       <div class="btn-event1">
         <a href="<%= event_path(event) %>" class="btn  btn-primary btn-lg stretched-link">Enter the event</a>
       </div>
       <div class="loc-d">
-          <p><%= event.venue.name %>  <% if user_signed_in? && current_user.address.present? %></p> 
+          <p><%= event.venue.name %>  <% if user_signed_in? && current_user.address.present? %></p>
           <p><%= (current_user.distance_to(event.venue.to_coordinates) * 1.35 ).round %> km  away <i class="fas fa-map-marker-alt"></i> <% end %></p>
       </div>
     </div>
   </div>
-  <div class="outer1">
     <div class="inner1"></div>
-  </div>
-  <div class="outer2">
     <div class="inner2"></div>
-  </div>
+    <div class="inner3"></div>
 </div>
 <% end %>
