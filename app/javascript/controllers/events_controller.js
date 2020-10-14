@@ -8,18 +8,15 @@ export default class extends Controller {
 
   }
   filterGameType(event) {
-    console.log(event);
     const target = event.currentTarget
     const gameType = target.dataset.gameType
     const gameTypeFilters = this.gameTypeFilter
-    console.log('before:',gameTypeFilters)
     if (gameTypeFilters.includes(gameType)) {
       gameTypeFilters.splice(gameTypeFilters.indexOf(gameType), 1)
     } else {
       gameTypeFilters.push(gameType)
     }
     this.gameTypeFilter = gameTypeFilters.join('|')
-    console.log('after:', this.gameTypeFilter)
     this.applyFilters();
   }
 
@@ -41,11 +38,9 @@ export default class extends Controller {
   }
 
   filterTimeType(event) {
-    console.log(event);
     const target = event.currentTarget
     const timeType = target.dataset.timeType
     const timeTypeFilters = this.timeTypeFilter
-    console.log('before:',timeTypeFilters)
     if (timeTypeFilters.includes(timeType)) {
       timeTypeFilters.splice(timeTypeFilters.indexOf(timeType), 1)
     } else {
@@ -62,7 +57,6 @@ export default class extends Controller {
       }
     }
     this.timeTypeFilter = timeTypeFilters.join('|')
-    console.log('after:', this.timeTypeFilter)
     this.applyFilters();
   }
 
