@@ -156,9 +156,10 @@ body {
 }
 
 .chat-input-area__input {
-  width: 100%;
-  background: rgba(#fff, 0.5);
-  border: none;
+  width: 80%;
+  background-color: black;
+  border: 1px solid white;
+  border-radius: 32px;
   box-sizing: border-box;
   padding: $site-padding;
   padding-right: calc(#{$submit-icon-size} + 20px);
