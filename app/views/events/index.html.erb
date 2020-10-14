@@ -1,6 +1,6 @@
 <div class="banner-events">
 </div>
-<div class="container-e pl-5 pr-5" data-controller="events">
+<div class="container-e pl-5 pr-5" data-controller="events" data-events-game-type-filter="" data-events-time-type-filter="">
   <div class="row">
     <div class="col-7" data-target="events.events">
       <%= render "shared/card" %>
@@ -20,19 +20,19 @@
             <div class="list-t">
              <div>
               <!-- <a class ="btn btn-primary" href="#" data-reflex="click->FilterReflex#filter_type" data-gametype="Axis">Strategy</a> -->
-                <input class="checkbox-budget" type="radio" name="budget" id="budget-1" data-action="click->events#filter" data-game-type="strategy">
+                <input class="checkbox-budget" type="checkbox" name="game-type" id="budget-1" data-action="click->events#filterGameType" data-game-type="strategy">
                 <label class="for-checkbox-budget" for="budget-1">
                   <span >Strategy</span>
                 </label>
-                <input class="checkbox-budget" type="radio" name="budget" id="budget-2" data-action="click->events#filter" data-game-type="fun">
+                <input class="checkbox-budget" type="checkbox" name="game-type" id="budget-2" data-action="click->events#filterGameType" data-game-type="fun">
                 <label class="for-checkbox-budget" for="budget-2">
                   <span >Fun</span>
                 </label><!--
-                --><input class="checkbox-budget" type="radio" name="budget" id="budget-3" data-action="click->events#filter" data-game-type="trivia">
+                --><input class="checkbox-budget" type="checkbox" name="game-type" id="budget-3" data-action="click->events#filterGameType" data-game-type="trivia">
                 <label class="for-checkbox-budget" for="budget-3">
                   <span >Trivia</span>
                 </label><!--
-                --><input class="checkbox-budget" type="radio" name="budget" id="budget-4" data-action="click->events#filter" data-game-type="adventure">
+                --><input class="checkbox-budget" type="checkbox" name="game-type" id="budget-4" data-action="click->events#filterGameType" data-game-type="adventure">
                 <label class="for-checkbox-budget" for="budget-4">
                   <span >Adventure</span>
                 </label>
@@ -43,21 +43,21 @@
               <h3>Time</h3>
              <div class="list-t">
              <div>
-                <input class="checkbox-budget" type="radio" name="budget" id="budget-5">
+                <input class="checkbox-budget" type="checkbox" name="game-time" id="budget-5" data-action="click->events#filterTimeType" data-target="events.today" data-time-type="today">
                 <label class="for-checkbox-budget" for="budget-5">
                   <span>Today</span>
                 </label><!--
-                --><input class="checkbox-budget" type="radio" name="budget" id="budget-6">
+                --><input class="checkbox-budget" type="checkbox" name="game-time" id="budget-6" data-action="click->events#filterTimeType" data-target="events.tomorrow" data-time-type="tomorrow">
                 <label class="for-checkbox-budget" for="budget-6">
-                  <span>This week</span>
+                  <span>Tomorrow</span>
                 </label><!--
-                --><input class="checkbox-budget" type="radio" name="budget" id="budget-7">
+                --><input class="checkbox-budget" type="checkbox" name="game-time" id="budget-7" data-action="click->events#filterTimeType" data-target="events.weekend" data-time-type="weekend">
                 <label class="for-checkbox-budget" for="budget-7">
                   <span>This weekend</span>
                 </label><!--
-                --><input class="checkbox-budget" type="radio" name="budget" id="budget-8">
+                --><input class="checkbox-budget" type="checkbox" name="game-time" id="budget-8" data-action="click->events#filterTimeType" data-time-type="week">
                 <label class="for-checkbox-budget" for="budget-8">
-                  <span>All</span>
+                  <span>This week</span>
                 </label>
               </div>
             </div>
