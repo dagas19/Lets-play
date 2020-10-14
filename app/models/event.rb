@@ -1,5 +1,5 @@
 class Event < ApplicationRecord
-  include PgSearch::Model
+  #include PgSearch::Model
   EXPERIENCE = ["Newbie", "Beginner", "Intermidiate", "Professional"]
   belongs_to :game
   belongs_to :venue
@@ -15,7 +15,21 @@ class Event < ApplicationRecord
     against: [:title], associated_against:
   { venue: [:address] }
 
+
   def participants
     [user] + users
+  end
+
+  def time_type
+    if date.today?
+      time_type = 'today'
+    elsif date.to_date == Date.tomorrow
+      time_type = 'tomorrow'
+    elsif (date.to_date.cweek == Date.today.cweek) && (date.friday? || date.saturday? || date.sunday?)
+      time_type = 'weekend'
+    elsif date.to_date.cweek == Date.today.cweek
+      time_type = 'week'
+    end
+    time_type
   end
 end
