@@ -1,13 +1,17 @@
 class EventsController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index]
   def index
-    @events = policy_scope(Event)
-    @events = Event.all
+      if @events
+        @events = policy_scope(@events)
+      else
+        @events = policy_scope(Event)
+      end
     @markers = @events.map do |event|
       {
         lat: event.venue.latitude,
         lng: event.venue.longitude,
-        infoWindow: render_to_string(partial: "info_window", locals: { event: event })
+        gameType: event.game.game_type,
+        infoWindow: render_to_string(partial: "events/info_window", locals: { event: event })
       }
     end
   end
@@ -38,5 +42,4 @@ class EventsController < ApplicationController
   def event_params
     params.require(:event).permit(:title, :date, :spots, :description, :experience_level, :min_age, :max_age, :game_id, :venue_id)
   end
-
 end

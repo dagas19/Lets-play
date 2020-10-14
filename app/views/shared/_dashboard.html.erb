@@ -25,7 +25,7 @@
                   <div class="col-5 plaque py-1">
                     <div class="row d-flex justify-content-center">
                       <div class="col-2 pl-3 pr-0"><%= cl_image_tag participant.photo.key, class: 'small-avatar' %></div>
-                      <div class="col-8 nametag mb-0 d-flex align-items-center"><h6 class="mb-0"><%= participant.nickname %></h6></div>
+                      <div class="col-8 nametag mb-0 d-flex align-items-center"><h6 class="mb-0"><%= link_to participant.nickname, user_path(participant) %></h6></div>
                     </div>
                   </div>
                 <% end %>

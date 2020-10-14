@@ -1,8 +1,8 @@
 <div class="banner-events">
 </div>
-<div class="container-e pl-5 pr-5">
+<div class="container-e pl-5 pr-5" data-controller="events">
   <div class="row">
-    <div class="col-7">
+    <div class="col-7" data-target="events.events">
       <%= render "shared/card" %>
     </div>
     <div class="col-5">
@@ -13,28 +13,26 @@
             <i class="fas fa-search"></i>
             <input type="text" id="cit" class="form-control sear" placeholder="City" />
           </div>
-          <div class="sorr">
-            <p>Sort by method</p>
-          </div>
         </div>
         <div class="bot-fil d-flex">
           <div class="all">
-            <h3>Preffered games</h3>
+            <h3>Preferred games</h3>
             <div class="list-t">
              <div>
-                <input class="checkbox-budget" type="radio" name="budget" id="budget-1">
+              <!-- <a class ="btn btn-primary" href="#" data-reflex="click->FilterReflex#filter_type" data-gametype="Axis">Strategy</a> -->
+                <input class="checkbox-budget" type="radio" name="budget" id="budget-1" data-action="click->events#filter" data-game-type="strategy">
                 <label class="for-checkbox-budget" for="budget-1">
                   <span >Strategy</span>
-                </label><!--
-                --><input class="checkbox-budget" type="radio" name="budget" id="budget-2">
+                </label>
+                <input class="checkbox-budget" type="radio" name="budget" id="budget-2" data-action="click->events#filter" data-game-type="fun">
                 <label class="for-checkbox-budget" for="budget-2">
-                  <span >Betrayl</span>
+                  <span >Fun</span>
                 </label><!--
-                --><input class="checkbox-budget" type="radio" name="budget" id="budget-3">
+                --><input class="checkbox-budget" type="radio" name="budget" id="budget-3" data-action="click->events#filter" data-game-type="trivia">
                 <label class="for-checkbox-budget" for="budget-3">
-                  <span >Puzzle</span>
+                  <span >Trivia</span>
                 </label><!--
-                --><input class="checkbox-budget" type="radio" name="budget" id="budget-4">
+                --><input class="checkbox-budget" type="radio" name="budget" id="budget-4" data-action="click->events#filter" data-game-type="adventure">
                 <label class="for-checkbox-budget" for="budget-4">
                   <span >Adventure</span>
                 </label>
@@ -42,7 +40,7 @@
             </div>
           </div>
           <div class="gametype">
-              <h3>Date around</h3>
+              <h3>Time</h3>
              <div class="list-t">
              <div>
                 <input class="checkbox-budget" type="radio" name="budget" id="budget-5">
@@ -65,7 +63,7 @@
             </div>
           </div>
         </div>
-        <div class="mapp"id="map" style="width: 100%; height: 597px;" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+        <div class="mapp" id="map" style="width: 100%; height: 597px;" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
       </div>
     </div>
   </div>
