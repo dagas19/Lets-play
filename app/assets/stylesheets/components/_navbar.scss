@@ -18,6 +18,7 @@
   border-radius: 10px !important;
   padding-top: 3px !important;
   padding-bottom: 3px !important;
+  margin-top: 2.8rem;
 }
 
 .navbar-rook {
@@ -41,7 +42,14 @@
 
 .navbar-dropdown-text {
   color: rgb(8,146,208);
+  font-size: 20px;
 }
+
+.navbar-dropdown-text:hover {
+  color: white;
+  background-color: rgb(8,146,208);
+}
+
 
 .navbar-logo {
   height: 100px;
