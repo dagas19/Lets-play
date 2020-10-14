@@ -5,52 +5,57 @@
   height: 100%;
 
 }
+.event-card-wrap {
+  position: absolute;
+  top: 0;
+  left: auto;
+  width: 100%;
+}
+
 .event-card {
+  background-color: white;
   margin-bottom: 30px;
   height: 350px;
   width: 100%;
   position: relative;
-  border-radius: 5px;
-  box-shadow: 0px 0px 1px 0px #2F2E2E;
-  border: solid 1px #2F2E2E;
+  border-radius: 40px;
+  box-shadow: 0px 0px 1px 0px black;
   transition: all .5s ease;
 }
-.entry {
-  position: absolute;
-  right: 620px;
-  bottom: 35px;
-}
+
 .event-card:hover {
   transform: translate3D(0,-1px,0) scale(1.01);
-  box-shadow: 2px 2px 5px 0px #2F2E2E;
+  box-shadow: 2px 2px 5px 0px gray;
   transition: all .4s ease;
   .small-info {
-    background-color: rgba(0, 0, 0, 0.5);
+    
   }
 }
 .eve-title {
-  color: rgb(8,146,208);
+  color: black;
 }
 .main-info {
-  background-color: #F5F5F5;
+  background-color: white;
   height: 230px;
   width: 100%;
-  border-radius: 5px;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
-  color: #2F2E2E;
+  border-radius: 40px;
   padding: 10px;
 }
+.btn-event1 {
+  position: absolute;
+  right: 30px;
+  bottom: 0;
+
+}
+
 .small-info {
-  background-color: #2F2E2E;
+  background-color: white;
   height: 118px;
   width: 100%;
-  border-radius: 5px;
-  color: white;
+  border-radius: 40px;
+  color: rgb(8,146,208);
   padding: 10px;
-  border-top-left-radius: 0px;
-  border-top-right-radius: 0px;
-  border-bottom: solid 1px black;
+  text-align: inline-block;
 }
 .event-img {
   margin-right: 20px;
@@ -60,19 +65,29 @@
   top: 10px;
   height: 200px;
   width: 200px;
+  filter: grayscale(70%);
+
 }
-.button {
-  background-color: rgb(8,146,208);
-  border: none;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 20px;
-  margin: 4px 2px;
-  font-weight: bold;
-  border-radius: 20px;
+// .button {
+//   background-color: black;
+//   border: none;
+//   color: white;
+//   padding: 20px;
+//   text-align: center;
+//   text-decoration: none;
+//   display: inline-block;
+//   font-size: 20px;
+//   margin: 4px 2px;
+//   font-weight: bold;
+//   border-radius: 20px;
+// }
+.btn {
+  border-radius: 50px;
+  background-color: black;
+  border-color: black;
+  margin-left: 20px;
+  margin-bottom: 20px;
+
 }
 .small-avatar {
   border-radius: 50%;
@@ -84,23 +99,25 @@
   width: 400px;
 }
 .eve-title {
-  color: #2F2E2E;
+  color: black;
   font-size: 36px;
 }
 .desc {
   font-weight: bold;
-  font-size: 25px;
-  width: 800px;
+  font-size: 18px;
+  width: 300px;
   margin: 0 auto 10px;
 }
+
 .fa-map-marker-alt {
-   color: red;
+   color: rgb(8,146,208);
    font-size: 25px;
    margin-left: 20px;
 }
-.loc {
-  padding: 10px;
-}
+// .loc {
+//   padding: 10px;
+// }
+
 .card-two {
   width: 300px;
 }
@@ -109,13 +126,73 @@
 }
 .created-by {
   margin-right: 10px;
+  margin-top: 10px;
   font-size: 20px;
+  color:rgb(8,146,208);
 }
 .loc-d {
+  position: absolute;
+  left: 250px;
   font-size: 20px;
 }
+
 .datik {
   position: absolute;
-  right: 10px;
+  right: 62px;
   bottom: 175px;
 }
+
+.outer {
+  width: 90%;
+  height: 1px;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.inner {
+  position: absolute;
+  width:100%;
+  height: 40%;
+  background: #6C757D;
+  top: 30%;
+  box-shadow: 0px 0px 30px 20px #6C757D;
+}
+
+.outer1 {
+  width: 1px;
+  height: 100%;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  left: 220px;
+}
+
+.inner1 {
+  position: absolute;
+  width:100%;
+  height: 40%;
+  background: #6C757D;
+  top: 30%;
+  box-shadow: 0px 0px 30px 20px #6C757D;
+
+}
+
+.outer2 {
+  width: 1px;
+  height: 100%;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  left: 10px;
+}
+
+.inner2 {
+  position: absolute;
+  width:100%;
+  height: 40%;
+  background: #6C757D;
+  box-shadow: 0px 0px 30px 20px #6C757D;
+  top: 30%;
+}
+
