@@ -17,8 +17,10 @@ $submit-icon-size: 30px;
 
 $user-text-color: #333333;
 $user-text-background: #edfbfb;
-$chatbot-text-color: #e4e3e3;
-$chatbot-text-background: linear-gradient(#5867fb, #3F51B5);
+// $chatbot-text-color: #e4e3e3;
+$chatbot-text-color: $blue;
+// $chatbot-text-background: linear-gradient(#5867fb, #3F51B5);
+$chatbot-text-background: white;
 
 // Resets
 p,
@@ -26,15 +28,18 @@ form {
   margin: 0;
 }
 
+
 // General
-body {
-  background-image: radial-gradient(circle at 100% 100%, rgba(lightblue, 0.8),rgba(pink, 0.05)),
-                    radial-gradient(circle at 100% 0%, rgba(#e3ade6, 0.05), rgba(#e3ade6, 0.8)),
-                    radial-gradient(circle at 20% 50%, rgba(yellow, 0.5), rgba(pink, 0.1));
-}
-.inppp {
-  position: relative;
-}
+
+
+// body {
+//  background-image: radial-gradient(circle at 100% 100%, rgba(lightblue, 0.8),rgba(pink, 0.05)),
+//                    radial-gradient(circle at 100% 0%, rgba(#e3ade6, 0.05), rgba(#e3ade6, 0.8)),
+//                    radial-gradient(circle at 20% 50%, rgba(yellow, 0.5), rgba(pink, 0.1));
+// }
+// .inppp {
+//    position: relative;
+// }
 
 // Conversational UI
 .chat-container {
@@ -97,13 +102,13 @@ body {
   }
 }
 
-.chat-message:first-of-type,
-.chat-message--right +
-.chat-message:not(.chat-message--right) {
-  .chat-message__text {
-    border-radius: 0 18px 18px;
-  }
-}
+// .chat-message:first-of-type,
+// .chat-message--right +
+// .chat-message:not(.chat-message--right) {
+//   .chat-message__text {
+//     border-radius: 0 18px 18px;
+//   }
+// }
 
 // Handle consecutive messages:
 // Remove extra space
@@ -145,20 +150,24 @@ body {
   font-size: 14px;
   font-weight: 300;
   color: $chatbot-text-color;
-
   animation-duration: 0.3s;
   animation-name: fly-in;
+
+  span {
+    color:  $chatbot-text-background;
+  }
+
 }
 
 // Chat input area
 .chat-input-area {
-  position: relative;
+  // position: relative;
 }
 
 .chat-input-area__input {
-  width: 100%;
-  background: rgba(#fff, 0.5);
-  border: none;
+  background-color: black;
+  border: 1px solid white;
+  border-radius: 32px;
   box-sizing: border-box;
   padding: $site-padding;
   padding-right: calc(#{$submit-icon-size} + 20px);
@@ -169,14 +178,14 @@ body {
 }
 
 .chat-input-area__submit-button {
-  position: absolute;
-  top: 3px;
-  right: 10px;
-  bottom: 0;
+  // position: absolute;
+  // top: 3px;
+  // right: 10px;
+  // bottom: 0;
   width: $submit-icon-size;
   height: $submit-icon-size;
   background-color: transparent;
-  background-image: asset-url('paper-plane.svg');
+  // background-image: asset-url('paper-plane.svg');
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
