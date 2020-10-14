@@ -40,4 +40,9 @@ const showJoining = (events) => {
     }
   })
 }
+document.querySelectorAll("h2").forEach((h2) => {
+  h2.addEventListener("click", (event) => {
+    event.currentTarget.classList.toggle("activeee");
+  });
+});
 
