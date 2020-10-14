@@ -35,6 +35,7 @@
 }
 .sear {
   border-radius: 5px;
+  width: 100%;
 }
 
 .sorr {
@@ -78,18 +79,67 @@
   width: 50%;
   text-align: center;
 }
+.dateee {
+  padding: 10px;
+}
 .cust-round  {
   background-color: rgb(8,146,208);
   height: 20px;
   width: 100%;
 }
 
+.search-box {
+  height: 50px;
+  border-radius: 50px;
+  background: white;
+  padding: 10px;
+  position: relative;
+  border: 1px solid black;
+}
+
+.search-btn {
+  color: rgb(8,146,208);
+  float: right;
+  width: 150px;
+  height: 50px;
+  border-radius: 50px;
+  background: #2F2E2E;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -1px;
+  right: 0px;
+}
 
 
-
+.search-txt {
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: black;
+  font-size: 16px;
+  transition: 0.4s;
+  line-height: 26px;
+  width: 240px;
+}
+.fa-search {
+  font-size: 30px;
+}
+.search-box a {
+  text-decoration: none;
+}
 
 .checkbox:checked ~ .section .container .row .col-12 .checkbox-tools:not(:checked) + label{
   box-shadow: 0 1x 4px 0 rgba(0, 0, 0, 0.05);
+}
+.gametypee {
+  padding: 10px;
+}
+.dateee {
+  paddinng: 10px;
 }
 
 .checkbox-budget:checked + label,
@@ -99,7 +149,7 @@
   padding: 0;
   padding-top: 20px;
   padding-bottom: 20px;
-  width: 200px;
+  width: 150px;
   font-size: 10px;
   line-height: 5px;
   font-weight: 700;
@@ -109,30 +159,36 @@
   margin-right: 5px;
   margin-bottom: 10px;
   text-align: center;
-  border-radius: 4px;
+  border-radius: 40px;
   overflow: hidden;
   cursor: pointer;
   text-transform: uppercase;
   -webkit-transition: all 300ms linear;
   transition: all 300ms linear;
-  -webkit-text-stroke: 1px white;
+  -webkit-text-stroke: 1px black;
     text-fill-color: white;
-    color: white;
+  border: 1px solid rgb(8,146,208);
+}
+.filtersss {
+  margin: 1px;
 }
 .checkbox-budget:not(:checked) + label{
-  background-color: #2F2E2E;
+  background-color: white;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
 }
 .checkbox-budget:checked + label{
   background-color: rgb(8,146,208);
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  color: white;
+   -webkit-transition: all 300ms linear;
+  transition: all 300ms linear;
+  -webkit-text-stroke: 1px white;
 }
 .checkbox-budget:not(:checked) + label:hover{
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   transform: translate3D(0,-1px,0) scale(1.03);
   box-shadow: 5px 5px 15px 0px #2F2E2E;
   transition: all .4s ease;
-  background-color: rgba(0, 0, 0, 0.5);
 }
 .checkbox-budget:checked + label::before,
 .checkbox-budget:not(:checked) + label::before{
@@ -162,6 +218,7 @@
 }
 .checkbox-budget:checked + label span::before{
   max-height: 100%;
+  color: white;
 }
 
 .checkbox:checked ~ .section .container .row .col-xl-10 .checkbox-budget:not(:checked) + label{
@@ -214,7 +271,7 @@
 }
 .checkbox:checked + label:before {
   left: 30px;
-
+  color: white;
   box-shadow: 0 4px 4px rgba(26,53,71,0.25), 0 0 0 1px rgba(26,53,71,0.07);
 }
 
