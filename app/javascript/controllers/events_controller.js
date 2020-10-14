@@ -54,7 +54,11 @@ export default class extends Controller {
         this.todayTarget.checked = true;
         this.tomorrowTarget.checked = true;
         this.weekendTarget.checked = true;
-        timeTypeFilters = ['today','tomorrow', 'weekend', 'week']
+        timeTypeFilters.splice(0, 4)
+        timeTypeFilters.push('today')
+        timeTypeFilters.push('tomorrow')
+        timeTypeFilters.push('weekend')
+        timeTypeFilters.push('week')
       }
     }
     this.timeTypeFilter = timeTypeFilters.join('|')
