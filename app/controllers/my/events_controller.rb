@@ -5,6 +5,7 @@ class My::EventsController < ApplicationController
     @participations = policy_scope([:my, Registration.where(user: current_user)])
     group_events(@events, @participations)
     @events = @all_events
+    @message = Message.new
   end
 
   private
