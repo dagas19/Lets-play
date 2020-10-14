@@ -1,5 +1,5 @@
-<div class="chat-log">
-  <div class="chat-message" id="message-<%= message.id %>">
+<div class="chat-log" >
+  <div class="chat-message" id="message-<%= message.id %>" data-myMessage="<%= message.user == current_user %>">
     <span class="chat-message__avatar-frame">
       <% if message.user.photo.attached? %>
       <%=  cl_image_tag message.user.photo.key, class: "chat-message__avatar", height: 50, width: 50, crop: :fill %>

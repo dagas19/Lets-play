@@ -19,8 +19,10 @@ $user-text-color: #333333;
 $user-text-background: #edfbfb;
 // $chatbot-text-color: #e4e3e3;
 $chatbot-text-color: $blue;
+$my-chatbot-text-color: white;
 // $chatbot-text-background: linear-gradient(#5867fb, #3F51B5);
 $chatbot-text-background: white;
+$my-chatbot-text-background: $blue;
 
 // Resets
 p,
@@ -195,4 +197,14 @@ body {
   &:hover {
     cursor: pointer;
   }
+}
+
+.my-messages {
+  justify-content: flex-end;
+
+  p {
+    background-color: $my-chatbot-text-background;
+    color:  $my-chatbot-text-color;
+  }
+
 }
