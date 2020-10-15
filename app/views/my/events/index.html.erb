@@ -46,7 +46,12 @@
                   <p><strong class="top-descr">Participants:</strong> <% event.participants.each do |participant| %></p>
                   <div>
                     <ul class="list-unstyled">
-                      <li><%= cl_image_tag participant.photo.key, class: 'small-avatar' %><span><%= participant.nickname.capitalize %></span></li>
+                      <% if current_user.photo.attached? %>
+                        <% image_url = cloudinary_url(current_user.photo.key) %>
+                        <% else %>
+                        <% image_url = 'https://miro.medium.com/max/395/1*reXbWdk_3cew69RuAUbVzg.png' %>
+                        <% end %>
+                      <li><%= image_tag(image_url, class: 'small-avatar') %><span><%= participant.nickname.capitalize %></span></li>
                     </ul>
                   </div>
                   <% end %>
