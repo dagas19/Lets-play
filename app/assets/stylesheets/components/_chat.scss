@@ -10,7 +10,19 @@
   margin-top: 40px;
   margin-bottom: 340px;
   border-radius: 16px;
+}
 
+.scroll::-webkit-scrollbar-track{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #2F2E2E;
+}
+.scroll::-webkit-scrollbar{
+  width: 10px;
+  background-color: #2F2E2E;
+}
+.scroll::-webkit-scrollbar-thumb{
+  background-color: #167FFB;
+  border-radius: 6px;
 }
 
 .message-box {
