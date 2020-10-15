@@ -5,7 +5,7 @@
       <%= simple_form_for("", method: :get, url: events_path) do |f| %>
       <div class="form-group search-box">
         <%= f.input :query, label: false, :input_html => { :class => 'form-control search-txt' }, placeholder: 'Search for city..' %>
-        <button name="button" type="submit" class="search-btn"><i class="fas fa-search"></i> Search</button>
+        <button name="button" type="submit" class="search-btn"><i class="fas fa-search"></i></button>
       </div>
       <% end  %>
       <div class="filtersss d-flex justify-content-between">
