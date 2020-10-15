@@ -34,6 +34,8 @@ stian = User.create(name: 'Stian Johansen', email: "stian.a.johansen@gmail.com",
 diana = User.create(name: 'Diana Faye-Schjøll', email: "diana@diana.com", password: "123456", nickname: 'diana', preferred_games: game_names.sample((1..4).to_a.sample).join(", "), gender: Gender.where(name: 'female')[0], age: 21, address: 'Drammensveien 54B, 0271 Oslo, NO')
 dovydas = User.create(name: 'Dovydas Savickas', email: "dovydas@dovydas.com", password: "123456", nickname: 'dovydas', preferred_games: game_names.sample((1..4).to_a.sample).join(", "), gender: Gender.where(name: 'male')[0], age: 21, address: 'Nordstrand terrasse 15, 1170 Oslo, NO')
 april = User.create(name: 'April Yeats', email: "april@april.com", password: "123456", nickname: 'april', preferred_games: game_names.sample((1..4).to_a.sample).join(", "), gender: Gender.where(name: 'female')[0], age: 28, address: 'Marta Steinsviks vei 14B, 1283 Oslo, NO')
+ben = User.create(name: 'Sir Benjamin IV', email: "benjamin@april.com", password: "123456", nickname: 'Sir Ben', preferred_games: game_names.sample((1..4).to_a.sample).join(", "), gender: Gender.where(name: 'male')[0], age: 20, address: 'Olav Kyrres gate 4, 0272 Oslo, NO')
+
 
 file = URI.open('https://res.cloudinary.com/letsplay-boardgames/image/upload/v1602513955/1_P4ZUdPzzZRQrQVbdcHMh8g_wdmgfo.jpg')
 joanna.photo.attach(io: file, filename: '1_P4ZUdPzzZRQrQVbdcHMh8g_wdmgfo.jpg', content_type:'image/png')
@@ -59,6 +61,12 @@ Venue.create(name: 'Oslo Mekaniske Verksted', address: 'Tøyenbekken 34, 0188 Os
 Venue.create(name: 'Colonel Mustard', address: 'Darres gate 2, 0175 Oslo, NO', description: 'Great little pub on the edge of town. Board games, food, good ambiance')
 Venue.create(name: 'Bar Polar', address: 'Sandakerveien 72 C, 0484 Oslo, NO', description: 'We have many cool boardgames available, good simple food and a great selection of beers')
 Venue.create(name: 'Perestrojka', address: 'Storgata 13, 0155 Oslo, NO', description: 'Cool concept with arcade games and drinks. Lovely employees too.')
+Venue.create(name: 'Kongen Marina', address: 'Frognerstranda 4, 0250 Oslo,NO', description: 'Layed back 80s inspired place with awesome assortiment of beers. Beautiful view to the harbour' )
+Venue.create(name: 'Bar Moskus', address: 'Olav Tryggvasons Gate 5, 7011 Trondheim,NO', description: 'Awesome bar with arcade games and drinks.')
+Venue.create(name: 'Raus bar', address: 'Nordre gate 21, 7010 Trondheim,NO', description: 'Cozy bar with arcade games and drinks.')
+Venue.create(name: 'Spontan Vinbar', address: 'Dronningens gate 26, 7011 Trondheim,NO', description: 'Wine bar with cool interior.')
+Venue.create(name: 'Den gode naboen', address: 'Øvre Bakklandet 66, 7016 Trondheim,NO', description: 'Cool pub with nice view')
+Venue.create(name: 'Sor bar & burger', address: 'Tmv-kaia 3, 7014 Trondheim,NO', description: 'Cozy place with good food')
 
 p "#{Venue.all.count} venues created!"
 
@@ -113,14 +121,14 @@ p "#{Game.all.count} Created!"
 
 p 'Creating events....'
 
-Event.create(title: 'Chess night!!', spots: (5..15).to_a.sample, description: 'We are hosting a chess event, all genders are welcome for a great evening', experience_level: experience.sample, min_age: (16..35).to_a.sample, max_age: (36..110).to_a.sample, game: chess, venue: Venue.where(name: 'Tilt')[0], user: User.all.sample, date: (time_now + ((6..600).to_a.sample).hours).to_datetime)
-Event.create(title: 'Board game night!', spots: (5..15).to_a.sample, description: 'We are hosting a board game night, we offer all the most popular boardgames, bring all your friends and join us for a great night out. All genders and are welcome for a great evening', experience_level: experience.sample, min_age: (16..35).to_a.sample, max_age: (36..110).to_a.sample, game: trivial_pursuit, venue: Venue.where(name: 'Colonel Mustard')[0], user: User.all.sample, date: (time_now + ((6..600).to_a.sample).hours).to_datetime)
-Event.create(title: 'Girls Monopoly bonanza!', spots: (5..15).to_a.sample, description: 'Out on the town with the girls and dont know what to do? If you love board games, you should check out our Monopoly event!', experience_level: experience.sample, min_age: (16..35).to_a.sample, max_age: (36..110).to_a.sample, game: monopoly, venue: Venue.where(name: 'Oslo Mekaniske Verksted')[0], user: User.all.sample, date: (time_now + ((6..600).to_a.sample).hours).to_datetime)
-Event.create(title: 'Catan!', spots: (5..15).to_a.sample, description: 'Up for an evening of strategy? Come join our Axis and allies event.', experience_level: experience.sample, min_age: (16..35).to_a.sample, max_age: (36..110).to_a.sample, game: catan, venue: Venue.where(name: 'Perestrojka')[0], user: User.all.sample, date: (time_now + ((6..600).to_a.sample).hours).to_datetime)
-Event.create(title: 'Checkers night!!', spots: (5..15).to_a.sample, description: 'We are hosting a checkers event, all genders are welcome for a great evening', experience_level: experience.sample, min_age: (21..35).to_a.sample, max_age: (36..110).to_a.sample, game: checkers, venue: Venue.where(name: 'Bar Polar')[0], user: User.all.sample, date: (time_now + ((6..600).to_a.sample).hours).to_datetime)
-Event.create(title: 'Scrabble night!', spots: (5..15).to_a.sample, description: 'We are hosting a board game night, we offer all the most popular boardgames, bring all your friends and join us for a great night out. All genders and are welcome for a great evening', experience_level: experience.sample, min_age: (16..35).to_a.sample, max_age: (36..110).to_a.sample, game: scrabble, venue: Venue.all.sample, user: User.all.sample, date: (time_now + ((6..600).to_a.sample).hours).to_datetime)
-Event.create(title: 'Pictionary night!!', spots: (5..15).to_a.sample, description: 'We are hosting a chess event, all genders and are welcome for a great evening', experience_level: experience.sample, min_age: (16..35).to_a.sample, max_age: (36..110).to_a.sample, game: pictionary, venue: Venue.all.sample, user: User.all.sample, date: (time_now + ((6..600).to_a.sample).hours).to_datetime)
-Event.create(title: 'Backgammon night for seniors', spots: (5..15).to_a.sample, description: 'Are you a senior and want to meet new people for a game of bridge, come join our event', experience_level: experience.sample, min_age: (60..65).to_a.sample, max_age: (66..110).to_a.sample, game: backgammon, venue: Venue.all.sample, user: User.all.sample, date: (time_now + ((6..600).to_a.sample).hours).to_datetime)
+Event.create(title: 'Chess night!!', spots: (5..15).to_a.sample, description: 'We are hosting a chess event, all genders are welcome for a great evening', experience_level: experience.sample, min_age: (16..35).to_a.sample, max_age: (36..110).to_a.sample, game: chess, venue: Venue.where(name: 'Tilt')[0], user: User.all.sample, date: Date.today)
+Event.create(title: 'Board game night!', spots: (5..15).to_a.sample, description: 'We are hosting a board game night, we offer all the most popular boardgames, bring all your friends and join us for a great night out. All genders and are welcome for a great evening', experience_level: experience.sample, min_age: (16..35).to_a.sample, max_age: (36..110).to_a.sample, game: trivial_pursuit, venue: Venue.where(name: 'Colonel Mustard')[0], user: User.all.sample, date: Date.today)
+Event.create(title: 'Girls Monopoly bonanza!', spots: (5..15).to_a.sample, description: 'Out on the town with the girls and dont know what to do? If you love board games, you should check out our Monopoly event!', experience_level: experience.sample, min_age: (16..35).to_a.sample, max_age: (36..110).to_a.sample, game: monopoly, venue: Venue.where(name: 'Oslo Mekaniske Verksted')[0], user: User.all.sample, date: Date.tomorrow)
+Event.create(title: 'Catan!', spots: (5..15).to_a.sample, description: 'Up for an evening of strategy? Come join our Axis and allies event.', experience_level: experience.sample, min_age: (16..35).to_a.sample, max_age: (36..110).to_a.sample, game: catan, venue: Venue.where(name: 'Perestrojka')[0], user: User.all.sample, date: Date.tomorrow)
+Event.create(title: 'Checkers night!!', spots: (5..15).to_a.sample, description: 'We are hosting a checkers event, all genders are welcome for a great evening', experience_level: experience.sample, min_age: (21..35).to_a.sample, max_age: (36..110).to_a.sample, game: checkers, venue: Venue.where(name: 'Bar Polar')[0], user: User.all.sample, date: Date.today + 2)
+Event.create(title: 'Scrabble night!', spots: (5..15).to_a.sample, description: 'We are hosting a board game night, we offer all the most popular boardgames, bring all your friends and join us for a great night out. All genders and are welcome for a great evening', experience_level: experience.sample, min_age: (16..35).to_a.sample, max_age: (36..110).to_a.sample, game: scrabble, venue: Venue.all.sample, user: User.all.sample, date: Date.today + 2)
+Event.create(title: 'Pictionary night!!', spots: (5..15).to_a.sample, description: 'We are hosting a chess event, all genders and are welcome for a great evening', experience_level: experience.sample, min_age: (16..35).to_a.sample, max_age: (36..110).to_a.sample, game: pictionary, venue: Venue.all.sample, user: User.all.sample, date: Date.today)
+Event.create(title: 'Backgammon night for seniors', spots: (5..15).to_a.sample, description: 'Are you a senior and want to meet new people for a game of bridge, come join our event', experience_level: experience.sample, min_age: (60..65).to_a.sample, max_age: (66..110).to_a.sample, game: backgammon, venue: Venue.all.sample, user: User.all.sample, date: Date.tomorrow)
  p "#{Event.all.count} events created"
  Event.all.each { |event| p event.title }
 
@@ -134,6 +142,7 @@ Registration.create(event: Event.last, user: User.first)
 Registration.create(event: Event.last, user: User.where(name: 'Dovydas Savickas')[0])
 Registration.create(event: Event.last, user: User.where(name: 'Diana Faye-Schjøll')[0])
 Registration.create(event: Event.last, user: User.where(name: 'April Yeats')[0])
+Registration.create(event: Event.last, user: User.where(name: 'Sir Benjamin IV')[0])
 
 
 p "creating messages"
