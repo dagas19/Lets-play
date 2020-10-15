@@ -41,6 +41,10 @@
         <div class="btn-event1">
           <button type="button" class="btn-gg btn-lg btn-disable" disabled>Registered!</button>
         </div>
+        <% elsif user_signed_in? && event.user_id == current_user.id %>
+        <div class="btn-event1">
+          <button type="button" class="btn-gg btn-lg btn-disable" disabled>My event!</button>
+        </div>
         <% elsif event.spots <= event.registrations.count %>
         <div class="btn-event1">
           <button type="button" class="btn-gg btn-lg btn-disable" disabled>Event full!</button>
