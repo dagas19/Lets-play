@@ -53,8 +53,6 @@ form {
   height: 50vh;
   background: rgba(#F5F5F5, 0.4);
   margin-right: -1600px;
-  overflow-y: scroll;
-  overflow-x: hidden;
 }
 
 // Chat log
@@ -259,4 +257,12 @@ form {
     border-right: 16px solid transparent;
     top: 0px;
     right: 68px;
+}
+.event-titleee {
+  color: rgb(8,146,208);
+  margin-left: 245px;
+  font-size: 50px;
+  position: absolute;
+  top: -90px;
+  width: 1000px;
 }
