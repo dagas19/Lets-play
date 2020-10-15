@@ -1,24 +1,25 @@
 <% @events.each do |event|  %>
-  <div class="chat-container hidden-chat" data-eventid="<%= event.id %>" data-my-user-id='<%= current_user.id %>'>
-    <div class="messages" data-event-id="<%= event.id %>">
-      <% event.messages.each do |message| %>
-        <%= render "messages/message", message: message %>
-      <% end %>
-    </div>
-    <div class="">
-      <%= simple_form_for [ event, @message ], remote: true do |f| %>
-        <div class="row d-flex justify-content-center">
-          <div class="col-10">
-            <%= f.input :content,as: :string,
-                             wrapper: false,
-                             label: false,
-                             input_html: {
-                               class: 'chat-input-area__input'
-                             }, label: false, placeholder: "type your message here" %>
-            <%= f.submit value: " ", class: "chat-input-area__submit-button" %>
-            <% end %>
+  <h3 class="hidden-chat chat-title text-center" data-eventid="<%= event.id %>"> <%=  event.title %>/ Message Board</h3>
+    <div class="chat-container hidden-chat" data-eventid="<%= event.id %>" data-my-user-id='<%= current_user.id %>'>
+      <div class="messages message-box" data-event-id="<%= event.id %>">
+        <% event.messages.each do |message| %>
+          <%= render "messages/message", message: message %>
+        <% end %>
+      </div>
+      <div class="">
+        <%= simple_form_for [ event, @message ], remote: true do |f| %>
+          <div class="row d-flex justify-content-center">
+            <div class="col-10">
+              <%= f.input :content,as: :string,
+                               wrapper: false,
+                               label: false,
+                               input_html: {
+                                 class: 'chat-input-area__input'
+                               }, label: false, placeholder: "type your message here" %>
+              <%= f.submit value: " ", class: "chat-input-area__submit-button" %>
+              <% end %>
+            </div>
           </div>
-        </div>
+      </div>
     </div>
-  </div>
 <% end %>

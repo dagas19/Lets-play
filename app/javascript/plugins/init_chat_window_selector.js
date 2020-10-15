@@ -2,6 +2,9 @@ const initChatWindowSelector = () => {
   const eventCards = document.querySelectorAll('.event-card');
   const eventChatWindows = document.querySelectorAll('.chat-container');
   window.chatShow = false
+  const eventChatWindowTitles = document.querySelectorAll('.chat-title');
+  console.log(eventChatWindowTitles);
+
 
   eventCards.forEach(card => {
     card.addEventListener('click', (event) => {
@@ -14,6 +17,15 @@ const initChatWindowSelector = () => {
           chatWindow.classList.add("hidden-chat");
         }
       })
+      eventChatWindowTitles.forEach(title => {
+        if (event.currentTarget.dataset.eventid == title.dataset.eventid) {
+          title.classList.remove("hidden-chat");
+          title.classList.add("not-hidden-chat");
+        } else {
+          title.classList.remove("not-hidden-chat");
+          title.classList.add("hidden-chat");
+        }
+      })
     })
   });
 };
@@ -22,6 +34,14 @@ const initInfoWindows = () => {
   window.infoShow = true
   const eventCards = document.querySelectorAll('.event-card');
   const eventChatWindows = document.querySelectorAll('.chat-container');
+  // eventChatWindows.forEach(chatbox => {
+  //   $("div.chat-container").scrollTop($("div.chat-container")[0].scrollHeight);
+  // });
+
+
+
+//$("div.chat-container[data-eventid='1']").scrollTop($("div.chat-container[data-eventid='1']")[0].scrollHeight);
+
 
   eventCards.forEach(card => {
     card.addEventListener('click', (event) => {

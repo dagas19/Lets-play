@@ -23,6 +23,9 @@ const initEventMessages = () => {
             const currentUserId = $(".chat-container").first().attr('data-my-user-id');
             const currentUserMessages = document.querySelectorAll("div[data-message-userid=\""+currentUserId+"\"]");
 
+            $("div[data-message-userid=\""+currentUserId+"\"] p.chat-left").removeClass("hidden-chat");
+            $("div[data-message-userid=\""+currentUserId+"\"] p.chat-right").addClass("hidden-chat");
+
             currentUserMessages.forEach(message => {
               moveChatLogRight(message);
             })
@@ -36,6 +39,7 @@ const initEventMessages = () => {
 
 function moveChatLogRight(message) {
   message.classList.add("my-messages");
+
 }
 
 export { initEventMessages }
