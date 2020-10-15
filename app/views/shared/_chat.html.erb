@@ -1,6 +1,6 @@
 <% @events.each do |event|  %>
 
-  <h3 class="hidden-chat chat-title text-center" data-eventid="<%= event.id %>"> <%=  event.title %>/ Message Board</h3>
+  <h3 class="hidden-chat chat-title text-center" data-eventid="<%= event.id %>"></h3>
     <div class="chat-container hidden-chat" data-eventid="<%= event.id %>" data-my-user-id='<%= current_user.id %>'>
       <div class="messages message-box" data-event-id="<%= event.id %>">
         <% event.messages.each do |message| %>

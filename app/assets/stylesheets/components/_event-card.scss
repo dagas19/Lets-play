@@ -3,7 +3,7 @@
   margin-left: 0px;
   margin-top: 20px;
   height: 100%;
-  overflow: hidden;
+
 }
 
 .event-card-wrap {
@@ -109,6 +109,7 @@
   text-align: left;
   width: 700px;
   margin-left: 226px;
+  max-width: 50ch;
   margin-bottom: 20px;
 }
 
@@ -199,7 +200,7 @@
   color: rgb(8,146,208);
   font-size: 20px;
   font-weight: bold;
-  padding-left: 0;
+  padding-left: 39px;
   margin-right: 30em;
 }
 
