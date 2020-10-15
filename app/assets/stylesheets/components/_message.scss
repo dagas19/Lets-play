@@ -69,6 +69,7 @@ form {
   display: flex;
   align-items: center;
   width: 100%;
+  position:relative;
 
   transition: all 0.5s;
 
@@ -154,6 +155,7 @@ form {
   color: $chatbot-text-color;
   animation-duration: 0.3s;
   animation-name: fly-in;
+  min-height: 63px;
 
   span {
     color:  $chatbot-text-background;
@@ -207,7 +209,7 @@ form {
   justify-content: flex-end;
 
   p {
-    background-color: $my-chatbot-text-background;
+    background-color: rgb(8,146,208);
     color:  $my-chatbot-text-color;
   }
 
@@ -215,4 +217,46 @@ form {
 
 .chat-left {
   margin-right: 16px;
+}
+
+.message-timestamp-right {
+    position: absolute;
+    font-size: 9px;
+    font-weight: 300;
+    bottom: -15px;
+    right: 89px;
+    color: white!important;
+}
+
+.message-timestamp-left {
+    position: absolute;
+    font-size: 9px;
+    font-weight: 300;
+    bottom: -15px;
+    left: 72px;
+    color: white!important;
+}
+
+.chat-right-stick {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 15px solid white;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    top: 0;
+    left: 52px;
+}
+
+.chat-left-stick {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 17px solid rgb(8,146,208);
+    border-left: 16px solid transparent;
+    border-right: 16px solid transparent;
+    top: 0px;
+    right: 68px;
 }
