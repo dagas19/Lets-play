@@ -1,13 +1,19 @@
-<div class="container-e pl-5 pr-5" data-controller="events">
+<div class="container-e pl-5 pr-5" data-controller="events" data-events-game-type-filter="" data-events-time-type-filter="">
   <div class="row">
     <div class="col-6" data-target="events.events" style="padding: 10px;">
       <h1 style="color: rgb(8,146,208);">All events</h1>
-      <div class="search-box">
+      <%= simple_form_for("", method: :get, url: events_path) do |f| %>
+      <div class="form-group search-box">
+        <%= f.input :query, label: false, :input_html => { :class => 'form-control search-txt' }, placeholder: 'Search for city..' %>
+        <button name="button" type="submit" class="search-btn"><i class="fas fa-search"></i> Search</button>
+      </div>
+      <% end  %>
+<!--       <div class="search-box">
         <input class="search-txt" type="text" placeholder="Type City you want">
         <a href="" class='search-btn'>
           <i class="fas fa-search"></i>
         </a>
-      </div>
+      </div> -->
       <!-- <div class="d-flex justify-content-between align-items-center form-group">
           <div class="inner-addon left-addon d-flex col-12">
             <i class="fas fa-search"></i>
@@ -17,40 +23,40 @@
       <div class="filtersss d-flex justify-content-between">
         <div class="gametypee my-2">
              <h3>Game type</h3>
-             <input class="checkbox-budget" type="radio" name="budget" id="budget-1" data-action="click->events#filter" data-game-type="strategy">
+             <input class="checkbox-budget" type="checkbox" name="game-type" id="budget-1" data-action="click->events#filterGameType" data-game-type="strategy">
                 <label class="for-checkbox-budget" for="budget-1">
                   <span >Strategy</span>
                 </label>
-                <input class="checkbox-budget" type="radio" name="budget" id="budget-2" data-action="click->events#filter" data-game-type="fun">
+                <input class="checkbox-budget" type="checkbox" name="game-type" id="budget-2" data-action="click->events#filterGameType" data-game-type="fun">
                 <label class="for-checkbox-budget" for="budget-2">
                   <span >Fun</span>
                 </label><!--
-                --><input class="checkbox-budget" type="radio" name="budget" id="budget-3" data-action="click->events#filter" data-game-type="trivia">
+                --><input class="checkbox-budget" type="checkbox" name="game-type" id="budget-3" data-action="click->events#filterGameType" data-game-type="trivia">
                 <label class="for-checkbox-budget" for="budget-3">
                   <span >Trivia</span>
                 </label><!--
-                --><input class="checkbox-budget" type="radio" name="budget" id="budget-4" data-action="click->events#filter" data-game-type="adventure">
+                --><input class="checkbox-budget" type="checkbox" name="game-type" id="budget-4" data-action="click->events#filterGameType" data-game-type="adventure">
                 <label class="for-checkbox-budget" for="budget-4">
                   <span >Adventure</span>
                 </label>
             </div>
             <div class="dateee my-2">
             <h3>Date</h3>
-             <input class="checkbox-budget" type="radio" name="budget" id="budget-5">
+             <input class="checkbox-budget" type="checkbox" name="game-time" id="budget-5" data-action="click->events#filterTimeType" data-target="events.today" data-time-type="today">
                 <label class="for-checkbox-budget" for="budget-5">
                   <span>Today</span>
                 </label><!--
-                --><input class="checkbox-budget" type="radio" name="budget" id="budget-6">
+                --><input class="checkbox-budget" type="checkbox" name="game-time" id="budget-6" data-action="click->events#filterTimeType" data-target="events.tomorrow" data-time-type="tomorrow">
                 <label class="for-checkbox-budget" for="budget-6">
-                  <span>This week</span>
+                  <span>Tomorrow</span>
                 </label><!--
-                --><input class="checkbox-budget" type="radio" name="budget" id="budget-7">
+                --><input class="checkbox-budget" type="checkbox" name="game-time" id="budget-7" data-action="click->events#filterTimeType" data-target="events.weekend" data-time-type="weekend">
                 <label class="for-checkbox-budget" for="budget-7">
                   <span>This weekend</span>
                 </label><!--
-                --><input class="checkbox-budget" type="radio" name="budget" id="budget-8">
+                --><input class="checkbox-budget" type="checkbox" name="game-time" id="budget-8" data-action="click->events#filterTimeType" data-time-type="week">
                 <label class="for-checkbox-budget" for="budget-8">
-                  <span>All</span>
+                  <span>This week</span>
                 </label>
           </div>
       </div>

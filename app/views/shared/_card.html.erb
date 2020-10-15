@@ -1,6 +1,6 @@
 <% @events.each do |event| %>
 
-<div class="event-card" data-game-type="<%= event.game.game_type %>">
+<div class="event-card" data-game-type="<%= event.game.game_type %>" data-time-type="<%= event.time_type %>" data-eventid = "<%= event.id %>">
   <div class="event-card-wrap">
     <div class="main-info text-center">
       <h2 class="eve-title display-5"> <%= event.title %></h2>
@@ -34,7 +34,7 @@
       </div>
 
       <div class="btn-event1">
-        <a href="<%= event_path(event) %>" class="btn  btn-primary btn-lg stretched-link">Enter the event</a>
+        <%= link_to "Join event", event_registrations_path(event.id), method: :post, class: "btn-gg btn-lg btn-primary" %>
       </div>
       <div class="loc-d">
           <p><%= event.venue.name %>  <% if user_signed_in? && current_user.address.present? %></p>
