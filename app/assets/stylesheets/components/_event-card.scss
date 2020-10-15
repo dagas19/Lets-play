@@ -44,9 +44,8 @@
 }
 .btn-event1 {
   position: absolute;
-  right: 30px;
+  right: 50px;
   bottom: 0;
-
 }
 
 .small-info {
@@ -55,7 +54,7 @@
   width: 100%;
   border-radius: 40px;
   color: rgb(8,146,208);
-  padding: 25px;
+  padding: 35px;
   text-align: inline-block;
 }
 .event-img {
@@ -71,13 +70,17 @@
 }
 
 .btn-gg {
+  color: white;
   border-radius: 50px;
   background-color: black;
-  border-color: black;
   margin-left: 20px;
   margin-bottom: 30px;
-
 }
+
+.btn-disable {
+  background-color: gray;
+}
+
 .small-avatar {
   border-radius: 50%;
   height: 50px;
@@ -188,6 +191,15 @@
   box-shadow: 0px 0px 0px 0px #6C757D;
   right: 225px;
   top: 252px;
-
 }
+
+#spots-l {
+  color: rgb(8,146,208);
+  font-size: 20px;
+  font-weight: bold;
+  padding-left: 0;
+  margin-right: 26em;
+}
+
+
 
