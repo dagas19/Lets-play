@@ -33,3 +33,11 @@
   border-radius: none;
   background-color: white;
 }
+.ll {
+  text-decoration: none;
+  color: #2F2E2E;
+  margin-right: 40px;
+}
+.ll:hover {
+  transform: translate3D(0,-1px,0) scale(1.05);
+}
