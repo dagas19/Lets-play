@@ -58,17 +58,19 @@ const initButtons = () => {
   const chatButton = document.querySelector("#chat")
   console.log(chatButton)
   const infoButton = document.querySelector("#moreinfo")
-  chatButton.addEventListener("click", (event) => {
-    window.infoShow = false
-    window.chatShow = true
-    $("div.chat-container[data-eventid = '"+window.eventId+"']").removeClass("hidden-chat").addClass("not-hidden-chat")
-    $("#event-info-"+window.eventId).addClass("d-none")
-  })
-   infoButton.addEventListener("click", (event) => {
-    window.infoShow = true
-    window.chatShow = false
-    $("div.chat-container[data-eventid = '"+window.eventId+"']").addClass("hidden-chat").removeClass("not-hidden-chat")
-    $("#event-info-"+window.eventId).removeClass("d-none")
-  })
+  if (chatButton) {
+    chatButton.addEventListener("click", (event) => {
+      window.infoShow = false
+      window.chatShow = true
+      $("div.chat-container[data-eventid = '"+window.eventId+"']").removeClass("hidden-chat").addClass("not-hidden-chat")
+      $("#event-info-"+window.eventId).addClass("d-none")
+    })
+     infoButton.addEventListener("click", (event) => {
+      window.infoShow = true
+      window.chatShow = false
+      $("div.chat-container[data-eventid = '"+window.eventId+"']").addClass("hidden-chat").removeClass("not-hidden-chat")
+      $("#event-info-"+window.eventId).removeClass("d-none")
+    })
+  }
 }
 export { initChatWindowSelector, initInfoWindows, initButtons };

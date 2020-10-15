@@ -31,13 +31,26 @@
         <div class=" py-3 pl-5 text-info"> <= Click card for refresh details below:</div>
         <% @events.each do |event| %>
           <div class="d-none event-info-2" id="event-info-<%= event.id %>" >
-            <h2 class="event-titlee"><%= event.title %></h2>
-            <div class="mappp">
-
-            </div>
             <div class="info-for-event">
-              <div class="descrip">
+            <h2 class="event-titlee"><%= event.title %></h2>
+              <div class="main-descrip">
                 <p><strong class="top-descr">Description:</strong> <%= event.description %></p>
+              </div>
+              <div class="mappp d-flex">
+                <div class="game-descrip">
+                <p><strong class="top-descr">Game:</strong></p>
+                <%=  cl_image_tag event.game.photo.key, class: "event-imgg", height: 400, width: 400, crop: :fill %>
+              </div>
+                <div class="pariti ">
+                  <div></div>
+                  <p><strong class="top-descr">Participants:</strong> <% event.participants.each do |participant| %></p>
+                  <div>
+                    <ul class="list-unstyled">
+                      <li><%= cl_image_tag participant.photo.key, class: 'small-avatar' %><span><%= participant.nickname.capitalize %></span></li>
+                    </ul>
+                  </div>
+                  <% end %>
+                </div>
               </div>
               <div class="descrip">
                 <p><strong class="top-descr">Venue:</strong> <%= event.venue.name %></p>
@@ -46,17 +59,7 @@
                 <p><strong class="top-descr">Address:</strong> <%= event.venue.address %></p>
               </div>
               <div class="descrip">
-                <p><strong class="top-descr">Game:</strong> <%= event.game.name.capitalize %></p>
-              </div>
-              <div class="descrip">
-                <p><strong class="top-descr">Time:</strong> <%= event.date.strftime("%k:%M HRS") %></p>
-              </div>
-              <div class="pariti">
-                <p><strong class="top-descr">Participants:</strong> <% event.participants.each do |participant| %></p>
-                <ul>
-                  <li><%= cl_image_tag participant.photo.key, class: 'small-avatar' %><%= participant.nickname.capitalize %></li>
-                </ul>
-                <% end %>
+                <p><strong class="top-descr">Time:</strong> <%= event.date.strftime("%k:%M local") %></p>
               </div>
             </div>
 
@@ -67,4 +70,5 @@
       </div>
     </div>
   </div>
+</div>
 </div>
