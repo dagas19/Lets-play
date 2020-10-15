@@ -28,6 +28,12 @@ const initChatWindowSelector = () => {
   });
 };
 
+  // eventChatWindows.forEach(chatbox => {
+  //   $("div.chat-container").scrollTop($("div.chat-container")[0].scrollHeight);
+  // });
+
+
+
 //$("div.chat-container[data-eventid='1']").scrollTop($("div.chat-container[data-eventid='1']")[0].scrollHeight);
 
 
