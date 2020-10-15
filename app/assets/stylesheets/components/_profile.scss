@@ -48,6 +48,37 @@
   z-index: -1;
 }
 
-.background-profile-page {
-  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8) ), url(/assets/background-profile.jpg);
+// .bg-profile {
+//   background-image: image_url('nn2.jpg');
+//   z-index: 1;
+//   background-size: cover;
+//   background-position: center;
+//   background-repeat: no-repeat;
+// }
+
+.back {
+  background-image: asset-url("nn2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+.left {
+  margin-left: 100px;
+}
+.form {
+  margin-top: 100px;
+}
+.wrapper {
+  position: relative;
+}
+.profile-top {
+  position: absolute;
+  top: -1300px;
+  left: 370px;
+  width: 100%;
+}
+
+#user-profile-image {
+  object-fit: cover;
 }

@@ -59,6 +59,7 @@ const initButtons = () => {
   console.log(chatButton)
   const infoButton = document.querySelector("#moreinfo")
   if (chatButton) {
+
     chatButton.addEventListener("click", (event) => {
       window.infoShow = false
       window.chatShow = true
@@ -72,5 +73,6 @@ const initButtons = () => {
       $("#event-info-"+window.eventId).removeClass("d-none")
     })
   }
+
 }
 export { initChatWindowSelector, initInfoWindows, initButtons };
