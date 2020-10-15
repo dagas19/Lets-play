@@ -9,7 +9,9 @@
       <h2 class="eve-title display-5"> <%= event.title %></h2>
        <div class="cont text-center">
         <%=  cl_image_tag event.game.photo.key, class: "event-img", height: 300, width: 300, crop: :fill %>
-         <p class="font-bold desc"><%= event.description %></p>
+         <p class="font-bold desc"><%= event.description %>
+           <%= truncate(event.description, :length => 50) %>
+         </p>
          <p id="spots-l">Spots left <%= event.spots - event.registrations.count %> ! </p>
          <div class="datik">
            <time datetime="@event.date.strftime(%d %m %Y')" class="icon">
