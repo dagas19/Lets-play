@@ -30,6 +30,7 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 import { initEventMessages } from '../channels/event_channel'
 import { initMapbox } from '../plugins/init_mapbox';
+import { initChatWindowSelector } from '../plugins/init_chat_window_selector';
 import "controllers"
 
 import flatpickr from 'flatpickr'
@@ -38,6 +39,7 @@ document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   initMapbox();
+  initChatWindowSelector();
   initEventMessages();
   flatpickr("[data-behavior='flatpickr']", {
     enableTime: true,
