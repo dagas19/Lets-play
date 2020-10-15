@@ -6,6 +6,7 @@ class MessagesController < ApplicationController
     @message.user = current_user
     authorize @message
     if @message.save
+      binding.pry
       EventChannel.broadcast_to(
         @event,
         render_to_string(partial: "message", locals: { message: @message })
