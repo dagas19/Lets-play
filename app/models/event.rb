@@ -1,5 +1,5 @@
 class Event < ApplicationRecord
-  #include PgSearch::Model
+  include PgSearch::Model
   EXPERIENCE = ["Newbie", "Beginner", "Intermidiate", "Professional"]
   belongs_to :game
   belongs_to :venue

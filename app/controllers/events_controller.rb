@@ -2,6 +2,7 @@ class EventsController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index]
   def index
       if @events
+        raise
         @events = policy_scope(@events)
       else
         @events = policy_scope(Event)
