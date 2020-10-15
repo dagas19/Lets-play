@@ -3,7 +3,7 @@
 
   <h3 class="hidden-chat chat-title text-center" data-eventid="<%= event.id %>"></h3>
     <div class="chat-container scroll hidden-chat" data-eventid="<%= event.id %>" data-my-user-id='<%= current_user.id %>'>
-
+        <h2 class="event-titleee"><%= event.title %></h2>
       <div class="messages message-box" data-event-id="<%= event.id %>">
         <% event.messages.each do |message| %>
           <%= render "messages/message", message: message %>

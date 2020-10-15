@@ -7,24 +7,26 @@
 
 .chat-container {
   background-color: #2F2E2E;
-  margin-top: 40px;
+  margin-top: 60px;
   margin-bottom: 340px;
   border-radius: 16px;
+  margin-left: 50px;
+  background-color: rgba(245,245,245,0.5);
+  position:relative;
 }
 
-.scroll::-webkit-scrollbar-track{
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-  background-color: #2F2E2E;
+.message-box::-webkit-scrollbar-track{
 }
-.scroll::-webkit-scrollbar{
+.message-box::-webkit-scrollbar{
   width: 10px;
-  background-color: #2F2E2E;
 }
-.scroll::-webkit-scrollbar-thumb{
+
+.message-box::-webkit-scrollbar-thumb{
   background-color: rgb(8,146,208);
   border-radius: 6px;
 }
 
 .message-box {
-  min-height: 600px;
+  height: 93%;
+  overflow-y: scroll;
 }
