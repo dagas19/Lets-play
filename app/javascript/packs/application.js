@@ -30,7 +30,7 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 import { initEventMessages } from '../channels/event_channel'
 import { initMapbox } from '../plugins/init_mapbox';
-import { initChatWindowSelector } from '../plugins/init_chat_window_selector';
+import { initChatWindowSelector, initInfoWindows, initButtons } from '../plugins/init_chat_window_selector';
 import { initChatAlignments } from '../plugins/init_chat_alignments';
 import "controllers"
 
@@ -41,8 +41,10 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
   initMapbox();
   initChatWindowSelector();
+  initInfoWindows();
   initChatAlignments();
   initEventMessages();
+  initButtons();
   flatpickr("[data-behavior='flatpickr']", {
     enableTime: true,
     dateFormat: "Y-m-d H:i",

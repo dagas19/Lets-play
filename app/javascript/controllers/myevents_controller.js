@@ -61,4 +61,3 @@ var btns = document.querySelectorAll(".b");
          item.className += " activeee";
       });
    });
-
