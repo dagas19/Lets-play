@@ -21,8 +21,8 @@ export default class extends Controller {
 }
 const showHosting = (events) => {
   events.forEach((eventCard) => {
-  const cardHosting = eventCard.dataset.hosting
-    if (cardHosting) {
+    const cardHosting = eventCard.dataset.hosting
+    if (cardHosting == "true") {
       eventCard.style.display = 'block'
     } else {
       eventCard.style.display = 'none'
@@ -32,8 +32,8 @@ const showHosting = (events) => {
 
 const showJoining = (events) => {
   events.forEach((eventCard) => {
-  const cardJoining = eventCard.dataset.joining
-    if (!cardJoining) {
+    const cardHosting = eventCard.dataset.hosting
+    if (cardHosting == "false") {
       eventCard.style.display = 'block'
     } else {
       eventCard.style.display = 'none'
