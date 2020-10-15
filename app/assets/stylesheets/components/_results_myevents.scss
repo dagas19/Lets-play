@@ -40,4 +40,6 @@
 }
 .ll:hover {
   transform: translate3D(0,-1px,0) scale(1.05);
+  transition: all .4s ease;
+  cursor: pointer;
 }
