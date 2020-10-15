@@ -37,13 +37,17 @@
         <p><%= event.user.nickname %></p>
       </div>
       </div>
-        <% if (event.registrations.pluck(:user_id).include?(current_user.id)) || (event.spots < event.registrations.count) %>
+        <% if user_signed_in? && event.registrations.pluck(:user_id).include?(current_user.id) %>
         <div class="btn-event1">
-          <button type="button" class="btn-gg btn-lg btn-disable" disabled>Full !</button>
+          <button type="button" class="btn-gg btn-lg btn-disable" disabled>Registered!</button>
+        </div>
+        <% elsif event.spots <= event.registrations.count %>
+        <div class="btn-event1">
+          <button type="button" class="btn-gg btn-lg btn-disable" disabled>Event full!</button>
         </div>
         <% else %>
         <div class="btn-event1">
-          <%= link_to "Join event", event_registrations_path(event.id), method: :post, class: "btn-gg btn btn-lg" %>
+          <%= link_to "Join event!", event_registrations_path(event.id), method: :post, class: "btn-gg btn btn-lg" %>
         </div>
         <% end %>
       <div class="loc-d">
