@@ -31,6 +31,7 @@ import "bootstrap";
 import { initEventMessages } from '../channels/event_channel'
 import { initMapbox } from '../plugins/init_mapbox';
 import { initChatWindowSelector } from '../plugins/init_chat_window_selector';
+import { initChatAlignments } from '../plugins/init_chat_alignments';
 import "controllers"
 
 import flatpickr from 'flatpickr'
@@ -40,6 +41,7 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
   initMapbox();
   initChatWindowSelector();
+  initChatAlignments();
   initEventMessages();
   flatpickr("[data-behavior='flatpickr']", {
     enableTime: true,
