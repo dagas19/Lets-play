@@ -1,17 +1,27 @@
 import consumer from "./consumer";
 
 const initEventMessages = () => {
-  const messagesContainer = document.getElementById('messages');
-  if (messagesContainer) {
-    const id = messagesContainer.dataset.eventId;
-    console.log('hi dag')
-
-    consumer.subscriptions.create({ channel: "EventChannel", id: id }, {
-      received(data) {
-        console.log('hello, John', data, messageContainer);
-        messagesContainer.insertAdjacentHTML('beforeend', data); // called when data is broadcast in the cable
-      }
-    });
+  const messagesContainers = document.querySelectorAll('.chat-container');
+  if (messagesContainers) {
+    messagesContainers.forEach((container) => {
+      const eventId = container.dataset.eventid
+      consumer.subscriptions.create(
+        { channel: "EventChannel", id: eventId },
+        {
+          // called when data is broadcast in the cable
+          received(data) {
+            // Clear chat message in input
+            container.querySelector(".chat-input-area__input")
+              .value = ""
+            // Append new chat message
+            container.querySelector('.messages')
+              .insertAdjacentHTML("beforeend", data)
+            // scroll to chat end
+            container.scrollTo(0, container.scrollHeight)
+          },
+        }
+      )
+    })
   }
 };
 
