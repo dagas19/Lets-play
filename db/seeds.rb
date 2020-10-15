@@ -66,7 +66,7 @@ Venue.create(name: 'Bar Moskus', address: 'Olav Tryggvasons Gate 5, 7011 Trondhe
 Venue.create(name: 'Raus bar', address: 'Nordre gate 21, 7010 Trondheim,NO', description: 'Cozy bar with arcade games and drinks.')
 Venue.create(name: 'Spontan Vinbar', address: 'Dronningens gate 26, 7011 Trondheim,NO', description: 'Wine bar with cool interior.')
 Venue.create(name: 'Den gode naboen', address: 'Øvre Bakklandet 66, 7016 Trondheim,NO', description: 'Cool pub with nice view')
-Venue.create(name: 'Sor bar & burger', address: 'Tmv-kaia 3, 7014 Trondheim,NO', description: 'Cozy place with good food')
+Venue.create(name: 'Sot bar & burger', address: 'Tmv-kaia 3, 7014 Trondheim,NO', description: 'Cozy place with good food')
 
 p "#{Venue.all.count} venues created!"
 
