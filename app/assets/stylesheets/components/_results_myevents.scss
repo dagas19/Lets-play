@@ -6,4 +6,30 @@
 }
 .jj {
   margin-right: 40px;
+  text-decoration: none;
+  color: rgb(8,146,208);
+}
+.hh {
+  color: #2F2E2E;
+
+}
+.b {
+  text-decoration: none;
+}
+.jj:hover {
+  cursor: pointer;
+  transform: translate3D(0,-1px,0) scale(1.05);
+  transition: all .4s ease;
+}
+.hh:hover {
+  cursor: pointer;
+  transform: translate3D(0,-1px,0) scale(1.05);
+  // box-shadow: 2px 2px 5px 0px gray;
+  transition: all .4s ease;
+}
+.activeee {
+  border-bottom: 1px solid #2F2E2E;
+  text-decoration: none;
+  border-radius: none;
+  background-color: #E5E5E5;
 }
