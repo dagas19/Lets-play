@@ -77,16 +77,13 @@
 }
 .butttt {
   margin-left: 50px;
-  margin-top: 121px;
+  margin-top: 10px;
 }
 
-
 .mappp {
-  width: 800px;
-  height: 400px;
-  background-color: white;
-  margin-left: 180px;
+  margin-left: 0;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 .info-for-event {
   margin-left: 50px;
@@ -97,20 +94,49 @@
   border-bottom:1px solid rgba(245,245,245,0.6);
   width: 80%;
 }
-.top-descr {
-  font-size: 20px;
+.main-descrip {
+  padding: 10px;
+  width: 80%;
+}
+.game-descrip {
+  padding: 10px;
 }
 
-
-
-
-
-
-
-
-
-
-
+.top-descr {
+  font-size: 24px;
+  font-family: Bungee;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+.event-titlee {
+  color: rgb(8,146,208);
+  margin-left: 275px;
+  font-size: 50px;
+}
+.pariti {
+  padding: 10px;
+  width: 36%;
+  margin-left: 20px;
+}
+.pariti li {
+  text-style-type: none;
+  text-decoration: none;
+  margin-top: 10px;
+  border-bottom:1px solid rgba(245,245,245,0.6);
+  padding: 10px;
+}
+.info-for-event p {
+  font-size: 24px;
+}
+.nickm {
+  font-size: 25px;
+}
+.pariti span {
+  font-size: 25px;
+}
+.event-imgg {
+  margin-top: 24px;
+}
 
 
 
