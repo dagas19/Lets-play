@@ -12,20 +12,29 @@ export default class extends Controller {
     const category = target.dataset.category
     const events = document.querySelectorAll('.event-card');
     if (category == "joining") {
+      hideAll(events)
       showJoining(events)
+    }
+    else if (category == "hosting") {
+      hideAll(events)
+      showHosting(events)
     }
     else {
       showHosting(events)
+      showJoining(events)
     }
   }
+}
+const hideAll = (events) => {
+  events.forEach((eventCard) => {
+    eventCard.style.display = 'none'
+  })
 }
 const showHosting = (events) => {
   events.forEach((eventCard) => {
     const cardHosting = eventCard.dataset.hosting
     if (cardHosting == "true") {
       eventCard.style.display = 'block'
-    } else {
-      eventCard.style.display = 'none'
     }
   })
 }
@@ -35,8 +44,6 @@ const showJoining = (events) => {
     const cardHosting = eventCard.dataset.hosting
     if (cardHosting == "false") {
       eventCard.style.display = 'block'
-    } else {
-      eventCard.style.display = 'none'
     }
   })
 }
