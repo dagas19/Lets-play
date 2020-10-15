@@ -1,6 +1,8 @@
 class EventsController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index]
   def index
+    @query = params['query']
+    @events = Event.city_search(@query) if @query.present?
       if @events
         raise
         @events = policy_scope(@events)

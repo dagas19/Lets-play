@@ -11,8 +11,7 @@ class Event < ApplicationRecord
   validates :title, presence: true
   validates :spots, presence: true
 
-  pg_search_scope :city_search,
-    against: [:title], associated_against:
+  pg_search_scope :city_search, against: [:title], associated_against:
   { venue: [:address] }
 
 
