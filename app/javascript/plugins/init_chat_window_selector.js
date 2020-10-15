@@ -28,5 +28,7 @@ const initChatWindowSelector = () => {
   });
 };
 
+//$("div.chat-container[data-eventid='1']").scrollTop($("div.chat-container[data-eventid='1']")[0].scrollHeight);
+
 
 export { initChatWindowSelector };

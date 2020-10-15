@@ -3,8 +3,7 @@ const initChatAlignments = () => {
   const currentUserId = $(".chat-container").first().attr('data-my-user-id');
   const currentUserMessages = document.querySelectorAll("div[data-message-userid=\""+currentUserId+"\"]");
 
-$("div[data-message-userid=\""+currentUserId+"\"] p.chat-left").removeClass("hidden-chat")
-$("div[data-message-userid=\""+currentUserId+"\"] p.chat-right").addClass("hidden-chat")
+
 
 
   currentUserMessages.forEach(message => {
@@ -13,6 +12,8 @@ $("div[data-message-userid=\""+currentUserId+"\"] p.chat-right").addClass("hidde
 
   function moveChatLogRight(message) {
     message.classList.add("my-messages");
+    $("div[data-message-userid=\""+currentUserId+"\"] p.chat-left").removeClass("hidden-chat");
+    $("div[data-message-userid=\""+currentUserId+"\"] p.chat-right").addClass("hidden-chat");
   }
 
 
