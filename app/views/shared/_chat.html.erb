@@ -1,6 +1,5 @@
 <% @events.each do |event|  %>
-  <div class="chat-container hidden-chat" data-eventid="<%= event.id %>">
-    <!-- <div id="messages" data-event-id="<%= event.id %>"> -->
+  <div class="chat-container hidden-chat" data-eventid="<%= event.id %>" data-my-user-id='<%= current_user.id %>'>
     <div class="messages" data-event-id="<%= event.id %>">
       <% event.messages.each do |message| %>
         <%= render "messages/message", message: message %>

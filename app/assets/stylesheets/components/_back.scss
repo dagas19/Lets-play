@@ -4,7 +4,7 @@
   background-size: cover;
   height: 100vh;
   width: 100%;
-  filter: grayscale(60%);
+  filter: drop-shadow(16px 16px 20px blue) invert(75%);
 }
 .left {
   margin-left: 100px;

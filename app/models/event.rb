@@ -14,7 +14,6 @@ class Event < ApplicationRecord
   pg_search_scope :city_search, against: [:title], associated_against:
   { venue: [:address] }
 
-
   def participants
     [user] + users
   end

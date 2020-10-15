@@ -10,6 +10,12 @@ const initEventMessages = () => {
         {
           // called when data is broadcast in the cable
           received(data) {
+            const currentUserId = $(".chat-container").first().attr('data-my-user-id');
+            const currentUserMessages = document.querySelectorAll("div[data-message-userid=\""+currentUserId+"\"]");
+
+            currentUserMessages.forEach(message => {
+              moveChatLogRight(message);
+            })
             // Clear chat message in input
             container.querySelector(".chat-input-area__input")
               .value = ""
@@ -24,5 +30,10 @@ const initEventMessages = () => {
     })
   }
 };
+
+
+function moveChatLogRight(message) {
+  message.classList.add("my-messages");
+}
 
 export { initEventMessages }

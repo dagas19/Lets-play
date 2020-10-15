@@ -4,8 +4,8 @@
   margin-top: 20px;
   height: 100%;
   overflow: hidden;
-
 }
+
 .event-card-wrap {
   position: absolute;
   top: 0;
@@ -35,6 +35,7 @@
 .eve-title {
   color: black;
 }
+
 .main-info {
   background-color: white;
   height: 230px;
@@ -42,11 +43,11 @@
   border-radius: 40px;
   padding: 25px;
 }
+
 .btn-event1 {
   position: absolute;
-  right: 30px;
+  right: 50px;
   bottom: 0;
-
 }
 
 .small-info {
@@ -55,9 +56,10 @@
   width: 100%;
   border-radius: 40px;
   color: rgb(8,146,208);
-  padding: 25px;
+  padding: 35px;
   text-align: inline-block;
 }
+
 .event-img {
   margin-right: 20px;
   border-radius: 40px;
@@ -67,38 +69,45 @@
   height: 200px;
   width: 200px;
   filter: grayscale(70%);
-
 }
 
 .btn-gg {
+  color: white;
   border-radius: 50px;
   background-color: black;
-  border-color: black;
   margin-left: 20px;
   margin-bottom: 30px;
-
 }
+
+.btn-disable {
+  background-color: gray;
+  width: 130px;
+}
+
 .small-avatar {
   border-radius: 50%;
   height: 50px;
   width: 50px;
   margin-right: 20px;
 }
+
 .card-one {
   width: 400px;
 }
+
 .eve-title {
   color: black;
   font-size: 36px;
   text-align: left;
   margin-left: 226px;
 }
+
 .desc {
   color: black;
   font-weight: bold;
   font-size: 22px;
   text-align: left;
-  width: 600px;
+  width: 700px;
   margin-left: 226px;
   margin-bottom: 20px;
 }
@@ -126,7 +135,7 @@
 }
 .loc-d {
   position: absolute;
-  left: 250px;
+  left: 255px;
   font-size: 20px;
 }
 
@@ -153,8 +162,6 @@
   box-shadow: 0px 0px 30px 20px #6C757D;
 }
 
-
-
 .inner1 {
   position: absolute;
   width:1px;
@@ -164,9 +171,7 @@
   box-shadow: 0px 0px 0px 0px #6C757D;
   left: 220px;
   top: 252px;
-
 }
-
 
 .inner2 {
   position: absolute;
@@ -177,8 +182,8 @@
   box-shadow: 0px 0px 0px 0px #6C757D;
   right: 225px;
   top: 27px;
-
 }
+
 .inner3 {
   position: absolute;
   width:1px;
@@ -188,6 +193,15 @@
   box-shadow: 0px 0px 0px 0px #6C757D;
   right: 225px;
   top: 252px;
-
 }
+
+#spots-l {
+  color: rgb(8,146,208);
+  font-size: 20px;
+  font-weight: bold;
+  padding-left: 0;
+  margin-right: 30em;
+}
+
+
 
