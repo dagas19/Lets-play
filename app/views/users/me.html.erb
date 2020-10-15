@@ -14,12 +14,12 @@
                       <div class="d-flex justify-content-center align-items-center rounded" style="height: 140px; background-color: rgb(233, 236, 239);" data-controller="image-preview">
 
                         <% if current_user.photo.attached? %>
-                      <% image_url = cloudinary_url(current_user.photo.key) %>
-                      <% else %>
-                      <% image_url = 'https://miro.medium.com/max/395/1*reXbWdk_3cew69RuAUbVzg.png' %>
-                      <% end %>
+                        <% image_url = cloudinary_url(current_user.photo.key) %>
+                        <% else %>
+                        <% image_url = 'https://miro.medium.com/max/395/1*reXbWdk_3cew69RuAUbVzg.png' %>
+                        <% end %>
                         <%= image_tag(image_url,  width: "140px", height: "140px", id: "user-profile-image") %>
-                     <!--    <span style="color: rgb(166, 168, 170); font: bold 8pt Arial;">140x140</span> -->
+                        <!--    <span style="color: rgb(166, 168, 170); font: bold 8pt Arial;">140x140</span> -->
 
                       </div>
                     </div>
@@ -41,76 +41,77 @@
                 </div>
                 <div class="tab-content pt-3">
                   <div class="tab-pane active">
-                      <div class="row">
-                        <div class="col">
-                          <div class="row">
-                            <div class="col">
-                              <div class="form-group">
-                                <%= f.input :name, label: 'Full name', input_html: {class: 'form-control-sm'}, placeholder: current_user.name %>
-                              </div>
-                            </div>
-                            <div class="col">
-                              <div class="form-group">
-                                <%= f.input :nickname, label: 'Nickname', input_html: {class: 'form-control-sm'}, placeholder: current_user.nickname %>
-                              </div>
+                    <div class="row">
+                      <div class="col">
+                        <div class="row">
+                          <div class="col">
+                            <div class="form-group">
+                              <%= f.input :name, label: 'Full name', input_html: {class: 'form-control-sm'}, placeholder: current_user.name %>
                             </div>
                           </div>
-                          <div class="row">
-                            <div class="col">
-                              <div class="form-group">
-                                <%= f.input :address, label: 'Address', input_html: {class: 'form-control-sm'} %>
-                              </div>
+                          <div class="col">
+                            <div class="form-group">
+                              <%= f.input :nickname, label: 'Nickname', input_html: {class: 'form-control-sm'}, placeholder: current_user.nickname %>
                             </div>
                           </div>
-                          <div class="row">
-                            <div class="col">
-                              <div class="form-group">
-                                <%= f.input :email, label: 'Email', input_html: {class: 'form-control-sm'}, placeholder: current_user.email %>
-                              </div>
-                            </div>
-                            <div class="col">
-                              <div class="form-group">
-                                <%= f.input :age, label: 'Age', input_html: {class: 'form-control-sm'}, placeholder: current_user.age %>
-                              </div>
+                        </div>
+                        <div class="row">
+                          <div class="col">
+                            <div class="form-group">
+                              <%= f.input :address, label: 'Address', input_html: {class: 'form-control-sm'} %>
                             </div>
                           </div>
-                          <div class="row">
-                            <div class="col">
-                              Gender
-                              <div class="form-group" data-controller="select2">
-                                <%= f.select :gender_id, Gender.all.map { |gender| [gender.name, gender.id]},
-                                {include_blank: false, required: true, include_hidden: false, selected: current_user.gender.id},
-                                label: 'Gender', class: 'form-control select2-list'
-                                 %>
-                              </div>
+                        </div>
+                        <div class="row">
+                          <div class="col">
+                            <div class="form-group">
+                              <%= f.input :email, label: 'Email', input_html: {class: 'form-control-sm'}, placeholder: current_user.email %>
                             </div>
-                            <div class="col">
-                              Preferred Game
-                              <div class="form-group" data-controller="select2">
-                                <%= f.select :preferred_games, Game.all.map { |game| game.name}, {include_blank: false, required: true, include_hidden: false}, label: 'Preferred Games', class: 'form-control select2-list' %>
-                              </div>
+                          </div>
+                          <div class="col">
+                            <div class="form-group">
+                              <%= f.input :age, label: 'Age', input_html: {class: 'form-control-sm'}, placeholder: current_user.age %>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col">
+                            Gender
+                            <div class="form-group" data-controller="select2">
+                              <%= f.select :gender_id, Gender.all.map { |gender| [gender.name, gender.id]},
+                              {include_blank: false, required: true, include_hidden: false, selected: current_user.gender.id},
+                              label: 'Gender', class: 'form-control select2-list'
+                              %>
+                            </div>
+                          </div>
+                          <div class="col">
+                            Preferred Game
+                            <div class="form-group" data-controller="select2">
+                              <%= f.select :preferred_games, Game.all.map { |game| game.name}, {include_blank: false, required: true, include_hidden: false}, label: 'Preferred Games', class: 'form-control select2-list' %>
                             </div>
                           </div>
                         </div>
                       </div>
-                      <div class="row">
-                        <div class="col d-flex justify-content-beginning">
-                          <button class="btn btn-primary" type="submit">Save Changes</button>
-                        </div>
+                    </div>
+                    <div class="row">
+                      <div class="col d-flex justify-content-beginning">
+                        <button class="btn btn-primary" type="submit">Save Changes</button>
                       </div>
-                      <div class="row">
-                        <div class="col d-flex justify-content-beginning">
+                    </div>
+                    <div class="row">
+                      <div class="col d-flex justify-content-beginning">
                         <%= link_to "Change password?", edit_user_registration_path, class: "mt-1" %>
-                        </div>
                       </div>
-
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
     </div>
+    <% end  %>
   </div>
-  <% end  %>
 </div>
+
