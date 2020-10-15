@@ -1,6 +1,9 @@
 <% @events.each do |event| %>
-
-<div class="event-card" data-game-type="<%= event.game.game_type %>" data-time-type="<%= event.time_type %>" data-eventid = "<%= event.id %>">
+<div class="event-card"
+  data-game-type="<%= event.game.game_type %>"
+  data-time-type="<%= event.time_type %>"
+  data-eventid="<%= event.id %>"
+  data-hosting="<%= event.user == current_user %>">
   <div class="event-card-wrap">
     <div class="main-info text-center">
       <h2 class="eve-title display-5"> <%= event.title %></h2>
