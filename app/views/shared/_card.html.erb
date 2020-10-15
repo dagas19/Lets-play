@@ -10,12 +10,12 @@
        <div class="cont text-center">
         <%=  cl_image_tag event.game.photo.key, class: "event-img", height: 300, width: 300, crop: :fill %>
          <p class="font-bold desc"><%= event.description %></p>
-
+         <p id="spots-l">Spots left <%= event.spots - event.registrations.count %> ! </p>
          <div class="datik">
            <time datetime="@event.date.strftime(%d %m %Y')" class="icon">
               <em><%= event.date.strftime("%A") %></em>
               <strong><%= event.date.strftime("%B")%></strong>
-              <span><%= (event.date + 6).strftime('%y') %></span>
+              <span><%= (event.date + 6).strftime('%e') %></span>
             </time>
          </div>
       </div>
@@ -35,10 +35,15 @@
         <p><%= event.user.nickname %></p>
       </div>
       </div>
-
-      <div class="btn-event1">
-        <%= link_to "Join event", event_registrations_path(event.id), method: :post, class: "btn-gg btn-lg btn-primary" %>
-      </div>
+        <% if (event.registrations.pluck(:user_id).include?(current_user.id)) || (event.spots < event.registrations.count) %>
+        <div class="btn-event1">
+          <button type="button" class="btn-gg btn-lg btn-disable" disabled>Full !</button>
+        </div>
+        <% else %>
+        <div class="btn-event1">
+          <%= link_to "Join event", event_registrations_path(event.id), method: :post, class: "btn-gg btn btn-lg" %>
+        </div>
+        <% end %>
       <div class="loc-d">
           <p><%= event.venue.name %>  <% if user_signed_in? && current_user.address.present? %></p>
           <p><%= (current_user.distance_to(event.venue.to_coordinates) * 1.35 ).round %> km  away <i class="fas fa-map-marker-alt"></i> <% end %></p>
