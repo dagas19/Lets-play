@@ -2,12 +2,18 @@
   <div class="row">
     <div class="col-6" data-target="events.events" style="padding: 10px;">
       <h1 style="color: rgb(8,146,208);">All events</h1>
-      <div class="search-box">
+      <%= simple_form_for("", method: :get, url: events_path) do |f| %>
+      <div class="form-group search-box">
+        <%= f.input :query, label: false, :input_html => { :class => 'form-control search-txt' }, placeholder: 'Search for city..' %>
+        <button name="button" type="submit" class="search-btn"><i class="fas fa-search"></i> Search</button>
+      </div>
+      <% end  %>
+<!--       <div class="search-box">
         <input class="search-txt" type="text" placeholder="Type City you want">
         <a href="" class='search-btn'>
           <i class="fas fa-search"></i>
         </a>
-      </div>
+      </div> -->
       <!-- <div class="d-flex justify-content-between align-items-center form-group">
           <div class="inner-addon left-addon d-flex col-12">
             <i class="fas fa-search"></i>

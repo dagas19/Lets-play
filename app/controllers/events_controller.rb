@@ -3,12 +3,11 @@ class EventsController < ApplicationController
   def index
     @query = params['query']
     @events = Event.city_search(@query) if @query.present?
-      if @events
-        raise
-        @events = policy_scope(@events)
-      else
-        @events = policy_scope(Event)
-      end
+    if @events
+      @events = policy_scope(@events)
+    else
+      @events = policy_scope(Event)
+    end
     @markers = @events.map do |event|
       {
         lat: event.venue.latitude,
