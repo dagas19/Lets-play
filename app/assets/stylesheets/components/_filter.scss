@@ -96,6 +96,10 @@
   position: relative;
   border: 1px solid black;
 }
+.search-box input:focus {
+  text-decoration: none;
+  border: none;
+}
 
 .search-btn {
   color: rgb(8,146,208);
@@ -123,7 +127,12 @@
   font-size: 16px;
   transition: 0.4s;
   line-height: 26px;
-  width: 240px;
+  width: 80%;
+  height: 25px;
+  border-radius: 50px;
+}
+.search-txt:focus {
+  border:none;
 }
 .fa-search {
   font-size: 30px;
