@@ -49,12 +49,13 @@ form {
   flex-direction: column;
   justify-content: flex-end;
   width: 100%;
-  max-width: 600px;
+  max-width: 800px;
   height: 50vh;
   background: rgba(#F5F5F5, 0.4);
   box-shadow: 2px 1px 10px rgba(#A9A6A6, 0.4);
   margin-right: -1600px;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 // Chat log
@@ -163,15 +164,16 @@ form {
 
 // Chat input area
 .chat-input-area {
-  // position: relative;
+  position: relative;
 }
 
 .chat-input-area__input {
-  background-color: black;
+  background-color: #2F2E2E;
   border: 1px solid white;
   border-radius: 32px;
   box-sizing: border-box;
   padding: $site-padding;
+  margin-bottom: 30px;
   padding-right: calc(#{$submit-icon-size} + 20px);
 
   &:focus {
@@ -180,14 +182,14 @@ form {
 }
 
 .chat-input-area__submit-button {
-  // position: absolute;
-  // top: 3px;
-  // right: 10px;
-  // bottom: 0;
+  position: absolute;
+  top: 3px;
+  right: -25px;
+  bottom: 0;
   width: $submit-icon-size;
   height: $submit-icon-size;
   background-color: transparent;
-  // background-image: asset-url('paper-plane.svg');
+  background-image: asset-url('paper-plane.svg');
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -210,4 +212,8 @@ form {
     color:  $my-chatbot-text-color;
   }
 
+}
+
+.chat-left {
+  margin-right: 16px;
 }

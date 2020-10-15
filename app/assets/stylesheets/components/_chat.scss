@@ -6,10 +6,13 @@
 }
 
 .chat-container {
-  background-color: black;
+  background-color: #2F2E2E;
   margin-top: 40px;
   margin-bottom: 340px;
   border-radius: 16px;
 
 }
 
+.message-box {
+  min-height: 600px;
+}
