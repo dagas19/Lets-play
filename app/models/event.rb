@@ -1,5 +1,5 @@
 class Event < ApplicationRecord
-  #include PgSearch::Model
+  include PgSearch::Model
   EXPERIENCE = ["Newbie", "Beginner", "Intermidiate", "Professional"]
   belongs_to :game
   belongs_to :venue
@@ -11,9 +11,9 @@ class Event < ApplicationRecord
   validates :title, presence: true
   validates :spots, presence: true
 
-  # pg_search_scope :game_type_filter,
-  #   against: [:title], associated_against:
-  # { game: [:name, :game_type] }
+  pg_search_scope :city_search, against: [:title], associated_against:
+  { venue: [:address] }
+
 
   def participants
     [user] + users

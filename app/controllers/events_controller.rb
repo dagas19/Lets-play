@@ -1,11 +1,13 @@
 class EventsController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index]
   def index
-      if @events
-        @events = policy_scope(@events)
-      else
-        @events = policy_scope(Event)
-      end
+    @query = params['query']
+    @events = Event.city_search(@query) if @query.present?
+    if @events
+      @events = policy_scope(@events)
+    else
+      @events = policy_scope(Event)
+    end
     @markers = @events.map do |event|
       {
         lat: event.venue.latitude,
