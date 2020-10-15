@@ -22,7 +22,46 @@
         </div>
       </div>
     </div>
-    <div class="col-6 ml-0 p-0">
+    <div class="col-6 ml-0 p-0" style="background-color: #2F2E2E; height: 100%;">
+      <div class="d-flex butttt">
+        <h2 id="moreinfo"class="k mm activeeee" >More info</h2>
+        <h2 id="chat" class="k cc">Chat</h2>
+      </div>
+      <div>
+        <div class=" py-3 pl-5 text-info"> <= Click card for refresh details below:</div>
+        <% @events.each do |event| %>
+          <div class="d-none event-info-2" id="event-info-<%= event.id %>" >
+            <%= event.title %>
+            <div class="mappp">
+
+            </div>
+            <div class="info-for-event">
+              <div class="descrip">
+                <p><strong class="top-descr">Description:</strong> <%= event.description %></p>
+              </div>
+              <div class="descrip">
+                <p><strong class="top-descr">Venue:</strong> <%= event.venue.name %></p>
+              </div>
+              <div class="descrip">
+                <p><strong class="top-descr">Address:</strong> <%= event.venue.address %></p>
+              </div>
+              <div class="descrip">
+                <p><strong class="top-descr">Game:</strong> <%= event.game.name %></p>
+              </div>
+              <div class="descrip">
+                <p><strong class="top-descr">Time:</strong> <%= event.date.strftime("%k:%M HRS") %></p>
+              </div>
+              <div class="pariti">
+                <p><strong class="top-descr">Participants:</strong> <% event.participants.each do |participant| %></p>
+                <ul>
+                  <li><%= cl_image_tag participant.photo.key, class: 'small-avatar' %><%= participant.nickname %></li>
+                </ul>
+                <% end %>
+              </div>
+            </div>
+
+          </div>
+          <% end %>
       <div class="filter-pane">
         <%= render "shared/chat" %>
       </div>

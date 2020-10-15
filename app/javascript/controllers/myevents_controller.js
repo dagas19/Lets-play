@@ -61,4 +61,11 @@ var btns = document.querySelectorAll(".b");
          item.className += " activeee";
       });
    });
-
+var btnss = document.querySelectorAll(".k");
+   Array.from(btnss).forEach(item => {
+      item.addEventListener("click", () => {
+         var selected = document.getElementsByClassName("activeeee");
+         selected[0].className = selected[0].className.replace(" activeeee", "");
+         item.className += " activeeee";
+      });
+   });

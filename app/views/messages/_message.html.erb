@@ -1,5 +1,6 @@
 <div class="chat-log" >
   <div class="chat-message" id="message-<%= message.id %>" data-message-userid="<%= message.user.id %>">
+        <p class="chat-message__text chat-left hidden-chat"><%= message.user.name %><span class="hidden-chat-dots">: - - - - - - -:</span><%= time_ago_in_words(message.created_at)%><br><%= message.content %></p>
     <span class="chat-message__avatar-frame">
       <% if message.user.photo.attached? %>
       <%=  cl_image_tag message.user.photo.key, class: "chat-message__avatar", height: 50, width: 50, crop: :fill %>
@@ -7,7 +8,7 @@
         <img src="https://media.kasperskydaily.com/wp-content/uploads/sites/85/2019/08/12075337/selfie-with-id-card-scam-featured.jpg" alt="" class='chat-message__avatar'>
       <% end %>
     </span>
-    <p class="chat-message__text"><%= message.user.name %><span class="hidden-chat-dots">: - - - - - - -:</span><%= time_ago_in_words(message.created_at)%><br><%= message.content %></p>
+    <p class="chat-message__text chat-right"><%= message.user.name %><span class="hidden-chat-dots">: - - - - - - -:</span><%= time_ago_in_words(message.created_at)%><br><%= message.content %></p>
   </div>
 </div>
 
