@@ -32,17 +32,26 @@ const showHosting = (events) => {
 
 const showJoining = (events) => {
   events.forEach((eventCard) => {
-  const cardHosting = eventCard.dataset.hosting
-    if (!cardHosting) {
+  const cardJoining = eventCard.dataset.joining
+    if (!cardJoining) {
       eventCard.style.display = 'block'
     } else {
       eventCard.style.display = 'none'
     }
   })
 }
-document.querySelectorAll("h2").forEach((h2) => {
-  h2.addEventListener("click", (event) => {
-    event.currentTarget.classList.toggle("activeee");
-  });
-});
+// document.querySelectorAll("h2").forEach((h2) => {
+//   h2.addEventListener("click", (event) => {
+//     event.currentTarget.classList.add("activeee").siblings().removeClass("activeee");
+//   });
+// });
+
+var btns = document.querySelectorAll(".b");
+   Array.from(btns).forEach(item => {
+      item.addEventListener("click", () => {
+         var selected = document.getElementsByClassName("activeee");
+         selected[0].className = selected[0].className.replace(" activeee", "");
+         item.className += " activeee";
+      });
+   });
 

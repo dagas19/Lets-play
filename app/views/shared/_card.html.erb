@@ -34,7 +34,7 @@
       </div>
 
       <div class="btn-event1">
-        <%= link_to "Join event", event_registrations_path(event.id), method: :post, class: "btn btn-lg btn-primary" %>
+        <%= link_to "Join event", event_registrations_path(event.id), method: :post, class: "btn-gg btn-lg btn-primary" %>
       </div>
       <div class="loc-d">
           <p><%= event.venue.name %>  <% if user_signed_in? && current_user.address.present? %></p>
