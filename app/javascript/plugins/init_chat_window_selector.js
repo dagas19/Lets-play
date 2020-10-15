@@ -58,6 +58,7 @@ const initButtons = () => {
   const chatButton = document.querySelector("#chat")
   console.log(chatButton)
   const infoButton = document.querySelector("#moreinfo")
+  if (chatButton) {
   chatButton.addEventListener("click", (event) => {
     window.infoShow = false
     window.chatShow = true
@@ -70,5 +71,6 @@ const initButtons = () => {
     $("div.chat-container[data-eventid = '"+window.eventId+"']").addClass("hidden-chat").removeClass("not-hidden-chat")
     $("#event-info-"+window.eventId).removeClass("d-none")
   })
+ }
 }
 export { initChatWindowSelector, initInfoWindows, initButtons };
