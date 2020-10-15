@@ -16,6 +16,9 @@
 .b {
   text-decoration: none;
 }
+.k {
+  text-decoration: none;
+}
 .jj:hover {
   cursor: pointer;
   transform: translate3D(0,-1px,0) scale(1.05);
@@ -31,7 +34,12 @@
   border-bottom: 1px solid #2F2E2E;
   text-decoration: none;
   border-radius: none;
-  background-color: white;
+}
+.activeeee {
+  border-bottom: 1px solid white;
+  text-decoration: none;
+  border-radius: none;
+  background-color: #2F2E2E;;
 }
 .ll {
   text-decoration: none;
@@ -43,3 +51,77 @@
   transition: all .4s ease;
   cursor: pointer;
 }
+.cc {
+  text-decoration: none;
+  color: white;
+}
+.cc:hover {
+  cursor: pointer;
+  transform: translate3D(0,-1px,0) scale(1.05);
+  // box-shadow: 2px 2px 5px 0px gray;
+  transition: all .4s ease;
+  background-color: #2F2E2E;
+}
+
+.mm {
+  margin-right: 40px;
+  text-decoration: none;
+  color: rgb(8,146,208);
+}
+.mm:hover {
+  cursor: pointer;
+  transform: translate3D(0,-1px,0) scale(1.05);
+  // box-shadow: 2px 2px 5px 0px gray;
+  transition: all .4s ease;
+  background-color: #2F2E2E;
+}
+.butttt {
+  margin-left: 50px;
+  margin-top: 121px;
+}
+
+
+.mappp {
+  width: 800px;
+  height: 400px;
+  background-color: white;
+  margin-left: 180px;
+  margin-bottom: 20px;
+}
+.info-for-event {
+  margin-left: 50px;
+  color: white;
+}
+.descrip {
+  padding: 10px;
+  border-bottom:1px solid rgba(245,245,245,0.6);
+  width: 80%;
+}
+.top-descr {
+  font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
