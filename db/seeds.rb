@@ -51,8 +51,8 @@ diana.photo.attach(io: file, filename: 'v1602513409/AATXAJwU6seujWzSkm_WLq0jt0nQ
 file = URI.open('https://res.cloudinary.com/letsplay-boardgames/image/upload/v1602514411/photo-1506794778202-cad84cf45f1d_cshxrh.jpg')
 dovydas.photo.attach(io: file, filename: 'photo-1506794778202-cad84cf45f1d_cshxrh.jpg', content_type:'image/png')
 
-file = URI.open('https://res.cloudinary.com/letsplay-boardgames/image/upload/v1602515784/01-shutterstock_476340928-Irina-Bg_oyjc7v.jpg')
-april.photo.attach(io: file, filename: 'v1602515784/01-shutterstock_476340928-Irina-Bg_oyjc7v.jpg', content_type:'image/png')
+file = URI.open('https://res.cloudinary.com/letsplay-boardgames/image/upload/v1602841855/6PWAWGTKTFHOZF4VJALHFHE3VU_ydk4pk.jpg')
+april.photo.attach(io: file, filename: 'v1602841855/6PWAWGTKTFHOZF4VJALHFHE3VU_ydk4pk.jpg', content_type:'image/png')
 
 file = URI.open('https://res.cloudinary.com/letsplay-boardgames/image/upload/v1602841825/AC_ECOM_SITE_2020_REFRESH_1_INDEX_M2_THUMBS-V2-1_ek9iie.jpg')
 ben.photo.attach(io: file, filename: 'v1602841825/AC_ECOM_SITE_2020_REFRESH_1_INDEX_M2_THUMBS-V2-1_ek9iie.jpg', content_type:'image/png')
