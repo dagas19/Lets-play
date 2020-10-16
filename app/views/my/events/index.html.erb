@@ -46,8 +46,8 @@
                   <p><strong class="top-descr">Participants:</strong> <% event.participants.each do |participant| %></p>
                   <div>
                     <ul class="list-unstyled">
-                      <% if current_user.photo.attached? %>
-                        <% image_url = cloudinary_url(current_user.photo.key) %>
+                      <% if participant.photo.attached? %>
+                        <% image_url = cloudinary_url(participant.photo.key) %>
                         <% else %>
                         <% image_url = 'https://miro.medium.com/max/395/1*reXbWdk_3cew69RuAUbVzg.png' %>
                         <% end %>
