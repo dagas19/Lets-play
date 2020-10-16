@@ -32,9 +32,11 @@ import { initEventMessages } from '../channels/event_channel'
 import { initMapbox } from '../plugins/init_mapbox';
 import { initChatWindowSelector, initInfoWindows, initButtons } from '../plugins/init_chat_window_selector';
 import { initChatAlignments } from '../plugins/init_chat_alignments';
+import { emojiPicker } from '../plugins/emoji_picker';
 import "controllers"
 
 import flatpickr from 'flatpickr'
+
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
@@ -45,6 +47,7 @@ document.addEventListener('turbolinks:load', () => {
   initChatAlignments();
   initEventMessages();
   initButtons();
+  emojiPicker();
   flatpickr("[data-behavior='flatpickr']", {
     enableTime: true,
     dateFormat: "Y-m-d H:i",
