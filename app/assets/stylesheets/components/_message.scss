@@ -179,7 +179,7 @@ form {
   font-size: 25px;
   position: absolute;
   bottom: -115px;
-  left: 14px;
+  left: -20px;
 
   &:focus {
     outline: none;
@@ -189,7 +189,7 @@ form {
 .chat-input-area__submit-button {
   position: absolute;
   top: 19px;
-  right: 5px;
+  right: -40px;
   bottom: 0;
   width: 44px;
   height: 44px;
@@ -274,10 +274,10 @@ form {
   margin-top: 30px;
   margin-bottom: 20px;
 }
-.triggerr {
+.trigger {
   position: absolute;
   top: 22px;
-  left: -40px;
+  right: 30px;
 }
 .fa-grin-alt {
   font-size: 44px;
