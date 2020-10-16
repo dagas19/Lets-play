@@ -129,7 +129,7 @@ p "#{Game.all.count} Created!"
 p 'Creating events....'
 
 Event.create(title: 'Chess night!!', spots: (5..15).to_a.sample, description: 'We are hosting a chess event, everyone is welcome for a great evening', experience_level: experience.sample, min_age: (16..35).to_a.sample, max_age: (36..110).to_a.sample, game: chess, venue: Venue.where(name: 'Tilt')[0],
-  user: User.first, date: DateTime.parse('2020-10-16 21:00'))
+  user: User.first, date: DateTime.parse('2020-10-18 21:00'))
 Event.create(title: 'Board game night!', spots: (5..15).to_a.sample, description: 'We are hosting a board game night, we offer all the most popular boardgames, bring all your friends and join us for a great night out. Everyone is welcome for a great evening', experience_level: experience.sample, min_age: (16..35).to_a.sample, max_age: (36..110).to_a.sample, game: trivial_pursuit, venue: Venue.where(name: 'Colonel Mustard')[0],
   user: User.first, date: DateTime.parse('2020-10-16 20:00'))
 Event.create(title: 'Girls Monopoly bonanza!', spots: (5..15).to_a.sample, description: 'Out on the town with the girls and don\'t know what to do? If you love board games, you should check out our Monopoly event!', experience_level: experience.sample, min_age: (16..35).to_a.sample, max_age: (36..110).to_a.sample, game: monopoly, venue: Venue.where(name: 'Oslo Mekaniske Verksted')[0],
