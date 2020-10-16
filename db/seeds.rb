@@ -34,6 +34,8 @@ stian = User.create(name: 'Stian Johansen', email: "stian.a.johansen@gmail.com",
 diana = User.create(name: 'Diana Faye-Schjøll', email: "diana@diana.com", password: "123456", nickname: 'diana', preferred_games: game_names.sample((1..4).to_a.sample).join(", "), gender: Gender.where(name: 'female')[0], age: 21, address: 'Drammensveien 54B, 0271 Oslo, NO')
 dovydas = User.create(name: 'Dovydas Savickas', email: "dovydas@dovydas.com", password: "123456", nickname: 'dovydas', preferred_games: game_names.sample((1..4).to_a.sample).join(", "), gender: Gender.where(name: 'male')[0], age: 21, address: 'Nordstrand terrasse 15, 1170 Oslo, NO')
 april = User.create(name: 'April Yeats', email: "april@april.com", password: "123456", nickname: 'april', preferred_games: game_names.sample((1..4).to_a.sample).join(", "), gender: Gender.where(name: 'female')[0], age: 28, address: 'Marta Steinsviks vei 14B, 1283 Oslo, NO')
+john = User.create(name: 'John El Basha', email: "john@gmail.com", password: "123456", nickname: 'John', preferred_games: game_names.sample((1..4).to_a.sample).join(", "), gender: Gender.where(name: 'male')[0], age: 20,
+  address: 'Schweigaards gate 34 C, 0191 Oslo, NO')
 ben = User.create(name: 'Sir Benjamin IV', email: "benjamin@april.com", password: "123456", nickname: 'Sir Ben', preferred_games: game_names.sample((1..4).to_a.sample).join(", "), gender: Gender.where(name: 'male')[0], age: 20, address: 'Olav Kyrres gate 4, 0272 Oslo, NO')
 
 
@@ -52,6 +54,11 @@ dovydas.photo.attach(io: file, filename: 'photo-1506794778202-cad84cf45f1d_cshxr
 file = URI.open('https://res.cloudinary.com/letsplay-boardgames/image/upload/v1602841855/6PWAWGTKTFHOZF4VJALHFHE3VU_ydk4pk.jpg')
 april.photo.attach(io: file, filename: 'v1602841855/6PWAWGTKTFHOZF4VJALHFHE3VU_ydk4pk.jpg', content_type:'image/png')
 
+file = URI.open('https://res.cloudinary.com/letsplay-boardgames/image/upload/v1602841825/AC_ECOM_SITE_2020_REFRESH_1_INDEX_M2_THUMBS-V2-1_ek9iie.jpg')
+ben.photo.attach(io: file, filename: 'v1602841825/AC_ECOM_SITE_2020_REFRESH_1_INDEX_M2_THUMBS-V2-1_ek9iie.jpg', content_type:'image/png')
+
+file = URI.open('https://res.cloudinary.com/letsplay-boardgames/image/upload/v1602841707/Screenshot_2020-10-16_at_11.47.20_ne8y7t.png')
+john.photo.attach(io: file, filename: 'v1602841707/Screenshot_2020-10-16_at_11.47.20_ne8y7t.png', content_type:'image/png')
 
 p "#{User.all.count} users created!"
 
@@ -121,35 +128,45 @@ p "#{Game.all.count} Created!"
 
 p 'Creating events....'
 
-Event.create(title: 'Chess night!!', spots: (5..15).to_a.sample, description: 'We are hosting a chess event, all genders are welcome for a great evening', experience_level: experience.sample, min_age: (16..35).to_a.sample, max_age: (36..110).to_a.sample, game: chess, venue: Venue.where(name: 'Tilt')[0], user: User.all.sample, date: Date.today)
-Event.create(title: 'Board game night!', spots: (5..15).to_a.sample, description: 'We are hosting a board game night, we offer all the most popular boardgames, bring all your friends and join us for a great night out. All genders and are welcome for a great evening', experience_level: experience.sample, min_age: (16..35).to_a.sample, max_age: (36..110).to_a.sample, game: trivial_pursuit, venue: Venue.where(name: 'Colonel Mustard')[0], user: User.all.sample, date: Date.today)
-Event.create(title: 'Girls Monopoly bonanza!', spots: (5..15).to_a.sample, description: 'Out on the town with the girls and dont know what to do? If you love board games, you should check out our Monopoly event!', experience_level: experience.sample, min_age: (16..35).to_a.sample, max_age: (36..110).to_a.sample, game: monopoly, venue: Venue.where(name: 'Oslo Mekaniske Verksted')[0], user: User.all.sample, date: Date.tomorrow)
-Event.create(title: 'Catan!', spots: (5..15).to_a.sample, description: 'Up for an evening of strategy? Come join our Axis and allies event.', experience_level: experience.sample, min_age: (16..35).to_a.sample, max_age: (36..110).to_a.sample, game: catan, venue: Venue.where(name: 'Perestrojka')[0], user: User.all.sample, date: Date.tomorrow)
-Event.create(title: 'Checkers night!!', spots: (5..15).to_a.sample, description: 'We are hosting a checkers event, all genders are welcome for a great evening', experience_level: experience.sample, min_age: (21..35).to_a.sample, max_age: (36..110).to_a.sample, game: checkers, venue: Venue.where(name: 'Bar Polar')[0], user: User.all.sample, date: Date.today + 2)
-Event.create(title: 'Scrabble night!', spots: (5..15).to_a.sample, description: 'We are hosting a board game night, we offer all the most popular boardgames, bring all your friends and join us for a great night out. All genders and are welcome for a great evening', experience_level: experience.sample, min_age: (16..35).to_a.sample, max_age: (36..110).to_a.sample, game: scrabble, venue: Venue.all.sample, user: User.all.sample, date: Date.today + 2)
-Event.create(title: 'Pictionary night!!', spots: (5..15).to_a.sample, description: 'We are hosting a chess event, all genders and are welcome for a great evening', experience_level: experience.sample, min_age: (16..35).to_a.sample, max_age: (36..110).to_a.sample, game: pictionary, venue: Venue.all.sample, user: User.all.sample, date: Date.today)
-Event.create(title: 'Backgammon night for seniors', spots: (5..15).to_a.sample, description: 'Are you a senior and want to meet new people for a game of bridge, come join our event', experience_level: experience.sample, min_age: (60..65).to_a.sample, max_age: (66..110).to_a.sample, game: backgammon, venue: Venue.all.sample, user: User.all.sample, date: Date.tomorrow)
+Event.create(title: 'Chess night!!', spots: (5..15).to_a.sample, description: 'We are hosting a chess event, everyone is welcome for a great evening', experience_level: experience.sample, min_age: (16..35).to_a.sample, max_age: (36..110).to_a.sample, game: chess, venue: Venue.where(name: 'Tilt')[0],
+  user: User.first, date: DateTime.parse('2020-10-16 21:00'))
+Event.create(title: 'Board game night!', spots: (5..15).to_a.sample, description: 'We are hosting a board game night, we offer all the most popular boardgames, bring all your friends and join us for a great night out. Everyone is welcome for a great evening', experience_level: experience.sample, min_age: (16..35).to_a.sample, max_age: (36..110).to_a.sample, game: trivial_pursuit, venue: Venue.where(name: 'Colonel Mustard')[0],
+  user: User.first, date: DateTime.parse('2020-10-16 20:00'))
+Event.create(title: 'Girls Monopoly bonanza!', spots: (5..15).to_a.sample, description: 'Out on the town with the girls and don\'t know what to do? If you love board games, you should check out our Monopoly event!', experience_level: experience.sample, min_age: (16..35).to_a.sample, max_age: (36..110).to_a.sample, game: monopoly, venue: Venue.where(name: 'Oslo Mekaniske Verksted')[0],
+  user: User.all[1], date: DateTime.parse('2020-10-17 22:00'))
+Event.create(title: 'Catan!', spots: (5..15).to_a.sample, description: 'Up for an evening of strategy? Come play Catan with us.', experience_level: experience.sample, min_age: (16..35).to_a.sample, max_age: (36..110).to_a.sample, game: catan, venue: Venue.where(name: 'Perestrojka')[0],
+  user: User.all[2], date: DateTime.parse('2020-10-17 22:00'))
+Event.create(title: 'Checkers night!!', spots: (5..15).to_a.sample, description: 'We are hosting a checkers event, everyone is welcome for a great evening', experience_level: experience.sample, min_age: (21..35).to_a.sample, max_age: (36..110).to_a.sample, game: checkers, venue: Venue.where(name: 'Bar Polar')[0],
+  user: User.all[3], date: DateTime.parse('2020-10-18 22:00'))
+Event.create(title: 'Scrabble night!', spots: (5..15).to_a.sample, description: 'Love Scrabble? Bring all your friends and join us for a great night out. Everyone is welcome for a great evening', experience_level: experience.sample, min_age: (16..35).to_a.sample, max_age: (36..110).to_a.sample, game: scrabble, venue: Venue.all.sample,
+  user: User.all[3], date: DateTime.parse('2020-10-17 23:00'))
+Event.create(title: 'Pictionary night!!', spots: (5..15).to_a.sample, description: 'We are hosting a Pictionary event, everyone is welcome for a great evening', experience_level: experience.sample, min_age: (16..35).to_a.sample, max_age: (36..110).to_a.sample, game: pictionary, venue: Venue.all.sample,
+  user: User.all[2], date: DateTime.parse('2020-10-16 20:00'))
+Event.create(title: 'Backgammon night for students', spots: (5..15).to_a.sample, description: 'Are you a student? Do you want to meet new people for a game of backgammon? Come join our event', experience_level: experience.sample, min_age: (60..65).to_a.sample, max_age: (66..110).to_a.sample, game: backgammon, venue: Venue.all.sample,
+  user: User.find_by(name: 'April Yeats'), date: DateTime.parse('2020-10-17 22:00'))
  p "#{Event.all.count} events created"
  Event.all.each { |event| p event.title }
 
 
 p "Creating registrations"
-Registration.create(event: Event.first, user: User.first)
+#Registration.create(event: Event.first, user: User.first)
 Registration.create(event: Event.first, user: User.last)
 Registration.create(event: Event.first, user: User.where(name: 'Dovydas Savickas')[0])
 Registration.create(event: Event.first, user: User.where(name: 'Diana Faye-Schjøll')[0])
 Registration.create(event: Event.last, user: User.first)
 Registration.create(event: Event.last, user: User.where(name: 'Dovydas Savickas')[0])
 Registration.create(event: Event.last, user: User.where(name: 'Diana Faye-Schjøll')[0])
-Registration.create(event: Event.last, user: User.where(name: 'April Yeats')[0])
+#Registration.create(event: Event.last, user: User.where(name: 'April Yeats')[0])
 Registration.create(event: Event.last, user: User.where(name: 'Sir Benjamin IV')[0])
 
 
 p "creating messages"
-Message.create(content: "I'm really excited about this next game. It has been ages!", date: (Time.now + ((1..3).to_a.sample).hours).to_datetime, event: Event.where(title: 'Girls Monopoly bonanza!')[0], user: User.where(name: 'April Yeats')[0])
-Message.create(content: "Can I bring a friend?.", date: (Time.now + ((1..3).to_a.sample).hours).to_datetime, event: Event.where(title: 'Girls Monopoly bonanza!')[0], user: User.where(name: 'Dovydas Savickas')[0])
+#Message.create(content: "I'm really excited about this next game. It has been ages!", date: (Time.now + ((1..3).to_a.sample).hours).to_datetime, event: Event.where(title: 'Girls Monopoly bonanza!')[0], user: User.where(name: 'April Yeats')[0])
+#Message.create(content: "Can I bring a friend?.", date: (Time.now + ((1..3).to_a.sample).hours).to_datetime, event: Event.where(title: 'Girls Monopoly bonanza!')[0], user: User.where(name: 'Diana Faye-Schjøll')[0])
+
 Message.create(content: "This time there is going to be a time limit for each turn", date: (Time.now + ((1..3).to_a.sample).hours).to_datetime, event: Event.where(title: 'Backgammon night for seniors')[0], user: User.where(name: 'April Yeats')[0])
 Message.create(content: "Are you sure this place serves drinks? I thought it was just coffee etc...", date: (Time.now + ((1..3).to_a.sample).hours).to_datetime, event: Event.where(title: 'Backgammon night for seniors')[0], user: User.where(name: 'Dovydas Savickas')[0])
-Message.create(content: "I found out that this place is dog-friendly, so feel free to bring your pooch!", date: (Time.now + ((1..3).to_a.sample).hours).to_datetime, event: Event.where(title: 'Checkers night!!')[0], user: User.where(name: 'April Yeats')[0])
-Message.create(content: "Great! I'll bring Max with me... I hope there is a comfy sofa for him", date: (Time.now + ((1..3).to_a.sample).hours).to_datetime, event: Event.where(title: 'Checkers night!!')[0], user: User.where(name: 'Dovydas Savickas')[0])
+
+Message.create(content: "I found out that this place is dog-friendly, so feel free to bring your pooch!", date: (Time.now + ((1..3).to_a.sample).hours).to_datetime, event: Event.where(title: 'Chess night!!')[0], user: User.where(name: 'Diana Faye-Schjøll')[0])
+Message.create(content: "Great! I'll bring Max with me... I hope there is a comfy sofa for him", date: (Time.now + ((1..3).to_a.sample).hours).to_datetime, event: Event.where(title: 'Chess night!!')[0], user: User.where(name: 'Dovydas Savickas')[0])
 
