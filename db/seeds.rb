@@ -164,8 +164,8 @@ p "creating messages"
 #Message.create(content: "I'm really excited about this next game. It has been ages!", date: (Time.now + ((1..3).to_a.sample).hours).to_datetime, event: Event.where(title: 'Girls Monopoly bonanza!')[0], user: User.where(name: 'April Yeats')[0])
 #Message.create(content: "Can I bring a friend?.", date: (Time.now + ((1..3).to_a.sample).hours).to_datetime, event: Event.where(title: 'Girls Monopoly bonanza!')[0], user: User.where(name: 'Diana Faye-Schjøll')[0])
 
-Message.create(content: "This time there is going to be a time limit for each turn", date: (Time.now + ((1..3).to_a.sample).hours).to_datetime, event: Event.where(title: 'Backgammon night for seniors')[0], user: User.where(name: 'April Yeats')[0])
-Message.create(content: "Are you sure this place serves drinks? I thought it was just coffee etc...", date: (Time.now + ((1..3).to_a.sample).hours).to_datetime, event: Event.where(title: 'Backgammon night for seniors')[0], user: User.where(name: 'Dovydas Savickas')[0])
+Message.create(content: "This time there is going to be a time limit for each turn", date: (Time.now + ((1..3).to_a.sample).hours).to_datetime, event: Event.where(title: 'Backgammon night for students')[0], user: User.where(name: 'April Yeats')[0])
+Message.create(content: "Are you sure this place serves drinks? I thought it was just coffee etc...", date: (Time.now + ((1..3).to_a.sample).hours).to_datetime, event: Event.where(title: 'Backgammon night for students')[0], user: User.where(name: 'Dovydas Savickas')[0])
 
 Message.create(content: "I found out that this place is dog-friendly, so feel free to bring your pooch!", date: (Time.now + ((1..3).to_a.sample).hours).to_datetime, event: Event.where(title: 'Chess night!!')[0], user: User.where(name: 'Diana Faye-Schjøll')[0])
 Message.create(content: "Great! I'll bring Max with me... I hope there is a comfy sofa for him", date: (Time.now + ((1..3).to_a.sample).hours).to_datetime, event: Event.where(title: 'Chess night!!')[0], user: User.where(name: 'Dovydas Savickas')[0])
