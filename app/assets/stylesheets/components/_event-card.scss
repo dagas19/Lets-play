@@ -12,11 +12,24 @@
   left: auto;
   width: 100%;
 }
-
+.card-for-event {
+  height: auto;
+  width: 100%;
+  background-color: white;
+  margin-bottom: 30px;
+  border-radius: 40px;
+  box-shadow: 0px 0px 1px 0px black;
+  transition: all .5s ease;
+}
+.card-for-event:hover {
+  transform: translate3D(0,-1px,0) scale(1.01);
+  box-shadow: 2px 2px 5px 0px gray;
+  transition: all .4s ease;
+}
 .event-card {
   background-color: white;
   margin-bottom: 30px;
-  height: 350px;
+  height: auto;
   width: 100%;
   position: relative;
   border-radius: 40px;
@@ -38,16 +51,19 @@
 
 .main-info {
   background-color: white;
-  height: 230px;
+  height: auto;
   width: 100%;
   border-radius: 40px;
   padding: 25px;
+  font-size: clamp(1.4em, 2.1vw, 1.9em);
+  flex-grow: 2;
 }
-
-.btn-event1 {
-  position: absolute;
-  right: 50px;
-  bottom: 0;
+.top-event {
+  background-color: white;
+  height: auto;
+  width: 100%;
+  border-radius: 40px;
+  padding: 25px;
 }
 
 .small-info {
@@ -59,24 +75,73 @@
   padding: 35px;
   text-align: inline-block;
 }
-
+.bottom-event {
+  background-color: white;
+  height: 118px;
+  border-radius: 40px;
+  color: rgb(8,146,208);
+  padding: 25px;
+}
+.borderis {
+  width: 90%;
+  height: 1px;
+  border-top: 1px solid black;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+.full {
+  width: 100%;
+  height: auto;
+}
 .event-img {
   margin-right: 20px;
   border-radius: 40px;
+  height: auto;
+  width: 100%;
+  filter: grayscale(70%);
+}
+.imgevent {
+  margin-right: 20px;
+  border-radius: 40px;
+  height: auto;
+  width: 200px;
+}
+.img-event-repso {
+  max-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  object-position: 50% 50%;
+  border-radius: 40px;
+  margin-bottom: 20px;
+}
+.eventinfo {
+  width: 300px;
+  margin-right: 20px;
+  border-right-width: 60%;
+  border-right: 1px solid black;
+  flex-grow: 1;
+  font-size: clamp(1.0em, 2.1vw, 1.9em);
+}
+.img-eve-card {
+  height: 200px;
+  width: 200px;
   position: absolute;
   left: 27px;
   top: 15px;
-  height: 200px;
+}
+.desc-event {
+  overflow: hidden;
+}
+.eventcalendar {
   width: 200px;
-  filter: grayscale(70%);
 }
 
 .btn-gg {
   color: white;
   border-radius: 50px;
   background-color: rgb(8,146,208);
-  margin-left: 20px;
-  margin-bottom: 30px;
 }
 
 .btn-disable {
@@ -88,8 +153,6 @@
   border-radius: 50%;
   height: 50px;
   width: 50px;
-  margin-right: 20px;
-  margin-top: 10px;
 }
 
 .card-one {
@@ -108,9 +171,8 @@
   font-weight: bold;
   font-size: 22px;
   text-align: left;
-  width: 700px;
+  max-width: 300px;
   margin-left: 226px;
-  max-width: 50ch;
   margin-bottom: 20px;
 }
 
@@ -153,6 +215,13 @@
   margin: auto;
   position: relative;
   overflow: hidden;
+}
+.created-event-by {
+  width: 200px;
+  height: auto;
+  margin-right: 20px;
+  border-right-width: 60%;
+  border-right: 1px solid black;
 }
 
 .inner {
@@ -199,11 +268,18 @@
 
 #spots-l {
   color: rgb(8,146,208);
-  font-size: 20px;
   font-weight: bold;
-  padding-left: 39px;
-  margin-right: 30em;
+  width: 100%;
 }
-
-
-
+.join-but {
+  width: 200px;
+  height: auto;
+}
+.distance-to {
+  width: 300px;
+  height: auto;
+  margin-right: 20px;
+  border-right-width: 60%;
+  border-right: 1px solid black;
+  flex-grow: 1;
+}

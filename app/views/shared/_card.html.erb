@@ -1,42 +1,46 @@
 <% @events.each do |event| %>
-<div class="event-card"
-  data-game-type="<%= event.game.game_type %>"
-  data-time-type="<%= event.time_type %>"
-  data-eventid="<%= event.id %>"
-  data-hosting="<%= event.user == current_user %>">
-  <div class="event-card-wrap">
-    <div class="main-info text-center">
-      <h2 class="eve-title display-5"> <%= event.title %></h2>
-       <div class="cont text-center">
-        <%=  cl_image_tag event.game.photo.key, class: "event-img", height: 300, width: 300, crop: :fill %>
-         <p class="font-bold desc"><%= event.description.truncate(100) %>
-         </p>
-         <p id="spots-l">Spots left <%= event.spots - event.registrations.count %> ! </p>
-         <div class="datik">
-           <time datetime="@event.date.strftime(%d %m %Y')" class="icon">
-              <em><%= event.date.strftime("%A") %></em>
-              <strong><%= event.date.strftime("%B")%></strong>
-              <span><%= (event.date + 6).strftime('%e') %></span>
-            </time>
-         </div>
-      </div>
+<div class="card-for-event">
+  <div class="d-flex top-event">
+    <div class="imgevent">
+      <%=  cl_image_tag event.game.photo.key, class: "img-event-repso", height: 300, width: 300, crop: :fill %>
     </div>
-    <div class="outer">
-      <div class="inner"></div>
+    <div class="eventinfo">
+      <h2 class="eve-title-resp"> <%= event.title.truncate(20) %></h2>
+      <p class="font-bold desc-event"><%= event.description.truncate(100) %></p>
+      <p id="spots-l">Spots left <%= event.spots - event.registrations.count %> ! </p>
     </div>
-    <div class="small-info d-flex justify-content-between align-items-center">
-      <div class="sma d-flex">
-        <% if event.user.photo.attached? %>
-        <%=  cl_image_tag event.user.photo.key, class: "small-avatar", height: 50, width: 50, crop: :fill %>
+    <div class="eventcalendar d-flex justify-content-center align-items-center">
+      <time datetime="@event.date.strftime(%d %m %Y')" class="icon">
+        <em><%= event.date.strftime("%A") %></em>
+        <strong><%= event.date.strftime("%B")%></strong>
+        <span><%= (event.date + 6).strftime('%e') %></span>
+      </time>
+    </div>
+  </div>
+  <div class="full d-flex justify-content-center align-items-center">
+    <div class="borderis">
+    </div>
+  </div>
+  <div class="d-flex bottom-event">
+    <div class="d-flex created-event-by justify-content-center align-items-center">
+       <% if event.user.photo.attached? %>
+        <%=  cl_image_tag event.user.photo.key, class: "small-avatar mr-2", height: 50, width: 50, crop: :fill %>
         <% else %>
           <img src="https://media.kasperskydaily.com/wp-content/uploads/sites/85/2019/08/12075337/selfie-with-id-card-scam-featured.jpg" alt="" class='small-avatar'>
-        <% end %>
-        <div class="created-by">
+      <% end %>
+       <div class="">
         <p>Created by </p>
         <p><%= event.user.nickname %></p>
       </div>
+    </div>
+    <div class="distance-to d-flex justify-content-left align-items-center">
+      <div>
+        <p><%= event.venue.name %>  <% if user_signed_in? && current_user.address.present? %></p>
+        <p><%= (current_user.distance_to(event.venue.to_coordinates) * 1.35 ).round %> km  away <i class="fas fa-map-marker-alt"></i> <% end %></p>
       </div>
-        <% if user_signed_in? && event.registrations.pluck(:user_id).include?(current_user.id) %>
+    </div>
+    <div class="join-but d-flex justify-content-center align-items-center">
+      <% if user_signed_in? && event.registrations.pluck(:user_id).include?(current_user.id) %>
         <div class="btn-event1">
           <button type="button" class="btn-gg btn-lg btn-disable" disabled>Registered!</button>
         </div>
@@ -53,14 +57,7 @@
           <%= link_to "Join event!", event_registrations_path(event.id), method: :post, class: "btn-gg btn btn-lg" %>
         </div>
         <% end %>
-      <div class="loc-d">
-          <p><%= event.venue.name %>  <% if user_signed_in? && current_user.address.present? %></p>
-          <p><%= (current_user.distance_to(event.venue.to_coordinates) * 1.35 ).round %> km  away <i class="fas fa-map-marker-alt"></i> <% end %></p>
-      </div>
     </div>
   </div>
-    <div class="inner1"></div>
-    <div class="inner2"></div>
-    <div class="inner3"></div>
 </div>
 <% end %>
